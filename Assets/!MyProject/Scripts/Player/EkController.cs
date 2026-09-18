@@ -1,12 +1,14 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class EkController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
 
-    private EkControllerSystem input;
+    [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D RigidBody;
+    private EkControllerSystem input;
+
     private Vector2 moveInput;
 
     private void Awake()
@@ -16,22 +18,25 @@ public class EkController : MonoBehaviour
 
     private void OnEnable()
     {
-        input.EkMovementSystem.Enable();
+        input.Enable();
+        input.EkMovementSystem.EkMovement.performed += OnMove;
+        input.EkMovementSystem.EkMovement.canceled += OnMove;
     }
 
     private void OnDisable()
     {
+        input.EkMovementSystem.EkMovement.performed -= OnMove;
+        input.EkMovementSystem.EkMovement.canceled -= OnMove;
         input.EkMovementSystem.Disable();
     }
 
-    private void Update()
+    private void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = input.EkMovementSystem.EkMovement.ReadValue<Vector2>();
-        Debug.Log($"moveInput = {moveInput}");
+        moveInput = context.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
     {
-        RigidBody.linearVelocity = moveInput * moveSpeed;
-    }   
+        RigidBody.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+    }
 }
