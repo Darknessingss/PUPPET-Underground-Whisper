@@ -6,7 +6,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private int health = 100;
     [SerializeField] private int attackDamage = 10;
     [SerializeField] private float attackInterval = 1.5f;
-    [SerializeField] private float speed = 3.5f;
+    [SerializeField] private float moveSpeed = 3.5f;
 
     private float attackTimer;
 
