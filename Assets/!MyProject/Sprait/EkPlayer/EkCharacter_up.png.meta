@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 659b76ee26a86e34f8ba093ac916a8ee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5086926619110468396
+    second: EkCharacter_up_0
+  - first:
+      213: -7047732179020340585
+    second: EkCharacter_up_1
+  - first:
+      213: -2167481844205282314
+    second: EkCharacter_up_2
+  - first:
+      213: 2887073173521200026
+    second: EkCharacter_up_3
+  - first:
+      213: -8378329862226218728
+    second: EkCharacter_up_4
+  - first:
+      213: 1892727687468865423
+    second: EkCharacter_up_5
+  - first:
+      213: 3383625156626263700
+    second: EkCharacter_up_6
+  - first:
+      213: -2559484207157085964
+    second: EkCharacter_up_7
+  - first:
+      213: 2272303693238100008
+    second: EkCharacter_up_8
+  - first:
+      213: 3607536065324502495
+    second: EkCharacter_up_9
+  - first:
+      213: 5641638157650703514
+    second: EkCharacter_up_10
+  - first:
+      213: 7528099422140708076
+    second: EkCharacter_up_11
+  - first:
+      213: 2407305760791635494
+    second: EkCharacter_up_12
+  - first:
+      213: -6986788805023280710
+    second: EkCharacter_up_13
+  - first:
+      213: -4855083870599456299
+    second: EkCharacter_up_14
+  - first:
+      213: 6492980058518563085
+    second: EkCharacter_up_15
+  - first:
+      213: -249411652320233760
+    second: EkCharacter_up_16
+  - first:
+      213: -8040457795164217420
+    second: EkCharacter_up_17
+  - first:
+      213: 2865502976833301304
+    second: EkCharacter_up_18
+  - first:
+      213: -8584989908261553915
+    second: EkCharacter_up_19
+  - first:
+      213: 2047026900930850669
+    second: EkCharacter_up_20
+  - first:
+      213: -658419572743746463
+    second: EkCharacter_up_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EkCharacter_up_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 1025
+        width: 136
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4117d013b9769b0800000000000000
+      internalID: -5086926619110468396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1024
+        width: 135
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79227657cec613e90800000000000000
+      internalID: -7047732179020340585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_2
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 1027
+        width: 136
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb190b1fbe8be1e0800000000000000
+      internalID: -2167481844205282314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_3
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 1037
+        width: 141
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a937a4441c1f01820800000000000000
+      internalID: 2887073173521200026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_4
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 1039
+        width: 142
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81175fe61613abb80800000000000000
+      internalID: -8378329862226218728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 773
+        width: 141
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87d02cbdc1544a10800000000000000
+      internalID: 1892727687468865423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 767
+        width: 138
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49ea8c9172d05fe20800000000000000
+      internalID: 3383625156626263700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_7
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 768
+        width: 137
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8fd20aca2ea7cd0800000000000000
+      internalID: -2559484207157085964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_8
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 773
+        width: 138
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820e3497b28d88f10800000000000000
+      internalID: 2272303693238100008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_9
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 784
+        width: 142
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fddc31810fa801230800000000000000
+      internalID: 3607536065324502495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_10
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 518
+        width: 139
+        height: 242
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a943f0283002b4e40800000000000000
+      internalID: 5641638157650703514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_11
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 513
+        width: 136
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce43582f98e297860800000000000000
+      internalID: 7528099422140708076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_12
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 512
+        width: 136
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626acb1c5d7786120800000000000000
+      internalID: 2407305760791635494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_13
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 519
+        width: 137
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab159e37990f90f90800000000000000
+      internalID: -6986788805023280710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_14
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 529
+        width: 142
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d9d03a61f64f9cb0800000000000000
+      internalID: -4855083870599456299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_15
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 267
+        width: 142
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d09a1b146f2bb1a50800000000000000
+      internalID: 6492980058518563085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_16
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 257
+        width: 140
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6fb947c69e98cf0800000000000000
+      internalID: -249411652320233760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_17
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 256
+        width: 137
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf57b74c3e8a6090800000000000000
+      internalID: -8040457795164217420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_18
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 258
+        width: 137
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b29fc76cf44c720800000000000000
+      internalID: 2865502976833301304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_19
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 271
+        width: 142
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 509b1c5e92dfbd880800000000000000
+      internalID: -8584989908261553915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_20
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 13
+        width: 142
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6fe6abee10886c10800000000000000
+      internalID: 2047026900930850669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EkCharacter_up_21
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 4
+        width: 138
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16cc17513e2dcd6f0800000000000000
+      internalID: -658419572743746463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EkCharacter_up_0: -5086926619110468396
+      EkCharacter_up_1: -7047732179020340585
+      EkCharacter_up_10: 5641638157650703514
+      EkCharacter_up_11: 7528099422140708076
+      EkCharacter_up_12: 2407305760791635494
+      EkCharacter_up_13: -6986788805023280710
+      EkCharacter_up_14: -4855083870599456299
+      EkCharacter_up_15: 6492980058518563085
+      EkCharacter_up_16: -249411652320233760
+      EkCharacter_up_17: -8040457795164217420
+      EkCharacter_up_18: 2865502976833301304
+      EkCharacter_up_19: -8584989908261553915
+      EkCharacter_up_2: -2167481844205282314
+      EkCharacter_up_20: 2047026900930850669
+      EkCharacter_up_21: -658419572743746463
+      EkCharacter_up_3: 2887073173521200026
+      EkCharacter_up_4: -8378329862226218728
+      EkCharacter_up_5: 1892727687468865423
+      EkCharacter_up_6: 3383625156626263700
+      EkCharacter_up_7: -2559484207157085964
+      EkCharacter_up_8: 2272303693238100008
+      EkCharacter_up_9: 3607536065324502495
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
