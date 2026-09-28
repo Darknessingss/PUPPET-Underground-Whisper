@@ -159,6 +159,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -166,12 +179,12 @@ TextureImporter:
       name: EkCharacter_up_0
       rect:
         serializedVersion: 2
-        x: 58
-        y: 1025
-        width: 136
-        height: 243
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,12 +201,12 @@ TextureImporter:
       name: EkCharacter_up_1
       rect:
         serializedVersion: 2
-        x: 315
+        x: 256
         y: 1024
-        width: 135
-        height: 245
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -210,12 +223,12 @@ TextureImporter:
       name: EkCharacter_up_2
       rect:
         serializedVersion: 2
-        x: 571
-        y: 1027
-        width: 136
-        height: 244
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 512
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -232,12 +245,12 @@ TextureImporter:
       name: EkCharacter_up_3
       rect:
         serializedVersion: 2
-        x: 827
-        y: 1037
-        width: 141
-        height: 237
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 768
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -254,12 +267,12 @@ TextureImporter:
       name: EkCharacter_up_4
       rect:
         serializedVersion: 2
-        x: 1084
-        y: 1039
-        width: 142
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -276,12 +289,12 @@ TextureImporter:
       name: EkCharacter_up_5
       rect:
         serializedVersion: 2
-        x: 62
-        y: 773
-        width: 141
-        height: 243
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -298,12 +311,12 @@ TextureImporter:
       name: EkCharacter_up_6
       rect:
         serializedVersion: 2
-        x: 320
-        y: 767
-        width: 138
-        height: 246
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -320,12 +333,12 @@ TextureImporter:
       name: EkCharacter_up_7
       rect:
         serializedVersion: 2
-        x: 577
+        x: 512
         y: 768
-        width: 137
-        height: 247
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -342,12 +355,12 @@ TextureImporter:
       name: EkCharacter_up_8
       rect:
         serializedVersion: 2
-        x: 832
-        y: 773
-        width: 138
-        height: 243
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -364,12 +377,12 @@ TextureImporter:
       name: EkCharacter_up_9
       rect:
         serializedVersion: 2
-        x: 1083
-        y: 784
-        width: 142
-        height: 235
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 768
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -386,12 +399,12 @@ TextureImporter:
       name: EkCharacter_up_10
       rect:
         serializedVersion: 2
-        x: 58
-        y: 518
-        width: 139
-        height: 242
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -408,12 +421,12 @@ TextureImporter:
       name: EkCharacter_up_11
       rect:
         serializedVersion: 2
-        x: 314
-        y: 513
-        width: 136
-        height: 245
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -430,12 +443,12 @@ TextureImporter:
       name: EkCharacter_up_12
       rect:
         serializedVersion: 2
-        x: 570
+        x: 512
         y: 512
-        width: 136
-        height: 247
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -452,12 +465,12 @@ TextureImporter:
       name: EkCharacter_up_13
       rect:
         serializedVersion: 2
-        x: 827
-        y: 519
-        width: 137
-        height: 241
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -474,12 +487,12 @@ TextureImporter:
       name: EkCharacter_up_14
       rect:
         serializedVersion: 2
-        x: 1083
-        y: 529
-        width: 142
-        height: 234
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 512
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -496,12 +509,12 @@ TextureImporter:
       name: EkCharacter_up_15
       rect:
         serializedVersion: 2
-        x: 60
-        y: 267
-        width: 142
-        height: 239
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -518,12 +531,12 @@ TextureImporter:
       name: EkCharacter_up_16
       rect:
         serializedVersion: 2
-        x: 319
-        y: 257
-        width: 140
-        height: 245
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -540,12 +553,12 @@ TextureImporter:
       name: EkCharacter_up_17
       rect:
         serializedVersion: 2
-        x: 577
+        x: 512
         y: 256
-        width: 137
-        height: 245
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -562,12 +575,12 @@ TextureImporter:
       name: EkCharacter_up_18
       rect:
         serializedVersion: 2
-        x: 833
-        y: 258
-        width: 137
-        height: 245
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -584,12 +597,12 @@ TextureImporter:
       name: EkCharacter_up_19
       rect:
         serializedVersion: 2
-        x: 1084
-        y: 271
-        width: 142
-        height: 235
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -606,12 +619,12 @@ TextureImporter:
       name: EkCharacter_up_20
       rect:
         serializedVersion: 2
-        x: 58
-        y: 13
-        width: 142
-        height: 237
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -628,12 +641,12 @@ TextureImporter:
       name: EkCharacter_up_21
       rect:
         serializedVersion: 2
-        x: 314
-        y: 4
-        width: 138
-        height: 243
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -650,7 +663,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2d12a5715bbec9040b12b1311839dcbd
     internalID: 0
     vertices: []
     indices: 
@@ -658,7 +671,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       EkCharacter_up_0: -5086926619110468396
       EkCharacter_up_1: -7047732179020340585

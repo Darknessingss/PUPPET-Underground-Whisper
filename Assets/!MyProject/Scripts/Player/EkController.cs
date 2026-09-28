@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D RigidBody;
+    [SerializeField] private Animator _animator;
     private EkControllerSystem input;
 
     private Vector2 moveInput;
@@ -14,6 +15,12 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         input = new EkControllerSystem();
+    }
+    private void Update()
+    {
+        _animator.SetFloat("Vertical", moveInput.y);
+        _animator.SetFloat("Horizontal", moveInput.x);
+        _animator.SetFloat("Speed", moveInput.sqrMagnitude);
     }
 
     private void OnEnable()
@@ -37,6 +44,6 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RigidBody.linearVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+        RigidBody.linearVelocity = moveInput.normalized * moveSpeed;
     }
 }
