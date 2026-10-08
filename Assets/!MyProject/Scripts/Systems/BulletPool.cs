@@ -1,35 +1,54 @@
 using UnityEngine;
-using System.Collections.Generic;
+using UnityEngine.Pool;
 
 public class BulletPool : MonoBehaviour
 {
     [SerializeField] private Bullet bulletPrefab;
-    [SerializeField] private int sizePool = 5;
+    [SerializeField] private int defaultCapacity = 10;
+    [SerializeField] private int maxSize = 100;
 
-    private readonly Queue<Bullet> _pool = new();
+    private IObjectPool<Bullet> _pool;
+
+    public IObjectPool<Bullet> Pool => _pool;
 
     private void Awake()
     {
-        for (int i = 0; i < sizePool; i++)
-            _pool.Enqueue(CreateBullet());
+        _pool = new ObjectPool<Bullet>(
+            createFunc: CreateBullet,
+            actionOnGet: OnGet,
+            actionOnRelease: OnRelease,
+            actionOnDestroy: OnDestroyBullet,
+            collectionCheck: true,
+            defaultCapacity: defaultCapacity,
+            maxSize: maxSize
+        );
     }
 
     private Bullet CreateBullet()
     {
-        var PrefabSpawn = Instantiate(bulletPrefab, transform);
-        PrefabSpawn.gameObject.SetActive(false);
-        return PrefabSpawn;
+        var bullet = Instantiate(bulletPrefab, transform);
+        bullet.SetPool(_pool);
+        return bullet;
     }
 
-    public Bullet Get()
+    private void OnGet(Bullet bullet)
     {
-        var PrefabSpawn = _pool.Count > 0 ? _pool.Dequeue() : CreateBullet();
-        return PrefabSpawn;
+        bullet.gameObject.SetActive(true);
     }
 
-    public void Return(Bullet bullet)
+    private void OnRelease(Bullet bullet)
     {
         bullet.gameObject.SetActive(false);
-        _pool.Enqueue(bullet);
     }
+
+    private void OnDestroyBullet(Bullet bullet)
+    {
+        if (bullet != null)
+        {
+            Destroy(bullet.gameObject);
+        }
+    }
+
+    public Bullet Get() => _pool.Get();
+    public void Return(Bullet bullet) => _pool.Release(bullet);
 }
