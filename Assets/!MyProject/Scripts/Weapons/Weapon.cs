@@ -20,4 +20,12 @@ public abstract class Weapon : MonoBehaviour
     public int CurrentAmmo => _currentAmmo;
     public int MagazineSize => magazineSize;
     public bool IsReloading => _isReloading;
+
+
+    protected virtual void Awake()
+    {
+        _currentAmmo = magazineSize;
+    }
+
+
 }
