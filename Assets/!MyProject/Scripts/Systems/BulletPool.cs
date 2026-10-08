@@ -16,15 +16,15 @@ public class BulletPool : MonoBehaviour
 
     private Bullet CreateBullet()
     {
-        var b = Instantiate(bulletPrefab, transform);
-        b.gameObject.SetActive(false);
-        return b;
+        var PrefabSpawn = Instantiate(bulletPrefab, transform);
+        PrefabSpawn.gameObject.SetActive(false);
+        return PrefabSpawn;
     }
 
     public Bullet Get()
     {
-        var b = _pool.Count > 0 ? _pool.Dequeue() : CreateBullet();
-        return b;
+        var PrefabSpawn = _pool.Count > 0 ? _pool.Dequeue() : CreateBullet();
+        return PrefabSpawn;
     }
 
     public void Return(Bullet bullet)
