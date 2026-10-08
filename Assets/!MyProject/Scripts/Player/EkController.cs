@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class EkController : MonoBehaviour
 {
 
     [SerializeField] private float moveSpeed = 5f;
