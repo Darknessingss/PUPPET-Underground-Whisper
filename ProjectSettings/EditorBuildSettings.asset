@@ -1,4 +1,4 @@
-%YAML 1.1
+﻿%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1045 &1
 EditorBuildSettings:
@@ -6,7 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/!MyProject/Scenes/GameScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 094ae502854f91c42b2f135ad15e2776, type: 3}
+    path: Assets/PUPPET/Scenes/MainMenu.unity
+    guid: e2fdc47652467d9428ae22514e5ec653
+  - enabled: 1
+    path: Assets/PUPPET/Scenes/Workshop.unity
+    guid: 87eb0a24b88cf9742a364103db2dd562
+  - enabled: 1
+    path: Assets/PUPPET/Scenes/UpperCity.unity
+    guid: 67495e1879aac134690f3e0a7a5801b9
+  - enabled: 1
+    path: Assets/PUPPET/Scenes/Library.unity
+    guid: cbec7aa3e919d5549877c5c78a7c323a
+  - enabled: 1
+    path: Assets/PUPPET/Scenes/Hospital.unity
+    guid: 168d4c1c19789564a811e11631e4d614
+  - enabled: 1
+    path: Assets/PUPPET/Scenes/Factory.unity
+    guid: f976b0ed78e37a2408659812fdcf5a2d
+  - enabled: 1
+    path: Assets/PUPPET/Scenes/Core.unity
+    guid: 0f79a82d49ae7854c9b2f5c2d1dee154
+

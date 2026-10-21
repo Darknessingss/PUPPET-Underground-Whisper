@@ -1,0 +1,31 @@
+﻿using UnityEngine;
+
+namespace PUPPET
+{
+    public class ZoneSceneBootstrap : MonoBehaviour
+    {
+        public string zoneId = "workshop";
+
+        private void Start()
+        {
+            var root = GameRoot.EnsureExists();
+            root.EnterZoneFromScene(zoneId);
+        }
+    }
+
+    public class MenuBootstrap : MonoBehaviour
+    {
+        private void Start()
+        {
+            var root = GameRoot.EnsureExists();
+            var args = System.Environment.GetCommandLineArgs();
+            bool newGame = System.Array.IndexOf(args, "-newgame") >= 0;
+            bool cont = System.Array.IndexOf(args, "-continue") >= 0;
+            if (newGame) root.NewGame();
+            else if (cont && SaveSystem.HasSave) root.ContinueGame();
+            else root.ShowMainMenu();
+        }
+    }
+}
+
+
