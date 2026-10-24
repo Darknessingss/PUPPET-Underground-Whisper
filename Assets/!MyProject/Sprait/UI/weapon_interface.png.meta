@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a3c2941968397154b9e6017732a0b2d1
+guid: 6206045ef2d95ab4cbbb1335fd8dbfe1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1443965179105914774
-    second: icon_pistol_0
+      213: -1044156221157532085
+    second: weapon_interface_0
+  - first:
+      213: -2732031532131434745
+    second: weapon_interface_1
+  - first:
+      213: 2695796145889940613
+    second: weapon_interface_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: icon_pistol_0
+      name: weapon_interface_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 5
-        width: 22
-        height: 21
+        x: 29
+        y: 219
+        width: 383
+        height: 427
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a60db5fe15106fbe0800000000000000
-      internalID: -1443965179105914774
+      spriteID: b4e14e3f2796281f0800000000000000
+      internalID: -1044156221157532085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_interface_1
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 219
+        width: 384
+        height: 427
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fb324ebcfd51ad0800000000000000
+      internalID: -2732031532131434745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_interface_2
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 188
+        width: 387
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58413aecf44696520800000000000000
+      internalID: 2695796145889940613
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      icon_pistol_0: -1443965179105914774
+      weapon_interface_0: -1044156221157532085
+      weapon_interface_1: -2732031532131434745
+      weapon_interface_2: 2695796145889940613
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
