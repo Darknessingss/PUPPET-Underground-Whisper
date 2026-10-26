@@ -28,6 +28,11 @@ public class ExitConfirmationPanel : MonoBehaviour
         SceneManager.LoadScene(scene.name);
     }
 
+    public void ExitGameOver()
+    {
+        Application.Quit();
+    }
+
     public void PanelExit()
     {
         MainMenuPanel.SetActive(true);

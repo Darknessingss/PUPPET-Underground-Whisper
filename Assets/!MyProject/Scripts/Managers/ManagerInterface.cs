@@ -10,7 +10,7 @@ public class ManagerInterface : MonoBehaviour
 
     [SerializeField] private GameObject SettingsMenu;
     [SerializeField] private GameObject SettingsGameplay;
-    [SerializeField] private ExitConfirmationPanel exitPanel;
+    [SerializeField] private GameObject exitPanel;
 
     private EkControllerSystem inputPause;
     private bool isPaused;
@@ -25,7 +25,10 @@ public class ManagerInterface : MonoBehaviour
 
     private void Start()
     {
-        TogglePause();
+        isPaused = true;
+        Time.timeScale = 0f;
+        MainMenuPanel.SetActive(true);
+        pausePanel.SetActive(false);
     }
     private void OnEnable()
     {
@@ -48,14 +51,25 @@ public class ManagerInterface : MonoBehaviour
 
     private void OnEscape(InputAction.CallbackContext context)
     {
-        TogglePause();
+        if (MainMenuPanel.activeSelf || SettingsMenu.activeSelf
+            || SettingsGameplay.activeSelf || pausePanel.activeSelf || exitPanel.activeSelf)
+            return;
+
+        SetPaused(!isPaused);
     }
 
     public void TogglePause()
     {
         isPaused = !isPaused;
-        pausePanel.SetActive(isPaused);
         Time.timeScale = isPaused ? 0f : 1f;
+    }
+    private void SetPaused(bool paused)
+    {
+        isPaused = paused;
+        Time.timeScale = paused ? 0f : 1f;
+        pausePanel.SetActive(paused && !MainMenuPanel.activeSelf
+                                   && !SettingsMenu.activeSelf
+                                   && !SettingsGameplay.activeSelf);
     }
 
     public void Resume()
@@ -95,7 +109,7 @@ public class ManagerInterface : MonoBehaviour
     public void OpenExitPanel()
     {
         pausePanel.SetActive(false);
-        exitPanel.Show();
+        exitPanel.SetActive(true);
     }
 
     public void StartGame()

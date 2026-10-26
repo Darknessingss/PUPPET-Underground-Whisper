@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 969726135213135754}
   - component: {fileID: 3741882060128075172}
   - component: {fileID: 3260737172945818571}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ImageE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1179467739184735746, guid: 21089a2d75c2ebc4ab09f787e76d3f6b, type: 3}
+  m_Sprite: {fileID: -904922184268459459, guid: 7c5bc425ad807be44ac98ae1225d3881, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 7392414056128031}
   - component: {fileID: 2584744638553595666}
   - component: {fileID: 3623041377880996190}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TextE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 6342060012164569303}
   - component: {fileID: 2353501599077299791}
   - component: {fileID: 7185646082158425674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WorldEButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
   m_UseReflectionProbes: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 5160785859005729154}
   - component: {fileID: 3546753597175972781}
   - component: {fileID: 7862761833261910350}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5874e355a5bdab34a870fdddd0466ce5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -464,8 +464,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2, y: 2.875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

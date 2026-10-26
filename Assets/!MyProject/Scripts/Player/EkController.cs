@@ -25,6 +25,7 @@ public class EkController : MonoBehaviour
     private void OnEnable()
     {
         input.Enable();
+
         input.EkMovementSystem.EkMovement.performed += OnMove;
         input.EkMovementSystem.EkMovement.canceled += OnMove;
     }
@@ -38,7 +39,8 @@ public class EkController : MonoBehaviour
 
     private void OnDestroy()
     {
-        input?.Dispose();
+        input.Dispose();
+        input = null;
     }
 
     private void OnMove(InputAction.CallbackContext context)
