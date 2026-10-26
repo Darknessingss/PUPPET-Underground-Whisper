@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -55,15 +56,10 @@ public class ManagerInterface : MonoBehaviour
             || SettingsGameplay.activeSelf || pausePanel.activeSelf || exitPanel.activeSelf)
             return;
 
-        SetPaused(!isPaused);
+        TogglePause(!isPaused);
     }
 
-    public void TogglePause()
-    {
-        isPaused = !isPaused;
-        Time.timeScale = isPaused ? 0f : 1f;
-    }
-    private void SetPaused(bool paused)
+    public void TogglePause(bool paused)
     {
         isPaused = paused;
         Time.timeScale = paused ? 0f : 1f;
@@ -114,7 +110,7 @@ public class ManagerInterface : MonoBehaviour
 
     public void StartGame()
     {
-        TogglePause();
+        TogglePause(!isPaused);
         MainMenuPanel.SetActive(false);
     }
 }
