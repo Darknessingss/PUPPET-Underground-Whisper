@@ -26,4 +26,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PUPPET/Scenes/Core.unity
     guid: 0f79a82d49ae7854c9b2f5c2d1dee154
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 094ae502854f91c42b2f135ad15e2776, type: 3}

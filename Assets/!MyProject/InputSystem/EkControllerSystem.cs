@@ -181,6 +181,35 @@ public partial class @EkControllerSystem: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""EscapeSystem"",
+            ""id"": ""4dd6a563-e7fd-40a9-8fae-cb010aea0fc4"",
+            ""actions"": [
+                {
+                    ""name"": ""ExitGameplay"",
+                    ""type"": ""Button"",
+                    ""id"": ""f9b5d061-20a0-452d-8fb1-bad4d17759af"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""b0e66354-b339-4ae3-9b83-eba7ec0fb954"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ExitGameplay"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -189,11 +218,15 @@ public partial class @EkControllerSystem: IInputActionCollection2, IDisposable
         m_EkMovementSystem = asset.FindActionMap("EkMovementSystem", throwIfNotFound: true);
         m_EkMovementSystem_Attack = m_EkMovementSystem.FindAction("Attack", throwIfNotFound: true);
         m_EkMovementSystem_EkMovement = m_EkMovementSystem.FindAction("EkMovement", throwIfNotFound: true);
+        // EscapeSystem
+        m_EscapeSystem = asset.FindActionMap("EscapeSystem", throwIfNotFound: true);
+        m_EscapeSystem_ExitGameplay = m_EscapeSystem.FindAction("ExitGameplay", throwIfNotFound: true);
     }
 
     ~@EkControllerSystem()
     {
         UnityEngine.Debug.Assert(!m_EkMovementSystem.enabled, "This will cause a leak and performance issues, EkControllerSystem.EkMovementSystem.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_EscapeSystem.enabled, "This will cause a leak and performance issues, EkControllerSystem.EscapeSystem.Disable() has not been called.");
     }
 
     /// <summary>
@@ -372,6 +405,102 @@ public partial class @EkControllerSystem: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="EkMovementSystemActions" /> instance referencing this action map.
     /// </summary>
     public EkMovementSystemActions @EkMovementSystem => new EkMovementSystemActions(this);
+
+    // EscapeSystem
+    private readonly InputActionMap m_EscapeSystem;
+    private List<IEscapeSystemActions> m_EscapeSystemActionsCallbackInterfaces = new List<IEscapeSystemActions>();
+    private readonly InputAction m_EscapeSystem_ExitGameplay;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "EscapeSystem".
+    /// </summary>
+    public struct EscapeSystemActions
+    {
+        private @EkControllerSystem m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public EscapeSystemActions(@EkControllerSystem wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "EscapeSystem/ExitGameplay".
+        /// </summary>
+        public InputAction @ExitGameplay => m_Wrapper.m_EscapeSystem_ExitGameplay;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_EscapeSystem; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="EscapeSystemActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(EscapeSystemActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="EscapeSystemActions" />
+        public void AddCallbacks(IEscapeSystemActions instance)
+        {
+            if (instance == null || m_Wrapper.m_EscapeSystemActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_EscapeSystemActionsCallbackInterfaces.Add(instance);
+            @ExitGameplay.started += instance.OnExitGameplay;
+            @ExitGameplay.performed += instance.OnExitGameplay;
+            @ExitGameplay.canceled += instance.OnExitGameplay;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="EscapeSystemActions" />
+        private void UnregisterCallbacks(IEscapeSystemActions instance)
+        {
+            @ExitGameplay.started -= instance.OnExitGameplay;
+            @ExitGameplay.performed -= instance.OnExitGameplay;
+            @ExitGameplay.canceled -= instance.OnExitGameplay;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="EscapeSystemActions.UnregisterCallbacks(IEscapeSystemActions)" />.
+        /// </summary>
+        /// <seealso cref="EscapeSystemActions.UnregisterCallbacks(IEscapeSystemActions)" />
+        public void RemoveCallbacks(IEscapeSystemActions instance)
+        {
+            if (m_Wrapper.m_EscapeSystemActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="EscapeSystemActions.AddCallbacks(IEscapeSystemActions)" />
+        /// <seealso cref="EscapeSystemActions.RemoveCallbacks(IEscapeSystemActions)" />
+        /// <seealso cref="EscapeSystemActions.UnregisterCallbacks(IEscapeSystemActions)" />
+        public void SetCallbacks(IEscapeSystemActions instance)
+        {
+            foreach (var item in m_Wrapper.m_EscapeSystemActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_EscapeSystemActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="EscapeSystemActions" /> instance referencing this action map.
+    /// </summary>
+    public EscapeSystemActions @EscapeSystem => new EscapeSystemActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "EkMovementSystem" which allows adding and removing callbacks.
     /// </summary>
@@ -393,5 +522,20 @@ public partial class @EkControllerSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnEkMovement(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "EscapeSystem" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="EscapeSystemActions.AddCallbacks(IEscapeSystemActions)" />
+    /// <seealso cref="EscapeSystemActions.RemoveCallbacks(IEscapeSystemActions)" />
+    public interface IEscapeSystemActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "ExitGameplay" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnExitGameplay(InputAction.CallbackContext context);
     }
 }

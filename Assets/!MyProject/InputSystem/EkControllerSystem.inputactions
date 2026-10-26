@@ -95,6 +95,35 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "EscapeSystem",
+            "id": "4dd6a563-e7fd-40a9-8fae-cb010aea0fc4",
+            "actions": [
+                {
+                    "name": "ExitGameplay",
+                    "type": "Button",
+                    "id": "f9b5d061-20a0-452d-8fb1-bad4d17759af",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b0e66354-b339-4ae3-9b83-eba7ec0fb954",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ExitGameplay",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

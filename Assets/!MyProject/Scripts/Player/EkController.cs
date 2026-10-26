@@ -1,10 +1,8 @@
-using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class EkController : MonoBehaviour
 {
-
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Rigidbody2D RigidBody;
     [SerializeField] private Animator _animator;
@@ -16,6 +14,7 @@ public class EkController : MonoBehaviour
     {
         input = new EkControllerSystem();
     }
+
     private void Update()
     {
         _animator.SetFloat("Vertical", moveInput.y);
@@ -34,7 +33,12 @@ public class EkController : MonoBehaviour
     {
         input.EkMovementSystem.EkMovement.performed -= OnMove;
         input.EkMovementSystem.EkMovement.canceled -= OnMove;
-        input.EkMovementSystem.Disable();
+        input.Disable();
+    }
+
+    private void OnDestroy()
+    {
+        input?.Dispose();
     }
 
     private void OnMove(InputAction.CallbackContext context)
