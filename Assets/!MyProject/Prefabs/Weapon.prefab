@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 4825477937738205103}
   - component: {fileID: 5160785859005729154}
   - component: {fileID: 3546753597175972781}
+  - component: {fileID: 7862761833261910350}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -472,3 +473,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &7862761833261910350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9033794241373333631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bcbc951c486cda46af204c7a1fae937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickupUI
+  playerTag: Player
+  pickUp: {fileID: 6374695858108863438}
