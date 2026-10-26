@@ -7,23 +7,28 @@ public class WeaponPickup : MonoBehaviour
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private WeaponInventory inventory;
 
+
     private bool playerInRange;
 
     private void Start()
     {
-        if (inventory != null) 
+        if (inventory != null)
             return;
         var player = GameObject.FindGameObjectWithTag(playerTag);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(playerTag)) playerInRange = true;
+        if (!other.CompareTag(playerTag)) 
+            return;
+        playerInRange = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag(playerTag)) playerInRange = false;
+        if (!other.CompareTag(playerTag)) 
+            return;
+        playerInRange = false;
     }
 
     private void Update()

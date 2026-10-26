@@ -15,7 +15,7 @@ MonoBehaviour:
   itemID: 333
   displayName: Pistol
   icon: {fileID: -2732031532131434745, guid: 6206045ef2d95ab4cbbb1335fd8dbfe1, type: 3}
-  worldPrefab: {fileID: 0}
+  worldPrefab: {fileID: 9033794241373333631, guid: 32418dbadfdd0634396990beb7654f02, type: 3}
   category: 1
   damage: 20
   attackRange: 100
