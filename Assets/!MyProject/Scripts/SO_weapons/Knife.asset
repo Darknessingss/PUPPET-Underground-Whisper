@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a581d9c9d84abe246a72d20018fc5fd1, type: 3}
+  m_Name: Knife
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponItem
+  itemID: 111
+  displayName: Knife
+  icon: {fileID: -1044156221157532085, guid: 6206045ef2d95ab4cbbb1335fd8dbfe1, type: 3}
+  worldPrefab: {fileID: 0}
+  category: 0
+  damage: 25
+  attackRange: 50
+  attackSpeed: 0.8
+  usesAmmo: 0
+  magazineSize: 5
+  maxReserveAmmo: 40

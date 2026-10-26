@@ -102,6 +102,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -109,12 +122,12 @@ TextureImporter:
       name: weapon_interface_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 219
-        width: 383
-        height: 427
+        x: 12
+        y: 182
+        width: 407
+        height: 485
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -131,12 +144,12 @@ TextureImporter:
       name: weapon_interface_1
       rect:
         serializedVersion: 2
-        x: 447
-        y: 219
-        width: 384
-        height: 427
+        x: 433
+        y: 183
+        width: 405
+        height: 483
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -153,12 +166,12 @@ TextureImporter:
       name: weapon_interface_2
       rect:
         serializedVersion: 2
-        x: 863
+        x: 842
         y: 188
-        width: 387
-        height: 458
+        width: 419
+        height: 475
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 038d010d455286f4f9657efdaa30dad3
     internalID: 0
     vertices: []
     indices: 
