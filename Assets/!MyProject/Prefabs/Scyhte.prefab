@@ -241,7 +241,7 @@ RectTransform:
   m_GameObject: {fileID: 6374695858108863438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 969726135213135754}
@@ -249,7 +249,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0967, y: 0.4387}
+  m_AnchoredPosition: {x: -0.005, y: 0.763}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &6342060012164569303
@@ -274,7 +274,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &2353501599077299791
 MonoBehaviour:
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 3546753597175972781}
   - component: {fileID: 7862761833261910350}
   m_Layer: 6
-  m_Name: Weapon
+  m_Name: Scyhte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -346,7 +346,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.38952, y: 0.05899, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5240564521857680699}
@@ -401,7 +401,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 5874e355a5bdab34a870fdddd0466ce5, type: 3}
+  m_Sprite: {fileID: 1879828538, guid: 374a3b42c54a89447bea3e56935cefdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5ae8e15ddc167341a9e9fcd052475bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponPickup
-  item: {fileID: 11400000, guid: 2557718c988eb6d44aa0df30dc7f3d70, type: 2}
+  item: {fileID: 11400000, guid: 169dc3d15f79e154382a1baf814df657, type: 2}
   playerTag: Player
   inventory: {fileID: 0}
 --- !u!61 &3546753597175972781
@@ -461,17 +461,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: -0.11556625, y: 0.5837164}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0}
-    oldSize: {x: 2, y: 2.875}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.88, y: 8.07}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.3947144, y: 9.91151}
   m_EdgeRadius: 0
 --- !u!114 &7862761833261910350
 MonoBehaviour:
