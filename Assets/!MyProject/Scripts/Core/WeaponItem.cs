@@ -10,6 +10,7 @@ public class WeaponItem : ScriptableObject
     [SerializeField] private string displayName;
     [SerializeField] private Sprite icon;
     [SerializeField] private GameObject worldPrefab;
+    [SerializeField] private GameObject slashPrefab;
 
     [Header("Category")]
     [SerializeField] private WeaponCategory category;
@@ -18,11 +19,12 @@ public class WeaponItem : ScriptableObject
     [SerializeField] private float damage;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackSpeed;
-
     [Header("Range Only")]
     [SerializeField] private bool usesAmmo;
     [SerializeField] private int magazineSize = 5;
     [SerializeField] private int maxReserveAmmo = 40;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float reloadTime = 1.5f;
 
     public string ItemID => itemID;
     public string DisplayName => displayName;
@@ -32,9 +34,12 @@ public class WeaponItem : ScriptableObject
     public float Damage => damage;
     public float AttackRange => attackRange;
     public float AttackSpeed => attackSpeed;
+    public GameObject SlashPrefab => slashPrefab;
     public bool UsesAmmo => usesAmmo;
     public int MagazineSize => magazineSize;
     public int MaxReserveAmmo => maxReserveAmmo;
+    public GameObject BulletPrefab => bulletPrefab;
+    public float ReloadTime => reloadTime;
 
     public bool IsRange => category == WeaponCategory.Range;
 }
