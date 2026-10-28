@@ -12,6 +12,7 @@ public class ManagerInterface : MonoBehaviour
     [SerializeField] private GameObject SettingsMenu;
     [SerializeField] private GameObject SettingsGameplay;
     [SerializeField] private GameObject exitPanel;
+    [SerializeField] private GameObject deathPanel;
 
     private EkControllerSystem inputPause;
     private bool isPaused;
@@ -22,6 +23,7 @@ public class ManagerInterface : MonoBehaviour
         pausePanel.SetActive(false);
         SettingsMenu.SetActive(false);
         SettingsGameplay.SetActive(false);
+        deathPanel.SetActive(false);
     }
 
     private void Start()
@@ -112,5 +114,18 @@ public class ManagerInterface : MonoBehaviour
     {
         TogglePause(!isPaused);
         MainMenuPanel.SetActive(false);
+    }
+    public void ShowDeathScreen()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+
+        pausePanel.SetActive(false);
+        MainMenuPanel.SetActive(false);
+        SettingsMenu.SetActive(false);
+        SettingsGameplay.SetActive(false);
+        exitPanel.SetActive(false);
+
+        deathPanel.SetActive(true);
     }
 }

@@ -1,39 +1,46 @@
-using System;
+﻿using System;
 using UnityEngine;
-using UnityEngine.Assemblies;
 using UnityEngine.UI;
 
 public class EkHealth : MonoBehaviour
 {
+    [SerializeField] private float maxHealth = 100f;
 
-    [SerializeField] private int maxHealth = 100;
-    [SerializeField] private int currentHealth = 100;
+    [Header("Damage")]
+    [SerializeField] private float damagePerSecondWhenNoSoul = 10f;
 
-    [SerializeField] private Image _healthimage;
+    [Header("Regeneration")]
+    [SerializeField] private float soulThresholdForHeal = 50f;
+    [SerializeField] private float healPerSecond = 3f;
 
-    private bool isDead = false;
+    [SerializeField] private EkSoul soul;
+    [SerializeField] private Image healthFill;
+    [SerializeField] private PlayerDeath death;
+
+    private float _currentHealth;
+
+    public float CurrentHealth => _currentHealth;
+    public float Normalized => _currentHealth / maxHealth;
 
     private void Awake()
     {
-        currentHealth = maxHealth;
-        UpdateHealthUI();
+        _currentHealth = maxHealth;
+        healthFill.fillAmount = 1f;
     }
 
-    private void UpdateHealthUI()
+    private void Update()
     {
-        if (_healthimage != null)
-        {
-            _healthimage.fillAmount = (float)currentHealth / maxHealth;
-        }
-    }
+        if (soul.CurrentSoul <= 0f)
+            _currentHealth -= damagePerSecondWhenNoSoul * Time.deltaTime;
 
+        else if (soul.CurrentSoul > soulThresholdForHeal)
+            _currentHealth += healPerSecond * Time.deltaTime;
 
-    private void Die()
-    {
-        if(currentHealth != 0)
-        {
-            isDead = true;
-            Debug.Log("Ek has died.");
-        }
+        _currentHealth = Mathf.Clamp(_currentHealth, 0f, maxHealth);
+
+        healthFill.fillAmount = Normalized;
+
+        if (_currentHealth <= 0f)
+            death.TryDie();
     }
 }
