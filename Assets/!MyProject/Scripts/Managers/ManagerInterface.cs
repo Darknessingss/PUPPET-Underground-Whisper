@@ -55,7 +55,7 @@ public class ManagerInterface : MonoBehaviour
     private void OnEscape(InputAction.CallbackContext context)
     {
         if (MainMenuPanel.activeSelf || SettingsMenu.activeSelf
-            || SettingsGameplay.activeSelf || pausePanel.activeSelf || exitPanel.activeSelf)
+            || SettingsGameplay.activeSelf || pausePanel.activeSelf || deathPanel.activeSelf || exitPanel.activeSelf)
             return;
 
         TogglePause(!isPaused);
@@ -67,7 +67,8 @@ public class ManagerInterface : MonoBehaviour
         Time.timeScale = paused ? 0f : 1f;
         pausePanel.SetActive(paused && !MainMenuPanel.activeSelf
                                    && !SettingsMenu.activeSelf
-                                   && !SettingsGameplay.activeSelf);
+                                   && !SettingsGameplay.activeSelf
+                                   && !deathPanel.activeSelf);
     }
 
     public void Resume()

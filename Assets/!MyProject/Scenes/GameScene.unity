@@ -4040,6 +4040,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EkHealth
   maxHealth: 100
   damagePerSecondWhenNoSoul: 10
+  soulThresholdForHeal: 50
+  healPerSecond: 3
   soul: {fileID: 1101049639}
   healthFill: {fileID: 1822135164}
   death: {fileID: 1101049640}
@@ -5764,8 +5766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 185.29999, y: -163}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 185.62903, y: -162.99988}
+  m_SizeDelta: {x: 90, y: 97.3226}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1302617307
 MonoBehaviour:
@@ -7723,8 +7725,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 222.19995, y: -62.80005}
-  m_SizeDelta: {x: 120, y: 120}
+  m_AnchoredPosition: {x: 222.33154, y: -62.2737}
+  m_SizeDelta: {x: 111.6386, y: 117.5225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822135164
 MonoBehaviour:
