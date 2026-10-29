@@ -95,7 +95,7 @@ public class AttackController : MonoBehaviour
         if (weapon.SlashPrefab == null || BulletPool.Instance == null)
             return;
 
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         Quaternion slashRotation = Quaternion.Euler(0, 0, angle);
 
         var slashInstance = BulletPool.Instance.Get(weapon.SlashPrefab, GetSpawnPosition(aimDirection), slashRotation);
@@ -105,26 +105,20 @@ public class AttackController : MonoBehaviour
 
     private void AttackRange(WeaponItem weapon, Vector2 aimDirection)
     {
-        if (weapon.BulletPrefab == null || BulletPool.Instance == null)
-            return;
+        if (weapon.BulletPrefab == null || BulletPool.Instance == null) return;
 
-        int weaponIndex = inventory.CurrentIndex;
+        int idx = inventory.CurrentIndex;
         if (weapon.UsesAmmo)
         {
-            EnsureAmmoInit(weaponIndex, weapon);
-            if (magazineAmmo[weaponIndex] <= 0)
-            {
-                TryStartReload(weapon);
-                return;
-            }
-            magazineAmmo[weaponIndex]--;
+            EnsureAmmoInit(idx, weapon);
+            if (magazineAmmo[idx] <= 0) { TryStartReload(weapon); 
+                return; }
+            magazineAmmo[idx]--;
         }
 
-        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        Quaternion bulletRotation = Quaternion.Euler(0, 0, angle);
-
-        var projectileInstance = BulletPool.Instance.Get(weapon.BulletPrefab, GetSpawnPosition(aimDirection), bulletRotation);
-        if (projectileInstance.TryGetComponent<Bullet>(out var bullet))
+        var rot = Quaternion.Euler(0, 0, Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg);
+        if (BulletPool.Instance.Get(weapon.BulletPrefab, GetSpawnPosition(aimDirection), rot)
+            .TryGetComponent<Bullet>(out var bullet))
             bullet.Launch(aimDirection, weapon.Damage);
     }
 

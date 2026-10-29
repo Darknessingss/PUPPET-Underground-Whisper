@@ -19,7 +19,7 @@ MonoBehaviour:
   slashPrefab: {fileID: 0}
   category: 1
   damage: 20
-  attackSpeed: 1
+  attackSpeed: 0.7
   usesAmmo: 1
   magazineSize: 6
   maxReserveAmmo: 30

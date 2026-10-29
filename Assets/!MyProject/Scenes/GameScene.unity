@@ -2163,8 +2163,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.00472939, y: -0.0047293305}
-  m_Size: {x: 1.0675278, y: 1.851292}
+  m_Offset: {x: 0.05, y: -0.005}
+  m_Size: {x: 4, y: 4}
   m_Direction: 0
 --- !u!1 &451700333
 GameObject:
@@ -3085,9 +3085,9 @@ MonoBehaviour:
   entries:
   - prefab: {fileID: 2422041515755228696, guid: 2da6d692cfd324d47b15b0aaeddcc341, type: 3}
     size: 10
-  - prefab: {fileID: 3204972912581542911, guid: f311dcd3a3cdef140a929b691959f8ab, type: 3}
+  - prefab: {fileID: 1539059448794586928, guid: a6fa7db088d5b874d91f69ff2b35b229, type: 3}
     size: 3
-  - prefab: {fileID: 8627005391730027871, guid: 21a0d86affd054c48ad908c4b2017d87, type: 3}
+  - prefab: {fileID: 3718410926319247662, guid: 49f304201ec36d6499fd02ede14365bb, type: 3}
     size: 3
 --- !u!1 &693902447
 GameObject:

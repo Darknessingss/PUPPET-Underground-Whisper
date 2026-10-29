@@ -16,10 +16,10 @@ MonoBehaviour:
   displayName: Scythe
   icon: {fileID: 2695796145889940613, guid: 6206045ef2d95ab4cbbb1335fd8dbfe1, type: 3}
   worldPrefab: {fileID: 9033794241373333631, guid: f95964119a90c9343973641a7c210a72, type: 3}
-  slashPrefab: {fileID: 3204972912581542911, guid: f311dcd3a3cdef140a929b691959f8ab, type: 3}
+  slashPrefab: {fileID: 1539059448794586928, guid: a6fa7db088d5b874d91f69ff2b35b229, type: 3}
   category: 0
   damage: 35
-  attackSpeed: 1.5
+  attackSpeed: 0.6
   usesAmmo: 0
   magazineSize: 5
   maxReserveAmmo: 40

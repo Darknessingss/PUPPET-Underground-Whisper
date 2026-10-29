@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour
         var rigidbody2D = GetComponent<Rigidbody2D>();
         rigidbody2D.linearVelocity = direction * speed;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
