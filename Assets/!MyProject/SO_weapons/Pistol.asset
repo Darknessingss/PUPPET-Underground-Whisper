@@ -15,11 +15,13 @@ MonoBehaviour:
   itemID: 333
   displayName: Pistol
   icon: {fileID: -2732031532131434745, guid: 6206045ef2d95ab4cbbb1335fd8dbfe1, type: 3}
-  worldPrefab: {fileID: 9033794241373333631, guid: 32418dbadfdd0634396990beb7654f02, type: 3}
+  worldPrefab: {fileID: 3329490136499546804, guid: 31ae68f878615ee4aadaaf4d22bc9ffa, type: 3}
+  slashPrefab: {fileID: 0}
   category: 1
   damage: 20
-  attackRange: 100
   attackSpeed: 1
   usesAmmo: 1
   magazineSize: 6
   maxReserveAmmo: 30
+  bulletPrefab: {fileID: 2422041515755228696, guid: 2da6d692cfd324d47b15b0aaeddcc341, type: 3}
+  reloadTime: 1.5

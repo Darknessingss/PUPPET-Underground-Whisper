@@ -17,7 +17,6 @@ public class WeaponItem : ScriptableObject
 
     [Header("Stats")]
     [SerializeField] private float damage;
-    [SerializeField] private float attackRange;
     [SerializeField] private float attackSpeed;
     [Header("Range Only")]
     [SerializeField] private bool usesAmmo;
@@ -32,7 +31,6 @@ public class WeaponItem : ScriptableObject
     public GameObject WorldPrefab => worldPrefab;
     public WeaponCategory Category => category;
     public float Damage => damage;
-    public float AttackRange => attackRange;
     public float AttackSpeed => attackSpeed;
     public GameObject SlashPrefab => slashPrefab;
     public bool UsesAmmo => usesAmmo;

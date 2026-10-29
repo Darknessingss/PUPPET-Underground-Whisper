@@ -32,13 +32,6 @@ public class WeaponItemEditor : Editor
             EditorGUILayout.PropertyField(usesAmmoProp);
 
             EditorGUILayout.Space();
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("damage"));
-            EditorGUILayout.Space();
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("attackRange"));
-            EditorGUILayout.Space();
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("attackSpeed"));
-            EditorGUILayout.Space();
-
 
             if (usesAmmoProp.boolValue)
             {
@@ -50,6 +43,11 @@ public class WeaponItemEditor : Editor
                 EditorGUILayout.Space();
             }
         }
+
+        EditorGUILayout.Space();
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("damage"));
+        EditorGUILayout.Space();
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("attackSpeed"));
 
         serializedObject.ApplyModifiedProperties();
     }

@@ -5,41 +5,41 @@ using UnityEngine.UI;
 public class WeaponUI : MonoBehaviour
 {
     [SerializeField] private WeaponInventory inventory;
+    [SerializeField] private AttackController controller;
     [SerializeField] private TMP_Text weaponNameText;
     [SerializeField] private TMP_Text ammoText;
     [SerializeField] private Image weaponIconImage;
 
-    private int currentMagazineAmmo;
-    private int currentReserveAmmo;
     private WeaponItem lastWeapon;
 
     private void Update()
     {
         var weapon = inventory.CurrentWeapon;
-        if (weapon == lastWeapon) 
-            return;
 
-        lastWeapon = weapon;
-
-        if (weapon == null)
+        if (weapon != lastWeapon)
         {
-            weaponNameText.text = "";
-            weaponIconImage.sprite = null;
-            ammoText.gameObject.SetActive(false);
-            return;
+            lastWeapon = weapon;
+
+            if (weapon == null)
+            {
+                weaponNameText.text = "";
+                weaponIconImage.sprite = null;
+                ammoText.gameObject.SetActive(false);
+                return;
+            }
+
+            weaponNameText.text = weapon.DisplayName;
+            weaponIconImage.sprite = weapon.Icon;
+            ammoText.gameObject.SetActive(weapon.IsRange && weapon.UsesAmmo);
+
+            if (weapon.IsRange && weapon.UsesAmmo)
+                controller.EnsureAmmoInitForCurrent();
         }
 
-        weaponNameText.text = weapon.DisplayName;
-        weaponIconImage.sprite = weapon.Icon;
-
-        bool showAmmo = weapon.IsRange && weapon.UsesAmmo;
-        ammoText.gameObject.SetActive(showAmmo);
-
-        if (showAmmo)
+        if (weapon != null && weapon.IsRange && weapon.UsesAmmo)
         {
-            currentMagazineAmmo = weapon.MagazineSize;
-            currentReserveAmmo = weapon.MaxReserveAmmo;
-            ammoText.text = $"{currentMagazineAmmo} / {currentReserveAmmo}";
+            int idx = inventory.CurrentIndex;
+            ammoText.text = $"{controller.GetMagazine(idx)} / {controller.GetReserve(idx)}";
         }
     }
 }

@@ -1,54 +1,96 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Pool;
 
 public class BulletPool : MonoBehaviour
 {
-    [SerializeField] private Bullet bulletPrefab;
-    [SerializeField] private int defaultCapacity = 5;
-    [SerializeField] private int maxSize = 50;
+    public static BulletPool Instance { get; private set; }
 
-    private IObjectPool<Bullet> _pool;
+    [System.Serializable]
+    public class PoolEntry
+    {
+        public GameObject prefab;
+        public int size = 20;
+    }
 
-    public IObjectPool<Bullet> Pool => _pool;
+    [SerializeField] private List<PoolEntry> entries = new List<PoolEntry>();
+
+    private readonly Dictionary<GameObject, Queue<GameObject>> pools = new Dictionary<GameObject, Queue<GameObject>>();
+    private readonly Dictionary<GameObject, GameObject> instanceToPrefab = new Dictionary<GameObject, GameObject>();
 
     private void Awake()
     {
-        _pool = new ObjectPool<Bullet>(
-            createFunc: CreateBullet,
-            actionOnGet: OnGet,
-            actionOnRelease: OnRelease,
-            actionOnDestroy: OnDestroyBullet,
-            collectionCheck: true,
-            defaultCapacity: defaultCapacity,
-            maxSize: maxSize
-        );
-    }
-
-    private Bullet CreateBullet()
-    {
-        var bullet = Instantiate(bulletPrefab, transform);
-        bullet.SetPool(_pool);
-        return bullet;
-    }
-
-    private void OnGet(Bullet bullet)
-    {
-        bullet.gameObject.SetActive(true);
-    }
-
-    private void OnRelease(Bullet bullet)
-    {
-        bullet.gameObject.SetActive(false);
-    }
-
-    private void OnDestroyBullet(Bullet bullet)
-    {
-        if (bullet != null)
+        if (Instance != null && Instance != this)
         {
-            Destroy(bullet.gameObject);
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+
+        foreach (var entry in entries)
+        {
+            if (entry.prefab == null) continue;
+
+            var q = new Queue<GameObject>(entry.size);
+            for (int i = 0; i < entry.size; i++)
+            {
+                var go = Instantiate(entry.prefab, transform);
+                go.SetActive(false);
+                q.Enqueue(go);
+                instanceToPrefab[go] = entry.prefab;
+            }
+            pools[entry.prefab] = q;
         }
     }
 
-    public Bullet Get() => _pool.Get();
-    public void Return(Bullet bullet) => _pool.Release(bullet);
+    public GameObject Get(GameObject prefab, Vector3 position, Quaternion rotation)
+    {
+        if (!pools.ContainsKey(prefab))
+        {
+            var go = Instantiate(prefab, position, rotation, transform);
+            instanceToPrefab[go] = prefab;
+            return go;
+        }
+
+        var q = pools[prefab];
+        GameObject inst = null;
+        while (q.Count > 0)
+        {
+            var candidate = q.Dequeue();
+            if (candidate != null)
+            {
+                inst = candidate;
+                break;
+            }
+        }
+
+        if (inst == null)
+        {
+            inst = Instantiate(prefab, transform);
+            instanceToPrefab[inst] = prefab;
+        }
+
+        inst.transform.SetPositionAndRotation(position, rotation);
+        inst.SetActive(true);
+        return inst;
+    }
+
+    public void Return(GameObject instance)
+    {
+        if (instance == null) return;
+
+        if (!instanceToPrefab.ContainsKey(instance))
+        {
+            Destroy(instance);
+            return;
+        }
+
+        var prefab = instanceToPrefab[instance];
+        instance.SetActive(false);
+        instance.transform.SetParent(transform);
+
+        if (!pools.ContainsKey(prefab))
+            pools[prefab] = new Queue<GameObject>();
+
+        pools[prefab].Enqueue(instance);
+    }
 }

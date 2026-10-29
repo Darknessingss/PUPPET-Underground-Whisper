@@ -15,11 +15,13 @@ MonoBehaviour:
   itemID: 111
   displayName: Knife
   icon: {fileID: -1044156221157532085, guid: 6206045ef2d95ab4cbbb1335fd8dbfe1, type: 3}
-  worldPrefab: {fileID: 0}
+  worldPrefab: {fileID: 2868060435039187003, guid: 4659cd1f5ed2b7d43984f9045c1e00e7, type: 3}
+  slashPrefab: {fileID: 8627005391730027871, guid: 21a0d86affd054c48ad908c4b2017d87, type: 3}
   category: 0
   damage: 25
-  attackRange: 50
   attackSpeed: 0.8
   usesAmmo: 0
   magazineSize: 5
   maxReserveAmmo: 40
+  bulletPrefab: {fileID: 0}
+  reloadTime: 1.5
