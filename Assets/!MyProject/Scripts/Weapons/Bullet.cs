@@ -8,19 +8,19 @@ public class Bullet : MonoBehaviour
     [SerializeField] private LayerMask hitLayers;
 
     private float damage;
-    private float timer;
+    private float remainingLifetime;
 
     private void OnEnable()
     {
-        timer = lifetime;
+        remainingLifetime = lifetime;
     }
 
     public void Launch(Vector2 direction, float damageAmount)
     {
         damage = damageAmount;
 
-        var rb = GetComponent<Rigidbody2D>();
-        rb.linearVelocity = direction * speed;
+        var rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidbody2D.linearVelocity = direction * speed;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
         transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -28,20 +28,26 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0f) ReturnToPool();
+        remainingLifetime -= Time.deltaTime;
+        if (remainingLifetime <= 0f)
+            ReturnToPool();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (hitLayers.value != 0 && ((1 << other.gameObject.layer) & hitLayers.value) == 0)
+        if (!IsInHitLayer(other.gameObject.layer))
             return;
 
-        var dmgTarget = other.GetComponentInParent<IDamageable>();
-        if (dmgTarget != null)
-            dmgTarget.TakeDamage(damage);
+        var damageableTarget = other.GetComponentInParent<IDamageable>();
+        if (damageableTarget != null)
+            damageableTarget.TakeDamage(damage);
 
         ReturnToPool();
+    }
+
+    private bool IsInHitLayer(int layer)
+    {
+        return hitLayers.value == 0 || (hitLayers.value & (1 << layer)) != 0;
     }
 
     private void ReturnToPool()

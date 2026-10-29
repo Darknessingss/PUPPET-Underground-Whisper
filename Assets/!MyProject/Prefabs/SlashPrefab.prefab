@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d4d44cfe23ddb045add1cab18552f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeleeHitbox
-  lifetime: 0.25
+  lifetime: 0.2
   hitLayers:
     serializedVersion: 2
     m_Bits: 128

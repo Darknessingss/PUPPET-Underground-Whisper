@@ -8,13 +8,13 @@ public class MeleeHitbox : MonoBehaviour
     [SerializeField] private LayerMask hitLayers;
 
     private float damage;
-    private float timer;
-    private readonly HashSet<Collider2D> alreadyHit = new HashSet<Collider2D>();
+    private float remainingLifetime;
+    private readonly HashSet<Collider2D> alreadyHitColliders = new HashSet<Collider2D>();
 
     private void OnEnable()
     {
-        timer = lifetime;
-        alreadyHit.Clear();
+        remainingLifetime = lifetime;
+        alreadyHitColliders.Clear();
     }
 
     public void Init(float damageAmount)
@@ -24,21 +24,27 @@ public class MeleeHitbox : MonoBehaviour
 
     private void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0f) ReturnToPool();
+        remainingLifetime -= Time.deltaTime;
+        if (remainingLifetime <= 0f)
+            ReturnToPool();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (hitLayers.value != 0 && ((1 << other.gameObject.layer) & hitLayers.value) == 0)
+        if (!IsInHitLayer(other.gameObject.layer))
             return;
 
-        if (!alreadyHit.Add(other))
+        if (!alreadyHitColliders.Add(other))
             return;
 
-        var dmgTarget = other.GetComponentInParent<IDamageable>();
-        if (dmgTarget != null)
-            dmgTarget.TakeDamage(damage);
+        var damageableTarget = other.GetComponentInParent<IDamageable>();
+        if (damageableTarget != null)
+            damageableTarget.TakeDamage(damage);
+    }
+
+    private bool IsInHitLayer(int layer)
+    {
+        return hitLayers.value == 0 || (hitLayers.value & (1 << layer)) != 0;
     }
 
     private void ReturnToPool()
