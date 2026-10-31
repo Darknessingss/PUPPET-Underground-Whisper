@@ -210,6 +210,35 @@ public partial class @EkControllerSystem: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""EkPickUpItems"",
+            ""id"": ""1947a392-0c5a-4efc-83bd-139aa98ca94b"",
+            ""actions"": [
+                {
+                    ""name"": ""PickUpItems"",
+                    ""type"": ""Button"",
+                    ""id"": ""5ecfea15-7e70-4c12-b43a-9339c31ed9c7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false,
+                    ""priority"": 0
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""ee75f6a2-d7dc-4142-bbe2-4b3234c4101c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PickUpItems"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -221,12 +250,16 @@ public partial class @EkControllerSystem: IInputActionCollection2, IDisposable
         // EscapeSystem
         m_EscapeSystem = asset.FindActionMap("EscapeSystem", throwIfNotFound: true);
         m_EscapeSystem_ExitGameplay = m_EscapeSystem.FindAction("ExitGameplay", throwIfNotFound: true);
+        // EkPickUpItems
+        m_EkPickUpItems = asset.FindActionMap("EkPickUpItems", throwIfNotFound: true);
+        m_EkPickUpItems_PickUpItems = m_EkPickUpItems.FindAction("PickUpItems", throwIfNotFound: true);
     }
 
     ~@EkControllerSystem()
     {
         UnityEngine.Debug.Assert(!m_EkMovementSystem.enabled, "This will cause a leak and performance issues, EkControllerSystem.EkMovementSystem.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_EscapeSystem.enabled, "This will cause a leak and performance issues, EkControllerSystem.EscapeSystem.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_EkPickUpItems.enabled, "This will cause a leak and performance issues, EkControllerSystem.EkPickUpItems.Disable() has not been called.");
     }
 
     /// <summary>
@@ -501,6 +534,102 @@ public partial class @EkControllerSystem: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="EscapeSystemActions" /> instance referencing this action map.
     /// </summary>
     public EscapeSystemActions @EscapeSystem => new EscapeSystemActions(this);
+
+    // EkPickUpItems
+    private readonly InputActionMap m_EkPickUpItems;
+    private List<IEkPickUpItemsActions> m_EkPickUpItemsActionsCallbackInterfaces = new List<IEkPickUpItemsActions>();
+    private readonly InputAction m_EkPickUpItems_PickUpItems;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "EkPickUpItems".
+    /// </summary>
+    public struct EkPickUpItemsActions
+    {
+        private @EkControllerSystem m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public EkPickUpItemsActions(@EkControllerSystem wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "EkPickUpItems/PickUpItems".
+        /// </summary>
+        public InputAction @PickUpItems => m_Wrapper.m_EkPickUpItems_PickUpItems;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_EkPickUpItems; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="EkPickUpItemsActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(EkPickUpItemsActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="EkPickUpItemsActions" />
+        public void AddCallbacks(IEkPickUpItemsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_EkPickUpItemsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_EkPickUpItemsActionsCallbackInterfaces.Add(instance);
+            @PickUpItems.started += instance.OnPickUpItems;
+            @PickUpItems.performed += instance.OnPickUpItems;
+            @PickUpItems.canceled += instance.OnPickUpItems;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="EkPickUpItemsActions" />
+        private void UnregisterCallbacks(IEkPickUpItemsActions instance)
+        {
+            @PickUpItems.started -= instance.OnPickUpItems;
+            @PickUpItems.performed -= instance.OnPickUpItems;
+            @PickUpItems.canceled -= instance.OnPickUpItems;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="EkPickUpItemsActions.UnregisterCallbacks(IEkPickUpItemsActions)" />.
+        /// </summary>
+        /// <seealso cref="EkPickUpItemsActions.UnregisterCallbacks(IEkPickUpItemsActions)" />
+        public void RemoveCallbacks(IEkPickUpItemsActions instance)
+        {
+            if (m_Wrapper.m_EkPickUpItemsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="EkPickUpItemsActions.AddCallbacks(IEkPickUpItemsActions)" />
+        /// <seealso cref="EkPickUpItemsActions.RemoveCallbacks(IEkPickUpItemsActions)" />
+        /// <seealso cref="EkPickUpItemsActions.UnregisterCallbacks(IEkPickUpItemsActions)" />
+        public void SetCallbacks(IEkPickUpItemsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_EkPickUpItemsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_EkPickUpItemsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="EkPickUpItemsActions" /> instance referencing this action map.
+    /// </summary>
+    public EkPickUpItemsActions @EkPickUpItems => new EkPickUpItemsActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "EkMovementSystem" which allows adding and removing callbacks.
     /// </summary>
@@ -537,5 +666,20 @@ public partial class @EkControllerSystem: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnExitGameplay(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "EkPickUpItems" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="EkPickUpItemsActions.AddCallbacks(IEkPickUpItemsActions)" />
+    /// <seealso cref="EkPickUpItemsActions.RemoveCallbacks(IEkPickUpItemsActions)" />
+    public interface IEkPickUpItemsActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "PickUpItems" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPickUpItems(InputAction.CallbackContext context);
     }
 }

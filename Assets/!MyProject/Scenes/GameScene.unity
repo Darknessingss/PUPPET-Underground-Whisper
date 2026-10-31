@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1101049637}
+    - target: {fileID: 1509841915793328969, guid: 31ae68f878615ee4aadaaf4d22bc9ffa, type: 3}
+      propertyPath: interactAction
+      value: 
+      objectReference: {fileID: 3209496079584641215, guid: 094ae502854f91c42b2f135ad15e2776, type: 3}
     - target: {fileID: 3329490136499546804, guid: 31ae68f878615ee4aadaaf4d22bc9ffa, type: 3}
       propertyPath: m_Name
       value: Pistol
@@ -1971,7 +1975,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5874e355a5bdab34a870fdddd0466ce5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2034,8 +2038,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 2, y: 2.875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2058,6 +2062,9 @@ MonoBehaviour:
   maxHealth: 100
   healthSlider: {fileID: 501257140}
   sliderLerpSpeed: 1.5
+  hitFlashColor: {r: 1, g: 0.4575472, b: 0.4575472, a: 1}
+  hitFlashDuration: 0.15
+  spriteRenderer: {fileID: 421292640}
 --- !u!1 &447256624
 GameObject:
   m_ObjectHideFlags: 0
@@ -6228,6 +6235,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1101049637}
+    - target: {fileID: 2093564008819806662, guid: 4659cd1f5ed2b7d43984f9045c1e00e7, type: 3}
+      propertyPath: interactAction
+      value: 
+      objectReference: {fileID: 3209496079584641215, guid: 094ae502854f91c42b2f135ad15e2776, type: 3}
     - target: {fileID: 2868060435039187003, guid: 4659cd1f5ed2b7d43984f9045c1e00e7, type: 3}
       propertyPath: m_Name
       value: Knife
@@ -7156,6 +7167,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1101049637}
+    - target: {fileID: 5160785859005729154, guid: f95964119a90c9343973641a7c210a72, type: 3}
+      propertyPath: interactAction
+      value: 
+      objectReference: {fileID: 3209496079584641215, guid: 094ae502854f91c42b2f135ad15e2776, type: 3}
     - target: {fileID: 9033794241373333631, guid: f95964119a90c9343973641a7c210a72, type: 3}
       propertyPath: m_Name
       value: Scyhte
@@ -7438,6 +7453,7 @@ RectTransform:
   - {fileID: 78966014}
   - {fileID: 84896828}
   - {fileID: 1793613031}
+  - {fileID: 1581661825}
   - {fileID: 1837746234}
   - {fileID: 788919080}
   - {fileID: 2111504556}
@@ -7467,6 +7483,41 @@ MonoBehaviour:
   weaponNameText: {fileID: 1203639184}
   ammoText: {fileID: 1511381191}
   weaponIconImage: {fileID: 1383792522}
+--- !u!1 &1581661824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581661825}
+  m_Layer: 5
+  m_Name: ShardMindness
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1581661825
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581661824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1559311175}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1610721062
 GameObject:
   m_ObjectHideFlags: 0

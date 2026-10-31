@@ -124,6 +124,35 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "EkPickUpItems",
+            "id": "1947a392-0c5a-4efc-83bd-139aa98ca94b",
+            "actions": [
+                {
+                    "name": "PickUpItems",
+                    "type": "Button",
+                    "id": "5ecfea15-7e70-4c12-b43a-9339c31ed9c7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "ee75f6a2-d7dc-4142-bbe2-4b3234c4101c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PickUpItems",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
