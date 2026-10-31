@@ -25,7 +25,7 @@ MonoBehaviour:
   maxReserveAmmo: 40
   bulletPrefab: {fileID: 0}
   reloadTime: 1.5
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: d6c9193ac18b0284fbe0dffd427f9dba, type: 3}
   reloadSound: {fileID: 0}
   volume: 1
   audioMixerGroup: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}
