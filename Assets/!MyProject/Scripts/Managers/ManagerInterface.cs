@@ -13,6 +13,7 @@ public class ManagerInterface : MonoBehaviour
     [SerializeField] private GameObject SettingsGameplay;
     [SerializeField] private GameObject exitPanel;
     [SerializeField] private GameObject deathPanel;
+    [SerializeField] private GameObject MindMapPanel;
 
     private EkControllerSystem inputPause;
     private bool isPaused;
@@ -24,6 +25,7 @@ public class ManagerInterface : MonoBehaviour
         SettingsMenu.SetActive(false);
         SettingsGameplay.SetActive(false);
         deathPanel.SetActive(false);
+        MindMapPanel.SetActive(false);
     }
 
     private void Start()
@@ -129,4 +131,24 @@ public class ManagerInterface : MonoBehaviour
 
         deathPanel.SetActive(true);
     }
+
+    public void ShowMindMap()
+    {
+        TogglePause(!isPaused);
+
+        MindMapPanel.SetActive(true);
+
+        pausePanel.SetActive(false);
+        MainMenuPanel.SetActive(false);
+        SettingsMenu.SetActive(false);
+        SettingsGameplay.SetActive(false);
+        exitPanel.SetActive(false);
+        deathPanel.SetActive(false);
+    }
+
+    public void CloseShowMap()
+    {
+        TogglePause(!isPaused);
+        MindMapPanel.SetActive(false);
+    }    
 }
