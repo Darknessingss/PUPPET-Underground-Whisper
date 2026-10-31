@@ -9,11 +9,13 @@ public class MeleeHitbox : MonoBehaviour
 
     private float damage;
     private float remainingLifetime;
-    private readonly HashSet<Collider2D> alreadyHitColliders = new HashSet<Collider2D>();
+    private bool returnedToPool;
+    private readonly HashSet<Collider2D> alreadyHitColliders = new();
 
     private void OnEnable()
     {
         remainingLifetime = lifetime;
+        returnedToPool = false;
         alreadyHitColliders.Clear();
     }
 
@@ -31,15 +33,19 @@ public class MeleeHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!IsInHitLayer(other.gameObject.layer))
+        if (!IsInHitLayer(other.gameObject.layer)) 
+            return;
+        if (!alreadyHitColliders.Add(other)) 
             return;
 
-        if (!alreadyHitColliders.Add(other))
-            return;
-
-        var damageableTarget = other.GetComponentInParent<IDamageable>();
-        if (damageableTarget != null)
-            damageableTarget.TakeDamage(damage);
+        if (other.TryGetComponent<IDamageable>(out var target))
+            target.TakeDamage(damage);
+        else
+        {
+            target = other.GetComponentInParent<IDamageable>();
+            if (target != null)
+                target.TakeDamage(damage);
+        }
     }
 
     private bool IsInHitLayer(int layer)
@@ -49,6 +55,10 @@ public class MeleeHitbox : MonoBehaviour
 
     private void ReturnToPool()
     {
+        if (returnedToPool) 
+            return;
+        returnedToPool = true;
+
         if (BulletPool.Instance != null)
             BulletPool.Instance.Return(gameObject);
         else

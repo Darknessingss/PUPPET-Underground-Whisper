@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public enum WeaponCategory { Melee, Range }
 
@@ -18,12 +19,22 @@ public class WeaponItem : ScriptableObject
     [Header("Stats")]
     [SerializeField] private float damage;
     [SerializeField] private float attackSpeed;
+
     [Header("Range Only")]
     [SerializeField] private bool usesAmmo;
     [SerializeField] private int magazineSize = 5;
     [SerializeField] private int maxReserveAmmo = 40;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float reloadTime = 1.5f;
+
+    [Header("Audio")]
+    [Tooltip("Melee: звук удара. Range: звук выстрела.")]
+    [SerializeField] private AudioClip attackSound;
+    [Tooltip("“олько Range + UsesAmmo: звук перезар€дки.")]
+    [SerializeField] private AudioClip reloadSound;
+    [Range(0f, 1f)]
+    [SerializeField] private float volume = 1f;
+    [SerializeField] private AudioMixerGroup audioMixerGroup;
 
     public string ItemID => itemID;
     public string DisplayName => displayName;
@@ -39,5 +50,12 @@ public class WeaponItem : ScriptableObject
     public GameObject BulletPrefab => bulletPrefab;
     public float ReloadTime => reloadTime;
 
+    public AudioClip AttackSound => attackSound;
+    public AudioClip ReloadSound => reloadSound;
+    public float Volume => volume;
+    public AudioMixerGroup AudioMixerGroup => audioMixerGroup;
+
     public bool IsRange => category == WeaponCategory.Range;
+
+    public bool HasReloadSound => IsRange && usesAmmo && reloadSound != null;
 }

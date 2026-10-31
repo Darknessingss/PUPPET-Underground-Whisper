@@ -8,16 +8,21 @@ public class AttackController : MonoBehaviour
 
     private const int WeaponSlotCount = 5;
 
-    private int[] magazineAmmo = new int[WeaponSlotCount];
-    private int[] reserveAmmo = new int[WeaponSlotCount];
+    private readonly int[] magazineAmmo = new int[WeaponSlotCount];
+    private readonly int[] reserveAmmo = new int[WeaponSlotCount];
     private float nextAttackTime;
     private bool isReloading;
     private float reloadEndTime;
     private Camera mainCamera;
+    private Keyboard keyboard;
+    private Mouse mouse;
 
     private void Awake()
     {
         mainCamera = Camera.main;
+        keyboard = Keyboard.current;
+        mouse = Mouse.current;
+
         for (int i = 0; i < WeaponSlotCount; i++)
         {
             magazineAmmo[i] = -1;
@@ -28,13 +33,7 @@ public class AttackController : MonoBehaviour
     private void Update()
     {
         var weapon = inventory?.CurrentWeapon;
-        if (weapon == null)
-            return;
-
-        var keyboard = Keyboard.current;
-        var mouse = Mouse.current;
-        if (keyboard == null || mouse == null)
-            return;
+        if (weapon == null || keyboard == null || mouse == null) return;
 
         if (isReloading)
         {
@@ -54,16 +53,18 @@ public class AttackController : MonoBehaviour
             nextAttackTime = Time.time + 1f / Mathf.Max(0.01f, weapon.AttackSpeed);
             Vector2 aimDirection = GetAimDirection();
 
-            if (weapon.IsRange)
-                AttackRange(weapon, aimDirection);
-            else
-                AttackMelee(weapon, aimDirection);
+            bool attacked = weapon.IsRange
+                ? AttackRange(weapon, aimDirection)
+                : AttackMelee(weapon, aimDirection);
+
+            if (attacked)
+                WeaponAudioService.Instance?.PlayAttack(weapon);
         }
     }
 
     private Vector2 GetAimDirection()
     {
-        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(mouse.position.ReadValue());
         mouseWorldPosition.z = 0f;
 
         Vector3 origin = attackOriginCollider != null
@@ -80,70 +81,95 @@ public class AttackController : MonoBehaviour
             return transform.position;
 
         Vector3 center = attackOriginCollider.bounds.center;
-        float radius;
-
-        if (attackOriginCollider is CircleCollider2D circleCollider)
-            radius = circleCollider.radius * attackOriginCollider.transform.lossyScale.x;
-        else
-            radius = attackOriginCollider.bounds.extents.x;
+        float radius = attackOriginCollider is CircleCollider2D circle
+            ? circle.radius * attackOriginCollider.transform.lossyScale.x
+            : attackOriginCollider.bounds.extents.x;
 
         return center + (Vector3)(aimDirection * radius);
     }
 
-    private void AttackMelee(WeaponItem weapon, Vector2 aimDirection)
+    private bool AttackMelee(WeaponItem weapon, Vector2 aimDirection)
     {
-        if (weapon.SlashPrefab == null || BulletPool.Instance == null)
-            return;
+        if (weapon.SlashPrefab == null || BulletPool.Instance == null) 
+            return false;
 
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        Quaternion slashRotation = Quaternion.Euler(0, 0, angle);
+        var slashInstance = BulletPool.Instance.Get(
+            weapon.SlashPrefab,
+            GetSpawnPosition(aimDirection),
+            Quaternion.Euler(0, 0, angle));
 
-        var slashInstance = BulletPool.Instance.Get(weapon.SlashPrefab, GetSpawnPosition(aimDirection), slashRotation);
+        if (slashInstance == null) 
+            return false;
+
         if (slashInstance.TryGetComponent<MeleeHitbox>(out var hitbox))
+        {
             hitbox.Init(weapon.Damage);
+            return true;
+        }
+        BulletPool.Instance.Return(slashInstance);
+        return false;
     }
 
-    private void AttackRange(WeaponItem weapon, Vector2 aimDirection)
+    private bool AttackRange(WeaponItem weapon, Vector2 aimDirection)
     {
-        if (weapon.BulletPrefab == null || BulletPool.Instance == null) return;
+        if (weapon.BulletPrefab == null || BulletPool.Instance == null) return false;
 
         int idx = inventory.CurrentIndex;
         if (weapon.UsesAmmo)
         {
             EnsureAmmoInit(idx, weapon);
-            if (magazineAmmo[idx] <= 0) { TryStartReload(weapon); 
-                return; }
-            magazineAmmo[idx]--;
+            if (magazineAmmo[idx] <= 0)
+            {
+                TryStartReload(weapon);
+                return false;
+            }
         }
 
-        var rot = Quaternion.Euler(0, 0, Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg);
-        if (BulletPool.Instance.Get(weapon.BulletPrefab, GetSpawnPosition(aimDirection), rot)
-            .TryGetComponent<Bullet>(out var bullet))
-            bullet.Launch(aimDirection, weapon.Damage);
+        float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
+        var bulletInstance = BulletPool.Instance.Get(
+            weapon.BulletPrefab,
+            GetSpawnPosition(aimDirection),
+            Quaternion.Euler(0, 0, angle));
+
+        if (bulletInstance == null) return false;
+
+        if (!bulletInstance.TryGetComponent<Bullet>(out var bullet))
+        {
+            BulletPool.Instance.Return(bulletInstance);
+            return false;
+        }
+
+        if (weapon.UsesAmmo)
+            magazineAmmo[idx]--;
+
+        bullet.Launch(aimDirection, weapon.Damage);
+        return true;
     }
 
     private void EnsureAmmoInit(int weaponIndex, WeaponItem weapon)
     {
-        if (magazineAmmo[weaponIndex] < 0)
-        {
-            magazineAmmo[weaponIndex] = weapon.MagazineSize;
-            reserveAmmo[weaponIndex] = weapon.MaxReserveAmmo;
-        }
+        if (magazineAmmo[weaponIndex] >= 0) 
+            return;
+        magazineAmmo[weaponIndex] = weapon.MagazineSize;
+        reserveAmmo[weaponIndex] = weapon.MaxReserveAmmo;
     }
 
     private void TryStartReload(WeaponItem weapon)
     {
-        if (!weapon.UsesAmmo || !weapon.IsRange || isReloading)
+        if (isReloading || !weapon.IsRange || !weapon.UsesAmmo) 
             return;
 
-        int weaponIndex = inventory.CurrentIndex;
-        EnsureAmmoInit(weaponIndex, weapon);
+        int idx = inventory.CurrentIndex;
+        EnsureAmmoInit(idx, weapon);
 
-        if (magazineAmmo[weaponIndex] >= weapon.MagazineSize || reserveAmmo[weaponIndex] <= 0)
+        if (magazineAmmo[idx] >= weapon.MagazineSize || reserveAmmo[idx] <= 0)
             return;
 
         isReloading = true;
         reloadEndTime = Time.time + weapon.ReloadTime;
+
+        WeaponAudioService.Instance?.PlayReload(weapon);
     }
 
     public void EnsureAmmoInitForCurrent()
@@ -155,10 +181,10 @@ public class AttackController : MonoBehaviour
 
     private void FinishReload(WeaponItem weapon)
     {
-        int weaponIndex = inventory.CurrentIndex;
-        int amountToReload = Mathf.Min(weapon.MagazineSize - magazineAmmo[weaponIndex], reserveAmmo[weaponIndex]);
-        magazineAmmo[weaponIndex] += amountToReload;
-        reserveAmmo[weaponIndex] -= amountToReload;
+        int idx = inventory.CurrentIndex;
+        int amount = Mathf.Min(weapon.MagazineSize - magazineAmmo[idx], reserveAmmo[idx]);
+        magazineAmmo[idx] += amount;
+        reserveAmmo[idx] -= amount;
     }
 
     public int GetMagazine(int slot) => magazineAmmo[slot];

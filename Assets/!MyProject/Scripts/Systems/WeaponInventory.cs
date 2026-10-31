@@ -13,13 +13,15 @@ public class WeaponInventory : MonoBehaviour
 
     public WeaponItem GetSlot(int index)
     {
-        if (index < 0 || index >= slots.Length) return null;
+        if (index < 0 || index >= slots.Length) 
+            return null;
         return slots[index];
     }
 
     public bool TryAddWeapon(WeaponItem item)
     {
-        if (item == null) return false;
+        if (item == null) 
+            return false;
 
         for (int i = 0; i < slots.Length; i++)
         {
@@ -34,8 +36,10 @@ public class WeaponInventory : MonoBehaviour
 
     public void SelectSlot(int index)
     {
-        if (index < 0 || index >= slots.Length) return;
-        if (slots[index] == null) return;
+        if (index < 0 || index >= slots.Length) 
+            return;
+        if (slots[index] == null) 
+            return;
         currentIndex = index;
     }
 }

@@ -7,20 +7,26 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float lifetime = 3f;
     [SerializeField] private LayerMask hitLayers;
 
+    private Rigidbody2D rb;
     private float damage;
     private float remainingLifetime;
+    private bool returnedToPool;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
 
     private void OnEnable()
     {
         remainingLifetime = lifetime;
+        returnedToPool = false;
     }
 
     public void Launch(Vector2 direction, float damageAmount)
     {
         damage = damageAmount;
-
-        var rigidbody2D = GetComponent<Rigidbody2D>();
-        rigidbody2D.linearVelocity = direction * speed;
+        rb.linearVelocity = direction * speed;
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -35,12 +41,19 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!IsInHitLayer(other.gameObject.layer))
+        if (returnedToPool) 
+            return;
+        if (!IsInHitLayer(other.gameObject.layer)) 
             return;
 
-        var damageableTarget = other.GetComponentInParent<IDamageable>();
-        if (damageableTarget != null)
-            damageableTarget.TakeDamage(damage);
+        if (other.TryGetComponent<IDamageable>(out var target))
+            target.TakeDamage(damage);
+        else
+        {
+            target = other.GetComponentInParent<IDamageable>();
+            if (target != null)
+                target.TakeDamage(damage);
+        }
 
         ReturnToPool();
     }
@@ -52,6 +65,10 @@ public class Bullet : MonoBehaviour
 
     private void ReturnToPool()
     {
+        if (returnedToPool) 
+            return;
+        returnedToPool = true;
+
         if (BulletPool.Instance != null)
             BulletPool.Instance.Return(gameObject);
         else

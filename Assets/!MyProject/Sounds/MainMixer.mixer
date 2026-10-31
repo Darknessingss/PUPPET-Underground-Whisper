@@ -23,14 +23,13 @@ AudioMixerGroupController:
   m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 6c27b20d7ffaeec43bcbaf555fb71af1
-  m_Children:
-  - {fileID: 5689180803045617601}
+  m_Children: []
   m_Volume: 9458f813ba7e44c4d8d18726ef344d60
   m_Pitch: 449e08b977bb51a4ca2ae7f1a4ce4f3b
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 2912958956571653086}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 6
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -63,7 +62,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 492b3c0def4e30149b11b2d61d1d406e
+    name: GameplaySFX
+  - guid: 449e08b977bb51a4ca2ae7f1a4ce4f3b
+    name: MusicSFX
+  - guid: 4f973620cd78a8c4582ddaf146994765
+    name: UISFX
   m_AudioMixerGroupViews:
   - guids:
     - 5a5260a3fa1fa184e8893ccd9620b956
@@ -83,13 +88,15 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 5a5260a3fa1fa184e8893ccd9620b956
   m_Children:
+  - {fileID: 5689180803045617601}
   - {fileID: -4209789814822897883}
+  - {fileID: 4136719252937611478}
   m_Volume: 6496f6c7397537f43831ea586782253d
   m_Pitch: 118f748f359f8e84a81d5c1e98cbb6ad
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -147,7 +154,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -6158115525482762946}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 3
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -160,14 +167,13 @@ AudioMixerGroupController:
   m_Name: UI
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 7da9761d6d616ae4297023cb5f9b0db9
-  m_Children:
-  - {fileID: 4136719252937611478}
+  m_Children: []
   m_Volume: b2afc539442763143b1e036233c8063d
   m_Pitch: 4f973620cd78a8c4582ddaf146994765
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -1158186988959889420}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 8
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0

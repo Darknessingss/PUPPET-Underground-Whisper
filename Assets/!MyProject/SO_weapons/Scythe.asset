@@ -19,9 +19,13 @@ MonoBehaviour:
   slashPrefab: {fileID: 1539059448794586928, guid: a6fa7db088d5b874d91f69ff2b35b229, type: 3}
   category: 0
   damage: 35
-  attackSpeed: 0.6
+  attackSpeed: 0.8
   usesAmmo: 0
   magazineSize: 5
   maxReserveAmmo: 40
   bulletPrefab: {fileID: 0}
   reloadTime: 1.5
+  attackSound: {fileID: 0}
+  reloadSound: {fileID: 0}
+  volume: 1
+  audioMixerGroup: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}

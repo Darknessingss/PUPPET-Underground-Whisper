@@ -6,49 +6,59 @@ public class WeaponItemEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        serializedObject.Update();
+        var so = serializedObject;
+        so.Update();
 
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("itemID"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("displayName"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("icon"));
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("worldPrefab"));
+        EditorGUILayout.PropertyField(so.FindProperty("itemID"));
+        EditorGUILayout.PropertyField(so.FindProperty("displayName"));
+        EditorGUILayout.PropertyField(so.FindProperty("icon"));
+        EditorGUILayout.PropertyField(so.FindProperty("worldPrefab"));
 
-        var categoryProp = serializedObject.FindProperty("category");
+        var categoryProp = so.FindProperty("category");
         EditorGUILayout.PropertyField(categoryProp);
-        bool isRange = categoryProp.enumValueIndex == (int)WeaponCategory.Range;
 
-        if (!isRange)
+        bool isRange = categoryProp.enumValueIndex == (int)WeaponCategory.Range;
+        var usesAmmoProp = so.FindProperty("usesAmmo");
+
+        if (isRange)
         {
-            EditorGUILayout.LabelField("Melee", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("slashPrefab"));
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("Range", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(so.FindProperty("bulletPrefab"));
+            EditorGUILayout.PropertyField(usesAmmoProp);
+
+            if (usesAmmoProp.boolValue)
+            {
+                EditorGUILayout.Space();
+                EditorGUILayout.PropertyField(so.FindProperty("magazineSize"));
+                EditorGUILayout.PropertyField(so.FindProperty("maxReserveAmmo"));
+                EditorGUILayout.PropertyField(so.FindProperty("reloadTime"));
+            }
         }
         else
         {
             EditorGUILayout.Space();
-            EditorGUILayout.LabelField("Range", EditorStyles.boldLabel);
-            EditorGUILayout.PropertyField(serializedObject.FindProperty("bulletPrefab"));
-
-            var usesAmmoProp = serializedObject.FindProperty("usesAmmo");
-            EditorGUILayout.PropertyField(usesAmmoProp);
-
-            EditorGUILayout.Space();
-
-            if (usesAmmoProp.boolValue)
-            {
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("magazineSize"));
-                EditorGUILayout.Space();
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("maxReserveAmmo"));
-                EditorGUILayout.Space();
-                EditorGUILayout.PropertyField(serializedObject.FindProperty("reloadTime"));
-                EditorGUILayout.Space();
-            }
+            EditorGUILayout.LabelField("Melee", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(so.FindProperty("slashPrefab"));
         }
 
         EditorGUILayout.Space();
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("damage"));
-        EditorGUILayout.Space();
-        EditorGUILayout.PropertyField(serializedObject.FindProperty("attackSpeed"));
+        EditorGUILayout.PropertyField(so.FindProperty("damage"));
+        EditorGUILayout.PropertyField(so.FindProperty("attackSpeed"));
 
-        serializedObject.ApplyModifiedProperties();
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Audio", EditorStyles.boldLabel);
+
+        EditorGUILayout.PropertyField(
+            so.FindProperty("attackSound"),
+            new GUIContent(isRange ? "Shot Sound" : "Attack Sound"));
+
+        if (isRange && usesAmmoProp.boolValue)
+            EditorGUILayout.PropertyField(so.FindProperty("reloadSound"));
+
+        EditorGUILayout.PropertyField(so.FindProperty("volume"));
+        EditorGUILayout.PropertyField(so.FindProperty("audioMixerGroup"));
+
+        so.ApplyModifiedProperties();
     }
 }
