@@ -27,9 +27,14 @@ public class WeaponItemEditor : Editor
             EditorGUILayout.PropertyField(so.FindProperty("bulletPrefab"));
             EditorGUILayout.PropertyField(usesAmmoProp);
 
+            EditorGUILayout.Space();
+            EditorGUILayout.LabelField("Muzzle Flash", EditorStyles.boldLabel);
+            EditorGUILayout.PropertyField(so.FindProperty("muzzleFlashPrefab"));
+
             if (usesAmmoProp.boolValue)
             {
                 EditorGUILayout.Space();
+                EditorGUILayout.LabelField("Ammo", EditorStyles.boldLabel);
                 EditorGUILayout.PropertyField(so.FindProperty("magazineSize"));
                 EditorGUILayout.PropertyField(so.FindProperty("maxReserveAmmo"));
                 EditorGUILayout.PropertyField(so.FindProperty("reloadTime"));

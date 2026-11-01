@@ -27,6 +27,9 @@ public class WeaponItem : ScriptableObject
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float reloadTime = 1.5f;
 
+    [Header("Muzzle Flash (Range Only)")]
+    [SerializeField] private GameObject muzzleFlashPrefab;
+
     [Header("Audio")]
     [Tooltip("Melee: звук удара. Range: звук выстрела.")]
     [SerializeField] private AudioClip attackSound;
@@ -50,12 +53,14 @@ public class WeaponItem : ScriptableObject
     public GameObject BulletPrefab => bulletPrefab;
     public float ReloadTime => reloadTime;
 
+    public GameObject MuzzleFlashPrefab => muzzleFlashPrefab;
+
     public AudioClip AttackSound => attackSound;
     public AudioClip ReloadSound => reloadSound;
     public float Volume => volume;
     public AudioMixerGroup AudioMixerGroup => audioMixerGroup;
 
     public bool IsRange => category == WeaponCategory.Range;
-
     public bool HasReloadSound => IsRange && usesAmmo && reloadSound != null;
+    public bool HasMuzzleFlash => IsRange && muzzleFlashPrefab != null;
 }

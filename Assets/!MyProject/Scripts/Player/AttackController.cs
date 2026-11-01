@@ -32,7 +32,7 @@ public class AttackController : MonoBehaviour
 
     private void Update()
     {
-        var weapon = inventory?.CurrentWeapon;
+        var weapon = inventory != null ? inventory.CurrentWeapon : null;
         if (weapon == null || keyboard == null || mouse == null) return;
 
         if (isReloading)
@@ -88,9 +88,18 @@ public class AttackController : MonoBehaviour
         return center + (Vector3)(aimDirection * radius);
     }
 
+    private bool SpawnMuzzleFlash(WeaponItem weapon, Vector3 position, Quaternion rotation)
+    {
+        if (!weapon.HasMuzzleFlash || BulletPool.Instance == null)
+            return false;
+
+        var flash = BulletPool.Instance.Get(weapon.MuzzleFlashPrefab, position, rotation);
+        return flash != null;
+    }
+
     private bool AttackMelee(WeaponItem weapon, Vector2 aimDirection)
     {
-        if (weapon.SlashPrefab == null || BulletPool.Instance == null) 
+        if (weapon.SlashPrefab == null || BulletPool.Instance == null)
             return false;
 
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
@@ -99,7 +108,7 @@ public class AttackController : MonoBehaviour
             GetSpawnPosition(aimDirection),
             Quaternion.Euler(0, 0, angle));
 
-        if (slashInstance == null) 
+        if (slashInstance == null)
             return false;
 
         if (slashInstance.TryGetComponent<MeleeHitbox>(out var hitbox))
@@ -107,15 +116,18 @@ public class AttackController : MonoBehaviour
             hitbox.Init(weapon.Damage);
             return true;
         }
+
         BulletPool.Instance.Return(slashInstance);
         return false;
     }
 
     private bool AttackRange(WeaponItem weapon, Vector2 aimDirection)
     {
-        if (weapon.BulletPrefab == null || BulletPool.Instance == null) return false;
+        if (weapon.BulletPrefab == null || BulletPool.Instance == null)
+            return false;
 
         int idx = inventory.CurrentIndex;
+
         if (weapon.UsesAmmo)
         {
             EnsureAmmoInit(idx, weapon);
@@ -127,11 +139,12 @@ public class AttackController : MonoBehaviour
         }
 
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        var bulletInstance = BulletPool.Instance.Get(
-            weapon.BulletPrefab,
-            GetSpawnPosition(aimDirection),
-            Quaternion.Euler(0, 0, angle));
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
+        Vector3 spawnPosition = GetSpawnPosition(aimDirection);
 
+        SpawnMuzzleFlash(weapon, spawnPosition, rotation);
+
+        var bulletInstance = BulletPool.Instance.Get(weapon.BulletPrefab, spawnPosition, rotation);
         if (bulletInstance == null) return false;
 
         if (!bulletInstance.TryGetComponent<Bullet>(out var bullet))
@@ -149,7 +162,7 @@ public class AttackController : MonoBehaviour
 
     private void EnsureAmmoInit(int weaponIndex, WeaponItem weapon)
     {
-        if (magazineAmmo[weaponIndex] >= 0) 
+        if (magazineAmmo[weaponIndex] >= 0)
             return;
         magazineAmmo[weaponIndex] = weapon.MagazineSize;
         reserveAmmo[weaponIndex] = weapon.MaxReserveAmmo;
@@ -157,7 +170,7 @@ public class AttackController : MonoBehaviour
 
     private void TryStartReload(WeaponItem weapon)
     {
-        if (isReloading || !weapon.IsRange || !weapon.UsesAmmo) 
+        if (isReloading || !weapon.IsRange || !weapon.UsesAmmo)
             return;
 
         int idx = inventory.CurrentIndex;
@@ -174,7 +187,7 @@ public class AttackController : MonoBehaviour
 
     public void EnsureAmmoInitForCurrent()
     {
-        var weapon = inventory?.CurrentWeapon;
+        var weapon = inventory != null ? inventory.CurrentWeapon : null;
         if (weapon != null && weapon.UsesAmmo)
             EnsureAmmoInit(inventory.CurrentIndex, weapon);
     }
