@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452858b5d92f3f649ad5dd3931ee0ba7, type: 3}
+  m_Name: EnemyCrawlerMelee
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  enemyID: 123
+  displayName: Crawler
+  enemyPrefab: {fileID: 1853281082323137531, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+  category: 0
+  maxHealth: 100
+  moveSpeed: 3
+  damage: 7
+  attackSpeed: 1
+  meleeAttackPrefab: {fileID: 4697720233432405309, guid: 0a32711292939f543a2882da58be78d8, type: 3}
+  bulletPrefab: {fileID: 1960371414040159481, guid: a159fa7c5270ce74dafebef1d06db933, type: 3}
+  keepDistance: 8
+  detectionRadius: 15
+  hitSound: {fileID: 8300000, guid: 894662919363f5d49a6000ad1575b667, type: 3}
+  deathSound: {fileID: 8300000, guid: 9b14d5ac5606d284ca2e304e71991b33, type: 3}
+  detectionSound: {fileID: 8300000, guid: c6a15b47bb1d6344cafeaf4cc09be220, type: 3}
+  attackSound: {fileID: 8300000, guid: 4ff7b0d27b1f68f45a8a6ba84217591e, type: 3}
+  volume: 1
+  audioMixerGroup: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}
