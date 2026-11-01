@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class EkHealth : MonoBehaviour
+public class EkHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxHealth = 100f;
 
@@ -18,6 +17,7 @@ public class EkHealth : MonoBehaviour
     [SerializeField] private PlayerDeath death;
 
     private float _currentHealth;
+    private bool _isDead;
 
     public float CurrentHealth => _currentHealth;
     public float Normalized => _currentHealth / maxHealth;
@@ -30,17 +30,37 @@ public class EkHealth : MonoBehaviour
 
     private void Update()
     {
+        if (_isDead) 
+            return;
+
         if (soul.CurrentSoul <= 0f)
             _currentHealth -= damagePerSecondWhenNoSoul * Time.deltaTime;
-
         else if (soul.CurrentSoul > soulThresholdForHeal)
             _currentHealth += healPerSecond * Time.deltaTime;
 
         _currentHealth = Mathf.Clamp(_currentHealth, 0f, maxHealth);
-
         healthFill.fillAmount = Normalized;
 
         if (_currentHealth <= 0f)
+        {
+            _isDead = true;
             death.TryDie();
+        }
+    }
+
+    public void TakeDamage(float amount)
+    {
+        if (_isDead) 
+            return;
+
+        _currentHealth = Mathf.Max(_currentHealth - amount, 0f);
+        soul.TakeSoulDamage(amount * 0.5f);
+        healthFill.fillAmount = Normalized;
+
+        if (_currentHealth <= 0f)
+        {
+            _isDead = true;
+            death.TryDie();
+        }
     }
 }

@@ -34,6 +34,14 @@ public class EkSoul : MonoBehaviour
         _currentSoul += (inLight ? restorePerSecond : -drainPerSecond) * Time.deltaTime;
         _currentSoul = Mathf.Clamp(_currentSoul, 0f, maxSoul);
 
-        soulFill.fillAmount = Normalized;
+        if (soulFill != null)
+            soulFill.fillAmount = Normalized;
+    }
+
+    public void TakeSoulDamage(float amount)
+    {
+        _currentSoul = Mathf.Max(_currentSoul - amount, 0f);
+        if (soulFill != null)
+            soulFill.fillAmount = Normalized;
     }
 }
