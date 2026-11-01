@@ -40,14 +40,10 @@ public class EnemyDamageDealer : MonoBehaviour
             target.TakeDamage(damage);
             _hasHit = true;
         }
-        else
+        else if (other.GetComponentInParent<IDamageable>() is { } parentTarget)
         {
-            target = other.GetComponentInParent<IDamageable>();
-            if (target != null)
-            {
-                target.TakeDamage(damage);
-                _hasHit = true;
-            }
+            parentTarget.TakeDamage(damage);
+            _hasHit = true;
         }
     }
 
@@ -55,7 +51,7 @@ public class EnemyDamageDealer : MonoBehaviour
 
     private void ReturnToPool()
     {
-        if (_returnedToPool) 
+        if (_returnedToPool)
             return;
         _returnedToPool = true;
 
@@ -64,4 +60,4 @@ public class EnemyDamageDealer : MonoBehaviour
         else
             Destroy(gameObject);
     }
-}   
+}

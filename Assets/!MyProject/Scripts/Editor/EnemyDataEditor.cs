@@ -13,6 +13,8 @@ public class EnemyDataEditor : Editor
     private SerializedProperty _damage;
     private SerializedProperty _attackSpeed;
     private SerializedProperty _meleeAttackPrefab;
+    private SerializedProperty _bulletPrefab;
+    private SerializedProperty _keepDistance;
     private SerializedProperty _detectionRadius;
     private SerializedProperty _hitSound;
     private SerializedProperty _deathSound;
@@ -32,6 +34,8 @@ public class EnemyDataEditor : Editor
         _damage = serializedObject.FindProperty("damage");
         _attackSpeed = serializedObject.FindProperty("attackSpeed");
         _meleeAttackPrefab = serializedObject.FindProperty("meleeAttackPrefab");
+        _bulletPrefab = serializedObject.FindProperty("bulletPrefab");
+        _keepDistance = serializedObject.FindProperty("keepDistance");
         _detectionRadius = serializedObject.FindProperty("detectionRadius");
         _hitSound = serializedObject.FindProperty("hitSound");
         _deathSound = serializedObject.FindProperty("deathSound");
@@ -65,8 +69,16 @@ public class EnemyDataEditor : Editor
         EditorGUILayout.LabelField("Combat", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(_damage);
         EditorGUILayout.PropertyField(_attackSpeed);
+
         if (isMelee)
+        {
             EditorGUILayout.PropertyField(_meleeAttackPrefab, new GUIContent("Melee Attack (Slash)"));
+        }
+        else
+        {
+            EditorGUILayout.PropertyField(_bulletPrefab, new GUIContent("Bullet Prefab"));
+            EditorGUILayout.PropertyField(_keepDistance, new GUIContent("Keep Distance"));
+        }
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Detection", EditorStyles.boldLabel);

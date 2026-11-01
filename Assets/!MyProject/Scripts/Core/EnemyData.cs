@@ -23,7 +23,14 @@ public class EnemyData : ScriptableObject
     [Header("Combat")]
     [SerializeField] private float damage = 10f;
     [SerializeField] private float attackSpeed = 1f;
+
+    [Header("Melee Only")]
     [SerializeField] private GameObject meleeAttackPrefab;
+
+    [Header("Range Only")]
+    [SerializeField] private GameObject bulletPrefab;
+    [Tooltip("На каком расстоянии от игрока враг остановится и начнёт стрелять")]
+    [SerializeField] private float keepDistance = 4f;
 
     [Header("Detection")]
     [SerializeField] private float detectionRadius = 5f;
@@ -47,6 +54,10 @@ public class EnemyData : ScriptableObject
     public float Damage => damage;
     public float AttackSpeed => attackSpeed;
     public GameObject MeleeAttackPrefab => meleeAttackPrefab;
+
+    public GameObject BulletPrefab => bulletPrefab;
+    public float KeepDistance => keepDistance;
+
     public float DetectionRadius => detectionRadius;
 
     public AudioClip HitSound => hitSound;
@@ -57,4 +68,5 @@ public class EnemyData : ScriptableObject
     public AudioMixerGroup AudioMixerGroup => audioMixerGroup;
 
     public bool IsMelee => category == EnemyCategory.Melee;
+    public bool IsRange => category == EnemyCategory.Range;
 }
