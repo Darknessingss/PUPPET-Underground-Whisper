@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class AttackController : MonoBehaviour
 {
@@ -16,6 +19,8 @@ public class AttackController : MonoBehaviour
     private Camera mainCamera;
     private Keyboard keyboard;
     private Mouse mouse;
+
+    private readonly List<RaycastResult> uiRaycastResults = new List<RaycastResult>();
 
     private void Awake()
     {
@@ -45,10 +50,13 @@ public class AttackController : MonoBehaviour
             return;
         }
 
-        if (keyboard.rKey.wasPressedThisFrame)
+        // Курсор над кнопкой — не даём ни перезаряжаться, ни атаковать
+        bool pointerOverButton = IsPointerOverButton();
+
+        if (keyboard.rKey.wasPressedThisFrame && !pointerOverButton)
             TryStartReload(weapon);
 
-        if (mouse.leftButton.isPressed && Time.time >= nextAttackTime)
+        if (mouse.leftButton.isPressed && !pointerOverButton && Time.time >= nextAttackTime)
         {
             nextAttackTime = Time.time + 1f / Mathf.Max(0.01f, weapon.AttackSpeed);
             Vector2 aimDirection = GetAimDirection();
@@ -60,6 +68,32 @@ public class AttackController : MonoBehaviour
             if (attacked)
                 WeaponAudioService.Instance?.PlayAttack(weapon);
         }
+    }
+
+    private bool IsPointerOverButton()
+    {
+        if (EventSystem.current == null || mouse == null)
+            return false;
+
+        var eventData = new PointerEventData(EventSystem.current)
+        {
+            position = mouse.position.ReadValue()
+        };
+
+        uiRaycastResults.Clear();
+        EventSystem.current.RaycastAll(eventData, uiRaycastResults);
+
+        for (int i = 0; i < uiRaycastResults.Count; i++)
+        {
+            var go = uiRaycastResults[i].gameObject;
+            if (go == null) continue;
+
+            // Проверяем кнопку на самом объекте или у любого родителя
+            if (go.GetComponentInParent<Button>() != null)
+                return true;
+        }
+
+        return false;
     }
 
     private Vector2 GetAimDirection()

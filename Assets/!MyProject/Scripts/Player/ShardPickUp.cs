@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Audio;
 
 public class ShardPickup : MonoBehaviour
 {
     [SerializeField] private string playerTag = "Player";
     [SerializeField] private InputActionReference interactAction;
+
+    [Header("Звук")]
     [SerializeField] private AudioClip pickupSound;
+    [SerializeField] private AudioMixerGroup mixerGroup;
 
     private bool playerInRange;
 
@@ -31,7 +35,7 @@ public class ShardPickup : MonoBehaviour
 
     private void OnInteract(InputAction.CallbackContext context)
     {
-        if (!playerInRange) 
+        if (!playerInRange)
             return;
 
         LoreManager.Instance.CollectShard();
@@ -41,11 +45,15 @@ public class ShardPickup : MonoBehaviour
 
     private void PlayPickupSound()
     {
-        if (pickupSound == null) 
+        if (pickupSound == null)
             return;
 
         var go = new GameObject("ShardPickupSFX");
-        go.AddComponent<AudioSource>().PlayOneShot(pickupSound);
+        AudioSource source = go.AddComponent<AudioSource>();
+
+        source.outputAudioMixerGroup = mixerGroup;
+        source.PlayOneShot(pickupSound);
+
         Destroy(go, pickupSound.length);
     }
 }
