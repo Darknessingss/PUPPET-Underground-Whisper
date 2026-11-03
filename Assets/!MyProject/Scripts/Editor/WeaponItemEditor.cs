@@ -61,6 +61,7 @@ public class WeaponItemEditor : Editor
         if (isRange && usesAmmoProp.boolValue)
             EditorGUILayout.PropertyField(so.FindProperty("reloadSound"));
 
+        EditorGUILayout.PropertyField(so.FindProperty("pickupSound"));
         EditorGUILayout.PropertyField(so.FindProperty("volume"));
         EditorGUILayout.PropertyField(so.FindProperty("audioMixerGroup"));
 

@@ -31,10 +31,9 @@ public class WeaponItem : ScriptableObject
     [SerializeField] private GameObject muzzleFlashPrefab;
 
     [Header("Audio")]
-    [Tooltip("Melee: звук удара. Range: звук выстрела.")]
     [SerializeField] private AudioClip attackSound;
-    [Tooltip("“олько Range + UsesAmmo: звук перезар€дки.")]
     [SerializeField] private AudioClip reloadSound;
+    [SerializeField] private AudioClip pickupSound;
     [Range(0f, 1f)]
     [SerializeField] private float volume = 1f;
     [SerializeField] private AudioMixerGroup audioMixerGroup;
@@ -52,11 +51,11 @@ public class WeaponItem : ScriptableObject
     public int MaxReserveAmmo => maxReserveAmmo;
     public GameObject BulletPrefab => bulletPrefab;
     public float ReloadTime => reloadTime;
-
     public GameObject MuzzleFlashPrefab => muzzleFlashPrefab;
 
     public AudioClip AttackSound => attackSound;
     public AudioClip ReloadSound => reloadSound;
+    public AudioClip PickupSound => pickupSound;
     public float Volume => volume;
     public AudioMixerGroup AudioMixerGroup => audioMixerGroup;
 
