@@ -31,47 +31,52 @@ public class MusicManager : MonoBehaviour
         }
 
         Instance = this;
-
-        transform.SetParent(null);
         DontDestroyOnLoad(gameObject);
 
         menuSource = CreateSource("MenuMusic", menuClip);
         gameplaySource = CreateSource("GameplayMusic", gameplayClip);
 
-        menuSource.volume = musicVolume;
-        gameplaySource.volume = 0f;
-
-        menuSource.Play();
-        gameplaySource.Play();
+        ResetToMenuMusic();
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         if (Instance == this) Instance = null;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode) => ResetToMenuMusic();
+
+    private void ResetToMenuMusic()
+    {
+        StopFade();
+
+        gameplaySource.Stop();
+        gameplaySource.volume = 0f;
+
+        menuSource.Stop();
+        menuSource.volume = musicVolume;
+        menuSource.Play();
     }
 
     private AudioSource CreateSource(string name, AudioClip clip)
     {
-        var go = new GameObject(name);
-        go.transform.SetParent(transform);
+        var gameObject = new GameObject(name);
+        gameObject.transform.SetParent(transform);
 
-        var src = go.AddComponent<AudioSource>();
-        src.clip = clip;
-        src.loop = true;
-        src.playOnAwake = false;
-        src.outputAudioMixerGroup = musicMixerGroup;
-        return src;
+        var audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = clip;
+        audioSource.loop = true;
+        audioSource.playOnAwake = false;
+        audioSource.volume = 0f;
+        audioSource.outputAudioMixerGroup = musicMixerGroup;
+        return audioSource;
     }
 
-    public void PlayGameplayMusic()
-    {
-        Crossfade(menuSource, gameplaySource);
-    }
+    public void PlayGameplayMusic() => Crossfade(menuSource, gameplaySource);
 
-    public void PlayMenuMusic()
-    {
-        Crossfade(gameplaySource, menuSource);
-    }
+    public void PlayMenuMusic() => Crossfade(gameplaySource, menuSource);
 
     private void Crossfade(AudioSource from, AudioSource to)
     {
@@ -81,16 +86,18 @@ public class MusicManager : MonoBehaviour
 
     private void StopFade()
     {
-        if (fadeRoutine == null) return;
-
+        if (fadeRoutine == null) 
+            return;
         StopCoroutine(fadeRoutine);
         fadeRoutine = null;
     }
 
-    private IEnumerator CrossfadeRoutine(AudioSource from, AudioSource to)
+    private IEnumerator CrossfadeRoutine(AudioSource fromSource, AudioSource toSource)
     {
-        float startFromVolume = from.volume;
-        float startToVolume = to.volume;
+        if (!toSource.isPlaying) toSource.Play();
+
+        float startFromVolume = fromSource.volume;
+        float startToVolume = toSource.volume;
         float elapsedTime = 0f;
 
         while (elapsedTime < fadeDuration)
@@ -98,13 +105,14 @@ public class MusicManager : MonoBehaviour
             elapsedTime += Time.unscaledDeltaTime;
             float progress = Mathf.Clamp01(elapsedTime / fadeDuration);
 
-            from.volume = Mathf.Lerp(startFromVolume, 0f, progress);
-            to.volume = Mathf.Lerp(startToVolume, musicVolume, progress);
+            fromSource.volume = Mathf.Lerp(startFromVolume, 0f, progress);
+            toSource.volume = Mathf.Lerp(startToVolume, musicVolume, progress);
             yield return null;
         }
 
-        from.volume = 0f;
-        to.volume = musicVolume;
+        fromSource.volume = 0f;
+        fromSource.Stop();
+        toSource.volume = musicVolume;
         fadeRoutine = null;
     }
 }
