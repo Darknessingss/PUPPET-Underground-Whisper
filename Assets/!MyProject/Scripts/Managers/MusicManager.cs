@@ -24,7 +24,16 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
+
+        transform.SetParent(null);
+        DontDestroyOnLoad(gameObject);
 
         menuSource = CreateSource("MenuMusic", menuClip);
         gameplaySource = CreateSource("GameplayMusic", gameplayClip);
@@ -36,41 +45,9 @@ public class MusicManager : MonoBehaviour
         gameplaySource.Play();
     }
 
-    private void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        ResetToMenu();
-    }
-
     private void OnDestroy()
     {
         if (Instance == this) Instance = null;
-    }
-
-    private void ResetToMenu()
-    {
-        StopFade();
-
-        menuSource.Stop();
-        gameplaySource.Stop();
-
-        menuSource.time = 0f;
-        gameplaySource.time = 0f;
-
-        menuSource.volume = musicVolume;
-        gameplaySource.volume = 0f;
-
-        menuSource.Play();
-        gameplaySource.Play();
     }
 
     private AudioSource CreateSource(string name, AudioClip clip)
@@ -104,8 +81,7 @@ public class MusicManager : MonoBehaviour
 
     private void StopFade()
     {
-        if (fadeRoutine == null)
-            return;
+        if (fadeRoutine == null) return;
 
         StopCoroutine(fadeRoutine);
         fadeRoutine = null;
