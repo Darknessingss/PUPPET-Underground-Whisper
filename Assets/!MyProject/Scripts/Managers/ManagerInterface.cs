@@ -19,6 +19,16 @@ public class ManagerInterface : MonoBehaviour
     private EkControllerSystem inputPause;
     private bool isPaused;
 
+    public bool IsInputBlocked =>
+        isPaused ||
+        MainMenuPanel.activeSelf ||
+        SettingsMenu.activeSelf ||
+        SettingsGameplay.activeSelf ||
+        pausePanel.activeSelf ||
+        deathPanel.activeSelf ||
+        exitPanel.activeSelf ||
+        MindMapPanel.activeSelf;
+
     private void Awake()
     {
         inputPause = new EkControllerSystem();
@@ -37,6 +47,7 @@ public class ManagerInterface : MonoBehaviour
         MainMenuPanel.SetActive(true);
         pausePanel.SetActive(false);
     }
+
     private void OnEnable()
     {
         inputPause.Enable();
@@ -88,6 +99,7 @@ public class ManagerInterface : MonoBehaviour
         pausePanel.SetActive(false);
         MainMenuPanel.SetActive(false);
     }
+
     public void OpenSettingsGamePlay()
     {
         SettingsGameplay.SetActive(true);
@@ -122,9 +134,8 @@ public class ManagerInterface : MonoBehaviour
 
         if (MusicManager.Instance != null)
             MusicManager.Instance.PlayGameplayMusic();
-        else
-            Debug.LogWarning("MusicManager.Instance == null — музыка не переключена");
     }
+
     public void ShowDeathScreen()
     {
         isPaused = true;
@@ -157,5 +168,5 @@ public class ManagerInterface : MonoBehaviour
     {
         TogglePause(!isPaused);
         MindMapPanel.SetActive(false);
-    }    
+    }
 }

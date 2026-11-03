@@ -50,7 +50,6 @@ public class AttackController : MonoBehaviour
             return;
         }
 
-        // Курсор над кнопкой — не даём ни перезаряжаться, ни атаковать
         bool pointerOverButton = IsPointerOverButton();
 
         if (keyboard.rKey.wasPressedThisFrame && !pointerOverButton)
@@ -88,7 +87,6 @@ public class AttackController : MonoBehaviour
             var go = uiRaycastResults[i].gameObject;
             if (go == null) continue;
 
-            // Проверяем кнопку на самом объекте или у любого родителя
             if (go.GetComponentInParent<Button>() != null)
                 return true;
         }
