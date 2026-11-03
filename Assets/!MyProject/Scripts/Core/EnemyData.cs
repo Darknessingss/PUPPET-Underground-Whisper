@@ -29,6 +29,7 @@ public class EnemyData : ScriptableObject
 
     [Header("Range Only")]
     [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private GameObject muzzleFlashPrefab;
     [Tooltip("На каком расстоянии от игрока враг остановится и начнёт стрелять")]
     [SerializeField] private float keepDistance = 4f;
 
@@ -56,6 +57,7 @@ public class EnemyData : ScriptableObject
     public GameObject MeleeAttackPrefab => meleeAttackPrefab;
 
     public GameObject BulletPrefab => bulletPrefab;
+    public GameObject MuzzleFlashPrefab => muzzleFlashPrefab;
     public float KeepDistance => keepDistance;
 
     public float DetectionRadius => detectionRadius;

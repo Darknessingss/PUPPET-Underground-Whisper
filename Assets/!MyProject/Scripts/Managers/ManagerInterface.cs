@@ -119,6 +119,7 @@ public class ManagerInterface : MonoBehaviour
     {
         TogglePause(!isPaused);
         MainMenuPanel.SetActive(false);
+        MusicManager.Instance.PlayGameplayMusic();
     }
     public void ShowDeathScreen()
     {

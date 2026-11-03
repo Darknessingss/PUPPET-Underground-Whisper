@@ -4,15 +4,10 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private EnemyData enemyData;
     [SerializeField] private Transform player;
-    [SerializeField] private Collider2D attackOriginCollider;
+    [SerializeField] private EnemyCombat combat;
+    public EnemyData Data => enemyData;
 
-    [Header("Range Settings")]
-    [SerializeField] private float viewAngle = 90f;
-
-    private float _attackCooldown;
     private float _sqrDetectionRadius;
-    private float _attackRadius;
-    private Vector3 _colliderCenterOffset;
     private bool _playerDetected;
     private Vector2 _lastLookDirection = Vector2.right;
 
@@ -21,10 +16,7 @@ public class EnemyController : MonoBehaviour
         if (enemyData != null)
             _sqrDetectionRadius = enemyData.DetectionRadius * enemyData.DetectionRadius;
 
-        if (attackOriginCollider == null)
-            attackOriginCollider = GetComponent<Collider2D>();
-
-        CacheColliderData();
+        if (combat == null) combat = GetComponent<EnemyCombat>();
     }
 
     private void Start()
@@ -32,31 +24,13 @@ public class EnemyController : MonoBehaviour
         if (player == null)
         {
             var playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null)
-                player = playerObj.transform;
+            if (playerObj != null) player = playerObj.transform;
         }
-    }
-
-    private void CacheColliderData()
-    {
-        if (attackOriginCollider == null) return;
-
-        _colliderCenterOffset = attackOriginCollider.bounds.center - transform.position;
-        float scale = Mathf.Abs(transform.lossyScale.x);
-
-        if (attackOriginCollider is CapsuleCollider2D capsule)
-            _attackRadius = Mathf.Max(capsule.size.x, capsule.size.y) * 0.5f * scale;
-        else if (attackOriginCollider is CircleCollider2D circle)
-            _attackRadius = circle.radius * scale;
-        else if (attackOriginCollider is BoxCollider2D box)
-            _attackRadius = Mathf.Max(box.size.x, box.size.y) * 0.5f * scale;
-        else
-            _attackRadius = Mathf.Max(attackOriginCollider.bounds.extents.x, attackOriginCollider.bounds.extents.y);
     }
 
     private void Update()
     {
-        if (enemyData == null || player == null)
+        if (enemyData == null || player == null) 
             return;
 
         Vector2 toPlayer = (Vector2)(player.position - transform.position);
@@ -80,7 +54,7 @@ public class EnemyController : MonoBehaviour
 
         if (enemyData.IsMelee)
         {
-            MoveMelee(direction);
+            transform.position += (Vector3)(direction * (enemyData.MoveSpeed * Time.deltaTime));
             _lastLookDirection = direction;
         }
         else
@@ -88,21 +62,7 @@ public class EnemyController : MonoBehaviour
             MoveRange(direction, sqrDistance);
         }
 
-
-        _attackCooldown -= Time.deltaTime;
-
-        if (_attackCooldown > 0f) 
-            return;
-        if (enemyData.IsRange && Vector2.Angle(_lastLookDirection, direction) > viewAngle * 0.5f)
-            return;
-
-        Attack(direction);
-        _attackCooldown = 1f / Mathf.Max(enemyData.AttackSpeed, 0.01f);
-    }
-
-    private void MoveMelee(Vector2 direction)
-    {
-        transform.position += (Vector3)(direction * (enemyData.MoveSpeed * Time.deltaTime));
+        combat?.ProcessAttack(direction, _lastLookDirection);
     }
 
     private void MoveRange(Vector2 direction, float sqrDistance)
@@ -123,49 +83,6 @@ public class EnemyController : MonoBehaviour
         else
         {
             _lastLookDirection = direction;
-        }
-    }
-
-    private void Attack(Vector2 direction)
-    {
-        EnemyAudioService.Instance.PlayAttack(enemyData);
-
-        if (enemyData.IsMelee && enemyData.MeleeAttackPrefab != null)
-            AttackMelee(direction);
-        else if (enemyData.IsRange && enemyData.BulletPrefab != null)
-            AttackRange(direction);
-    }
-
-    private void AttackMelee(Vector2 direction)
-    {
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
-
-        Vector3 spawnPosition = transform.position + _colliderCenterOffset + (Vector3)(direction * _attackRadius);
-        var slash = Instantiate(enemyData.MeleeAttackPrefab, spawnPosition, rotation);
-
-        var dealer = slash.GetComponent<EnemyDamageDealer>();
-        if (dealer != null)
-            dealer.SetDamage(enemyData.Damage);
-    }
-
-    private void AttackRange(Vector2 direction)
-    {
-        if (BulletPool.Instance == null)
-        {
-            Debug.LogError("BulletPool.Instance is missing on the scene!");
-            return;
-        }
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.Euler(0, 0, angle);
-
-        Vector3 spawnPosition = transform.position + _colliderCenterOffset + (Vector3)(direction * (_attackRadius + 0.2f));
-
-        var bulletInstance = BulletPool.Instance.Get(enemyData.BulletPrefab, spawnPosition, rotation);
-        if (bulletInstance != null && bulletInstance.TryGetComponent<Bullet>(out var bullet))
-        {
-            bullet.Launch(direction, enemyData.Damage);
         }
     }
 

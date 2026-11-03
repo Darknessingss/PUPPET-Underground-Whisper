@@ -14,6 +14,7 @@ public class EnemyDataEditor : Editor
     private SerializedProperty _attackSpeed;
     private SerializedProperty _meleeAttackPrefab;
     private SerializedProperty _bulletPrefab;
+    private SerializedProperty _muzzleFlashPrefab;
     private SerializedProperty _keepDistance;
     private SerializedProperty _detectionRadius;
     private SerializedProperty _hitSound;
@@ -35,6 +36,7 @@ public class EnemyDataEditor : Editor
         _attackSpeed = serializedObject.FindProperty("attackSpeed");
         _meleeAttackPrefab = serializedObject.FindProperty("meleeAttackPrefab");
         _bulletPrefab = serializedObject.FindProperty("bulletPrefab");
+        _muzzleFlashPrefab = serializedObject.FindProperty("muzzleFlashPrefab");
         _keepDistance = serializedObject.FindProperty("keepDistance");
         _detectionRadius = serializedObject.FindProperty("detectionRadius");
         _hitSound = serializedObject.FindProperty("hitSound");
@@ -76,7 +78,9 @@ public class EnemyDataEditor : Editor
         }
         else
         {
+            EditorGUILayout.LabelField("Range Settings", EditorStyles.boldLabel);
             EditorGUILayout.PropertyField(_bulletPrefab, new GUIContent("Bullet Prefab"));
+            EditorGUILayout.PropertyField(_muzzleFlashPrefab, new GUIContent("Muzzle Flash Prefab"));
             EditorGUILayout.PropertyField(_keepDistance, new GUIContent("Keep Distance"));
         }
 

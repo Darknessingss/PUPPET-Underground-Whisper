@@ -501,8 +501,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShardPickup
   playerTag: Player
   interactAction: {fileID: 0}
-  pickupSound: {fileID: 0}
-  mixerGroup: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: d8eaad2cc14b66f468c101978b6d9aa9, type: 3}
+  mixerGroup: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}
 --- !u!95 &1483926840183911950
 Animator:
   serializedVersion: 7

@@ -279,6 +279,7 @@ GameObject:
   - component: {fileID: 264983504150302514}
   - component: {fileID: 6794189230917677674}
   - component: {fileID: 1666087922723831270}
+  - component: {fileID: 3565441907929830132}
   - component: {fileID: 3407564558713028145}
   - component: {fileID: 6551065229192453241}
   m_Layer: 7
@@ -398,6 +399,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   enemyData: {fileID: 0}
   player: {fileID: 0}
+  combat: {fileID: 0}
+--- !u!114 &3565441907929830132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853281082323137531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4204ee2613e6b8b4d9e07d824408225a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyCombat
+  enemyData: {fileID: 0}
   attackOriginCollider: {fileID: 0}
   viewAngle: 90
 --- !u!70 &3407564558713028145

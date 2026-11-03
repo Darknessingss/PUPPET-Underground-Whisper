@@ -18,7 +18,7 @@ public class ButtonSounds : MonoBehaviour, IPointerEnterHandler
 
     private void OnDestroy()
     {
-            button.onClick.RemoveListener(PlayClickSound);
+        button.onClick.RemoveListener(PlayClickSound);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
