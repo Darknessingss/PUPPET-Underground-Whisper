@@ -28,6 +28,6 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 0}
   attackSound: {fileID: 8300000, guid: d6c9193ac18b0284fbe0dffd427f9dba, type: 3}
   reloadSound: {fileID: 0}
-  pickupSound: {fileID: 8300000, guid: 15a137e1e64bce44992a9e15d7795be0, type: 3}
+  pickupSound: {fileID: 8300000, guid: bea1be2b7c16c61459b1bf8330024575, type: 3}
   volume: 1
   audioMixerGroup: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}
