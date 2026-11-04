@@ -1,0 +1,402 @@
+fileFormatVersion: 2
+guid: da7f86f9367c8ea40bc80b3b7604e4ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4675656728132126885
+    second: lantern_soul_props_0
+  - first:
+      213: -4962273449327574674
+    second: lantern_soul_props_1
+  - first:
+      213: 5289037303730612295
+    second: lantern_soul_props_2
+  - first:
+      213: -5519631227146833446
+    second: lantern_soul_props_3
+  - first:
+      213: -1062880935196387182
+    second: lantern_soul_props_4
+  - first:
+      213: 4913567206990763362
+    second: lantern_soul_props_5
+  - first:
+      213: 388504525566795065
+    second: lantern_soul_props_6
+  - first:
+      213: 5007360545615605369
+    second: lantern_soul_props_7
+  - first:
+      213: -2213434580751551472
+    second: lantern_soul_props_8
+  - first:
+      213: -1939251560557165169
+    second: lantern_soul_props_9
+  - first:
+      213: 1781795840144258518
+    second: lantern_soul_props_10
+  - first:
+      213: 5932697466508170527
+    second: lantern_soul_props_11
+  - first:
+      213: 7038196581257646916
+    second: lantern_soul_props_12
+  - first:
+      213: -2602835743956097914
+    second: lantern_soul_props_13
+  - first:
+      213: -4456669022272603598
+    second: lantern_soul_props_14
+  - first:
+      213: 1073324733786770739
+    second: lantern_soul_props_15
+  - first:
+      213: -331639260164656754
+    second: lantern_soul_props_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lantern_soul_props_0
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 489
+        width: 162
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57f40c7afabc1fb0800000000000000
+      internalID: -4675656728132126885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_1
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 489
+        width: 162
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e614a7ec696722bb0800000000000000
+      internalID: -4962273449327574674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_2
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 489
+        width: 162
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74827acb76f666940800000000000000
+      internalID: 5289037303730612295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_3
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 489
+        width: 161
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad172c6a4a45663b0800000000000000
+      internalID: -5519631227146833446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_4
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 489
+        width: 162
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298951bbb63ef31f0800000000000000
+      internalID: -1062880935196387182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 65
+        width: 162
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e69b7d2e7bd7540800000000000000
+      internalID: 5007360545615605369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_6
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 65
+        width: 170
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014fcb0e9fc4841e0800000000000000
+      internalID: -2213434580751551472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_7
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 65
+        width: 162
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5311250e53ab810800000000000000
+      internalID: 1781795840144258518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_8
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 65
+        width: 162
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15541bb9ec255250800000000000000
+      internalID: 5932697466508170527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantern_soul_props_9
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 65
+        width: 162
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684aec86eaed0ebd0800000000000000
+      internalID: -2602835743956097914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 858d1dd8083ec7342840c70b1e96d47a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lantern_soul_props_0: -4675656728132126885
+      lantern_soul_props_1: -4962273449327574674
+      lantern_soul_props_12: 7038196581257646916
+      lantern_soul_props_14: -4456669022272603598
+      lantern_soul_props_15: 1073324733786770739
+      lantern_soul_props_16: -331639260164656754
+      lantern_soul_props_2: 5289037303730612295
+      lantern_soul_props_3: -5519631227146833446
+      lantern_soul_props_4: -1062880935196387182
+      lantern_soul_props_5: 5007360545615605369
+      lantern_soul_props_6: -2213434580751551472
+      lantern_soul_props_7: 1781795840144258518
+      lantern_soul_props_8: 5932697466508170527
+      lantern_soul_props_9: -2602835743956097914
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
