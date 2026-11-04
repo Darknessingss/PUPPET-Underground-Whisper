@@ -70,7 +70,7 @@ public class ManagerInterface : MonoBehaviour
     private void OnEscape(InputAction.CallbackContext context)
     {
         if (MainMenuPanel.activeSelf || SettingsMenu.activeSelf
-            || SettingsGameplay.activeSelf || pausePanel.activeSelf || deathPanel.activeSelf || exitPanel.activeSelf)
+            || SettingsGameplay.activeSelf || pausePanel.activeSelf || deathPanel.activeSelf || exitPanel.activeSelf || !deathPanel.activeSelf || !MindMapPanel.activeSelf)
             return;
 
         TogglePause(!isPaused);
@@ -83,7 +83,8 @@ public class ManagerInterface : MonoBehaviour
         pausePanel.SetActive(paused && !MainMenuPanel.activeSelf
                                    && !SettingsMenu.activeSelf
                                    && !SettingsGameplay.activeSelf
-                                   && !deathPanel.activeSelf);
+                                   && !deathPanel.activeSelf
+                                   && !MindMapPanel.activeSelf);
     }
 
     public void Resume()

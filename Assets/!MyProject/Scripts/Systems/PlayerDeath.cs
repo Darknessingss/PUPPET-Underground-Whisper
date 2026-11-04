@@ -6,17 +6,16 @@ public class PlayerDeath : MonoBehaviour
     public event Action OnPlayerDied;
 
     [Header("Death UI")]
-    [SerializeField] private ManagerInterface uiManager;
+    [SerializeField] private DeathScreenManager deathScreen;
 
     private bool _isDead;
     public void TryDie()
     {
-        if (_isDead) 
-            return;
-
+        if (_isDead) return;
         _isDead = true;
 
         OnPlayerDied?.Invoke();
-        uiManager.ShowDeathScreen();
+        if (deathScreen != null)
+            deathScreen.PlayDeathSequence();
     }
 }

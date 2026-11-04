@@ -60,28 +60,36 @@ public class MusicManager : MonoBehaviour
         menuSource.Play();
     }
 
-    private AudioSource CreateSource(string name, AudioClip clip)
+    private AudioSource CreateSource(string sourceName, AudioClip clip)
     {
-        var gameObject = new GameObject(name);
-        gameObject.transform.SetParent(transform);
+        var sourceObject = new GameObject(sourceName);
+        sourceObject.transform.SetParent(transform);
 
-        var audioSource = gameObject.AddComponent<AudioSource>();
+        var audioSource = sourceObject.AddComponent<AudioSource>();
         audioSource.clip = clip;
         audioSource.loop = true;
         audioSource.playOnAwake = false;
         audioSource.volume = 0f;
-        audioSource.outputAudioMixerGroup = musicMixerGroup;
+
+        if (musicMixerGroup != null)
+            audioSource.outputAudioMixerGroup = musicMixerGroup;
+
         return audioSource;
     }
 
     public void PlayGameplayMusic() => Crossfade(menuSource, gameplaySource);
-
     public void PlayMenuMusic() => Crossfade(gameplaySource, menuSource);
 
-    private void Crossfade(AudioSource from, AudioSource to)
+    public void StopAllMusic()
     {
         StopFade();
-        fadeRoutine = StartCoroutine(CrossfadeRoutine(from, to));
+        fadeRoutine = StartCoroutine(FadeOutAllRoutine());
+    }
+
+    private void Crossfade(AudioSource fromSource, AudioSource toSource)
+    {
+        StopFade();
+        fadeRoutine = StartCoroutine(CrossfadeRoutine(fromSource, toSource));
     }
 
     private void StopFade()
@@ -92,9 +100,33 @@ public class MusicManager : MonoBehaviour
         fadeRoutine = null;
     }
 
+    private IEnumerator FadeOutAllRoutine()
+    {
+        float startMenuVolume = menuSource.volume;
+        float startGameplayVolume = gameplaySource.volume;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.unscaledDeltaTime;
+            float progress = Mathf.Clamp01(elapsedTime / fadeDuration);
+
+            menuSource.volume = Mathf.Lerp(startMenuVolume, 0f, progress);
+            gameplaySource.volume = Mathf.Lerp(startGameplayVolume, 0f, progress);
+            yield return null;
+        }
+
+        menuSource.Stop();
+        gameplaySource.Stop();
+        menuSource.volume = 0f;
+        gameplaySource.volume = 0f;
+        fadeRoutine = null;
+    }
+
     private IEnumerator CrossfadeRoutine(AudioSource fromSource, AudioSource toSource)
     {
-        if (!toSource.isPlaying) toSource.Play();
+        if (!toSource.isPlaying)
+            toSource.Play();
 
         float startFromVolume = fromSource.volume;
         float startToVolume = toSource.volume;
