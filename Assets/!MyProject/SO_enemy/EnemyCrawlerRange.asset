@@ -17,6 +17,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1853281082323137531, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
   category: 1
   maxHealth: 100
+  soulReward: 15
   moveSpeed: 3
   damage: 55
   attackSpeed: 1
