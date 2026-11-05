@@ -9,6 +9,7 @@ public class EnemyDataEditor : Editor
     private SerializedProperty _enemyPrefab;
     private SerializedProperty _category;
     private SerializedProperty _maxHealth;
+    private SerializedProperty _soulReward;
     private SerializedProperty _moveSpeed;
     private SerializedProperty _damage;
     private SerializedProperty _attackSpeed;
@@ -31,6 +32,7 @@ public class EnemyDataEditor : Editor
         _enemyPrefab = serializedObject.FindProperty("enemyPrefab");
         _category = serializedObject.FindProperty("category");
         _maxHealth = serializedObject.FindProperty("maxHealth");
+        _soulReward = serializedObject.FindProperty("soulReward");
         _moveSpeed = serializedObject.FindProperty("moveSpeed");
         _damage = serializedObject.FindProperty("damage");
         _attackSpeed = serializedObject.FindProperty("attackSpeed");
@@ -62,6 +64,10 @@ public class EnemyDataEditor : Editor
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Health", EditorStyles.boldLabel);
         EditorGUILayout.PropertyField(_maxHealth);
+
+        EditorGUILayout.Space();
+        EditorGUILayout.LabelField("Rewards", EditorStyles.boldLabel);
+        EditorGUILayout.PropertyField(_soulReward, new GUIContent("Soul Reward"));
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("Movement", EditorStyles.boldLabel);

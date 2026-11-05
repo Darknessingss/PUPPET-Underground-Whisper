@@ -30,7 +30,7 @@ public class EkHealth : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (_isDead) 
+        if (_isDead)
             return;
 
         if (soul.CurrentSoul <= 0f)
@@ -50,7 +50,7 @@ public class EkHealth : MonoBehaviour, IDamageable
 
     public void TakeDamage(float amount)
     {
-        if (_isDead) 
+        if (_isDead)
             return;
 
         _currentHealth = Mathf.Max(_currentHealth - amount, 0f);

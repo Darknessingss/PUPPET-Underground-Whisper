@@ -17,6 +17,9 @@ public class EnemyData : ScriptableObject
     [Header("Health")]
     [SerializeField] private float maxHealth = 100f;
 
+    [Header("Rewards")]
+    [SerializeField] private float soulReward = 10f;
+
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 3f;
 
@@ -30,7 +33,6 @@ public class EnemyData : ScriptableObject
     [Header("Range Only")]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject muzzleFlashPrefab;
-    [Tooltip("На каком расстоянии от игрока враг остановится и начнёт стрелять")]
     [SerializeField] private float keepDistance = 4f;
 
     [Header("Detection")]
@@ -51,17 +53,15 @@ public class EnemyData : ScriptableObject
     public GameObject EnemyPrefab => enemyPrefab;
     public EnemyCategory Category => category;
     public float MaxHealth => maxHealth;
+    public float SoulReward => soulReward;
     public float MoveSpeed => moveSpeed;
     public float Damage => damage;
     public float AttackSpeed => attackSpeed;
     public GameObject MeleeAttackPrefab => meleeAttackPrefab;
-
     public GameObject BulletPrefab => bulletPrefab;
     public GameObject MuzzleFlashPrefab => muzzleFlashPrefab;
     public float KeepDistance => keepDistance;
-
     public float DetectionRadius => detectionRadius;
-
     public AudioClip HitSound => hitSound;
     public AudioClip DeathSound => deathSound;
     public AudioClip DetectionSound => detectionSound;

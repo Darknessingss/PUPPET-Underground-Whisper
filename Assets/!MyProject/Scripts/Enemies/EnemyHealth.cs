@@ -27,6 +27,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     private Coroutine _flashCoroutine;
     private WaitForSeconds _flashWait;
 
+    private EkSoul _playerSoul;
+    private bool _soulResolved;
+
     private void Awake()
     {
         if (enemyData != null)
@@ -91,9 +94,24 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             _isDead = true;
             EnemyAudioService.Instance.PlayDeath(enemyData);
 
+            var soul = ResolvePlayerSoul();
+            if (soul != null && enemyData != null)
+                soul.RestoreSoul(enemyData.SoulReward);
+
             if (!_hasSlider)
                 Destroy(gameObject);
         }
+    }
+
+    private EkSoul ResolvePlayerSoul()
+    {
+        if (_soulResolved && _playerSoul != null)
+            return _playerSoul;
+
+        var playerObj = GameObject.FindGameObjectWithTag("Player");
+        _playerSoul = playerObj != null ? playerObj.GetComponent<EkSoul>() : null;
+        _soulResolved = true;
+        return _playerSoul;
     }
 
     private IEnumerator HitFlashRoutine()

@@ -44,4 +44,15 @@ public class EkSoul : MonoBehaviour
         if (soulFill != null)
             soulFill.fillAmount = Normalized;
     }
+
+    public void RestoreSoul(float amount)
+    {
+        if (amount <= 0f)
+            return;
+
+        _currentSoul = Mathf.Min(_currentSoul + amount, maxSoul);
+
+        if (soulFill != null)
+            soulFill.fillAmount = Normalized;
+    }
 }
