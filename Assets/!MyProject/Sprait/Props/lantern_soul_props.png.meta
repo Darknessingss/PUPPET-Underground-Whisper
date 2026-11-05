@@ -144,6 +144,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -151,10 +164,10 @@ TextureImporter:
       name: lantern_soul_props_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 489
-        width: 162
-        height: 316
+        x: 5
+        y: 427
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +186,10 @@ TextureImporter:
       name: lantern_soul_props_1
       rect:
         serializedVersion: 2
-        x: 301
-        y: 489
-        width: 162
-        height: 316
+        x: 253
+        y: 427
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,10 +208,10 @@ TextureImporter:
       name: lantern_soul_props_2
       rect:
         serializedVersion: 2
-        x: 553
-        y: 489
-        width: 162
-        height: 316
+        x: 505
+        y: 427
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +230,10 @@ TextureImporter:
       name: lantern_soul_props_3
       rect:
         serializedVersion: 2
-        x: 806
-        y: 489
-        width: 161
-        height: 316
+        x: 758
+        y: 427
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +252,10 @@ TextureImporter:
       name: lantern_soul_props_4
       rect:
         serializedVersion: 2
-        x: 1058
-        y: 489
-        width: 162
-        height: 316
+        x: 1010
+        y: 427
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -261,10 +274,10 @@ TextureImporter:
       name: lantern_soul_props_5
       rect:
         serializedVersion: 2
-        x: 53
-        y: 65
-        width: 162
-        height: 317
+        x: 5
+        y: 2
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +296,10 @@ TextureImporter:
       name: lantern_soul_props_6
       rect:
         serializedVersion: 2
-        x: 302
-        y: 65
-        width: 170
-        height: 317
+        x: 253
+        y: 2
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,10 +318,10 @@ TextureImporter:
       name: lantern_soul_props_7
       rect:
         serializedVersion: 2
-        x: 553
-        y: 65
-        width: 162
-        height: 317
+        x: 505
+        y: 1
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,10 +340,10 @@ TextureImporter:
       name: lantern_soul_props_8
       rect:
         serializedVersion: 2
-        x: 806
-        y: 65
-        width: 162
-        height: 317
+        x: 759
+        y: 2
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -349,10 +362,10 @@ TextureImporter:
       name: lantern_soul_props_9
       rect:
         serializedVersion: 2
-        x: 1059
-        y: 65
-        width: 162
-        height: 316
+        x: 1011
+        y: 3
+        width: 256
+        height: 426
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -379,14 +392,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":256.0,"y":426.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       lantern_soul_props_0: -4675656728132126885
       lantern_soul_props_1: -4962273449327574674
-      lantern_soul_props_12: 7038196581257646916
-      lantern_soul_props_14: -4456669022272603598
-      lantern_soul_props_15: 1073324733786770739
-      lantern_soul_props_16: -331639260164656754
       lantern_soul_props_2: 5289037303730612295
       lantern_soul_props_3: -5519631227146833446
       lantern_soul_props_4: -1062880935196387182
