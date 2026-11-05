@@ -14,6 +14,7 @@ public class EnemyDataEditor : Editor
     private SerializedProperty _damage;
     private SerializedProperty _attackSpeed;
     private SerializedProperty _meleeAttackPrefab;
+    private SerializedProperty _meleeAttackRadius;
     private SerializedProperty _bulletPrefab;
     private SerializedProperty _muzzleFlashPrefab;
     private SerializedProperty _keepDistance;
@@ -37,6 +38,7 @@ public class EnemyDataEditor : Editor
         _damage = serializedObject.FindProperty("damage");
         _attackSpeed = serializedObject.FindProperty("attackSpeed");
         _meleeAttackPrefab = serializedObject.FindProperty("meleeAttackPrefab");
+        _meleeAttackRadius = serializedObject.FindProperty("meleeAttackRadius");
         _bulletPrefab = serializedObject.FindProperty("bulletPrefab");
         _muzzleFlashPrefab = serializedObject.FindProperty("muzzleFlashPrefab");
         _keepDistance = serializedObject.FindProperty("keepDistance");
@@ -81,6 +83,7 @@ public class EnemyDataEditor : Editor
         if (isMelee)
         {
             EditorGUILayout.PropertyField(_meleeAttackPrefab, new GUIContent("Melee Attack (Slash)"));
+            EditorGUILayout.PropertyField(_meleeAttackRadius, new GUIContent("Melee Attack Radius"));
         }
         else
         {

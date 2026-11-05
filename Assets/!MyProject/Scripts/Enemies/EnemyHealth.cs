@@ -28,7 +28,6 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     private WaitForSeconds _flashWait;
 
     private EkSoul _playerSoul;
-    private bool _soulResolved;
 
     private void Awake()
     {
@@ -52,21 +51,22 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             _originalColor = spriteRenderer.color;
 
         _flashWait = new WaitForSeconds(hitFlashDuration);
+
+        var playerObj = GameObject.FindGameObjectWithTag("Player");
+        if (playerObj != null)
+            _playerSoul = playerObj.GetComponent<EkSoul>();
     }
 
     private void Update()
     {
-        if (!_hasSlider)
+        if (!_hasSlider || _displayedSliderValue == _targetSliderValue)
             return;
 
-        if (_displayedSliderValue != _targetSliderValue)
-        {
-            _displayedSliderValue = Mathf.MoveTowards(
-                _displayedSliderValue,
-                _targetSliderValue,
-                sliderLerpSpeed * Time.deltaTime);
-            healthSlider.value = _displayedSliderValue;
-        }
+        _displayedSliderValue = Mathf.MoveTowards(
+            _displayedSliderValue,
+            _targetSliderValue,
+            sliderLerpSpeed * Time.deltaTime);
+        healthSlider.value = _displayedSliderValue;
 
         if (_isDead && _displayedSliderValue <= 0f)
             Destroy(gameObject);
@@ -94,24 +94,12 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             _isDead = true;
             EnemyAudioService.Instance.PlayDeath(enemyData);
 
-            var soul = ResolvePlayerSoul();
-            if (soul != null && enemyData != null)
-                soul.RestoreSoul(enemyData.SoulReward);
+            if (_playerSoul != null && enemyData != null)
+                _playerSoul.RestoreSoul(enemyData.SoulReward);
 
             if (!_hasSlider)
                 Destroy(gameObject);
         }
-    }
-
-    private EkSoul ResolvePlayerSoul()
-    {
-        if (_soulResolved && _playerSoul != null)
-            return _playerSoul;
-
-        var playerObj = GameObject.FindGameObjectWithTag("Player");
-        _playerSoul = playerObj != null ? playerObj.GetComponent<EkSoul>() : null;
-        _soulResolved = true;
-        return _playerSoul;
     }
 
     private IEnumerator HitFlashRoutine()

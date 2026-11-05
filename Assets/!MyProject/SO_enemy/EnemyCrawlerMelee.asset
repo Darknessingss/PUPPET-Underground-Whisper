@@ -17,14 +17,16 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1853281082323137531, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
   category: 0
   maxHealth: 100
+  soulReward: 10
   moveSpeed: 3
   damage: 55
-  attackSpeed: 1
+  attackSpeed: 0.5
   meleeAttackPrefab: {fileID: 4697720233432405309, guid: 0a32711292939f543a2882da58be78d8, type: 3}
+  meleeAttackRadius: 2
   bulletPrefab: {fileID: 1960371414040159481, guid: a159fa7c5270ce74dafebef1d06db933, type: 3}
   muzzleFlashPrefab: {fileID: 0}
   keepDistance: 8
-  detectionRadius: 5
+  detectionRadius: 2
   hitSound: {fileID: 8300000, guid: b5f7401cf5ee0c94fb56759964f77373, type: 3}
   deathSound: {fileID: 8300000, guid: 9b14d5ac5606d284ca2e304e71991b33, type: 3}
   detectionSound: {fileID: 8300000, guid: 5eefd82341c2ef0478a074eb63128944, type: 3}

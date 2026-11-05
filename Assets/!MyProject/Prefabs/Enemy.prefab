@@ -416,6 +416,7 @@ MonoBehaviour:
   enemyData: {fileID: 0}
   attackOriginCollider: {fileID: 0}
   viewAngle: 90
+  attackMovementLockDuration: 0.5
 --- !u!70 &3407564558713028145
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -490,7 +491,7 @@ Animator:
   m_GameObject: {fileID: 1853281082323137531}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 65b6ee34dfd5a954b894a80a5617b1c9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0dc5f2ec31db91e4d929ed5a9cfa3ef8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

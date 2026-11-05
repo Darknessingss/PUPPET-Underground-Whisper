@@ -29,6 +29,7 @@ public class EnemyData : ScriptableObject
 
     [Header("Melee Only")]
     [SerializeField] private GameObject meleeAttackPrefab;
+    [SerializeField] private float meleeAttackRadius = 1.5f;
 
     [Header("Range Only")]
     [SerializeField] private GameObject bulletPrefab;
@@ -58,6 +59,7 @@ public class EnemyData : ScriptableObject
     public float Damage => damage;
     public float AttackSpeed => attackSpeed;
     public GameObject MeleeAttackPrefab => meleeAttackPrefab;
+    public float MeleeAttackRadius => meleeAttackRadius;
     public GameObject BulletPrefab => bulletPrefab;
     public GameObject MuzzleFlashPrefab => muzzleFlashPrefab;
     public float KeepDistance => keepDistance;

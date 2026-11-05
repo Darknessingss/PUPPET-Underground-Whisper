@@ -8,6 +8,10 @@ public class AttackController : MonoBehaviour
 {
     [SerializeField] private WeaponInventory inventory;
     [SerializeField] private Collider2D attackOriginCollider;
+    [SerializeField] private EkController movementController;
+
+    [Header("Movement Lock")]
+    [SerializeField] private float attackMovementLockDuration = 0.2f;
 
     private const int WeaponSlotCount = 5;
 
@@ -16,6 +20,8 @@ public class AttackController : MonoBehaviour
     private float nextAttackTime;
     private bool isReloading;
     private float reloadEndTime;
+    private float movementLockEndTime;
+    private bool movementLocked;
     private Camera mainCamera;
     private Keyboard keyboard;
     private Mouse mouse;
@@ -38,7 +44,14 @@ public class AttackController : MonoBehaviour
     private void Update()
     {
         var weapon = inventory != null ? inventory.CurrentWeapon : null;
-        if (weapon == null || keyboard == null || mouse == null) return;
+        if (weapon == null || keyboard == null || mouse == null) 
+            return;
+
+        if (movementLocked && Time.time >= movementLockEndTime)
+        {
+            movementLocked = false;
+            movementController.SetMovementLocked(false);
+        }
 
         if (isReloading)
         {
@@ -65,13 +78,16 @@ public class AttackController : MonoBehaviour
                 : AttackMelee(weapon, aimDirection);
 
             if (attacked)
+            {
                 WeaponAudioService.Instance?.PlayAttack(weapon);
+                LockMovement(attackMovementLockDuration);
+            }
         }
     }
 
     private bool IsPointerOverButton()
     {
-        if (EventSystem.current == null || mouse == null)
+        if (EventSystem.current == null)
             return false;
 
         var eventData = new PointerEventData(EventSystem.current)
@@ -85,9 +101,7 @@ public class AttackController : MonoBehaviour
         for (int i = 0; i < uiRaycastResults.Count; i++)
         {
             var go = uiRaycastResults[i].gameObject;
-            if (go == null) continue;
-
-            if (go.GetComponentInParent<Button>() != null)
+            if (go != null && go.GetComponentInParent<Button>() != null)
                 return true;
         }
 
@@ -177,7 +191,8 @@ public class AttackController : MonoBehaviour
         SpawnMuzzleFlash(weapon, spawnPosition, rotation);
 
         var bulletInstance = BulletPool.Instance.Get(weapon.BulletPrefab, spawnPosition, rotation);
-        if (bulletInstance == null) return false;
+        if (bulletInstance == null) 
+            return false;
 
         if (!bulletInstance.TryGetComponent<Bullet>(out var bullet))
         {
@@ -213,7 +228,6 @@ public class AttackController : MonoBehaviour
 
         isReloading = true;
         reloadEndTime = Time.time + weapon.ReloadTime;
-
         WeaponAudioService.Instance?.PlayReload(weapon);
     }
 
@@ -230,6 +244,16 @@ public class AttackController : MonoBehaviour
         int amount = Mathf.Min(weapon.MagazineSize - magazineAmmo[idx], reserveAmmo[idx]);
         magazineAmmo[idx] += amount;
         reserveAmmo[idx] -= amount;
+    }
+
+    private void LockMovement(float duration)
+    {
+        if (movementController == null || duration <= 0f)
+            return;
+
+        movementLockEndTime = Mathf.Max(movementLockEndTime, Time.time + duration);
+        movementLocked = true;
+        movementController.SetMovementLocked(true);
     }
 
     public int GetMagazine(int slot) => magazineAmmo[slot];

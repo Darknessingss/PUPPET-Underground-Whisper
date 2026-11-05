@@ -2504,6 +2504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AttackController
   inventory: {fileID: 1101049637}
   attackOriginCollider: {fileID: 447256627}
+  movementController: {fileID: 1101049630}
+  attackMovementLockDuration: 0.2
 --- !u!70 &447256627
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -13913,6 +13915,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 400181604}
     m_Modifications:
+    - target: {fileID: 4137738001973269888, guid: c49e2fab2f8598444a5ce30f16bc513d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5057784387183531929, guid: c49e2fab2f8598444a5ce30f16bc513d, type: 3}
       propertyPath: m_Name
       value: LightSoul
@@ -14013,6 +14019,10 @@ PrefabInstance:
     - target: {fileID: 3366081113057385923, guid: be0a0303abd92fd4e90603a945dfa07e, type: 3}
       propertyPath: m_Name
       value: LightDefault
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589616446395950677, guid: be0a0303abd92fd4e90603a945dfa07e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

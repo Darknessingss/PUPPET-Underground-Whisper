@@ -8,13 +8,19 @@ public class EnemyController : MonoBehaviour
     public EnemyData Data => enemyData;
 
     private float _sqrDetectionRadius;
+    private float _sqrMeleeAttackRadius;
+    private float _sqrKeepDistance;
     private bool _playerDetected;
     private Vector2 _lastLookDirection = Vector2.right;
 
     private void Awake()
     {
         if (enemyData != null)
+        {
             _sqrDetectionRadius = enemyData.DetectionRadius * enemyData.DetectionRadius;
+            _sqrMeleeAttackRadius = enemyData.MeleeAttackRadius * enemyData.MeleeAttackRadius;
+            _sqrKeepDistance = enemyData.KeepDistance * enemyData.KeepDistance;
+        }
 
         if (combat == null) combat = GetComponent<EnemyCombat>();
     }
@@ -30,15 +36,15 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
-        if (enemyData == null || player == null) 
+        if (enemyData == null || player == null)
             return;
 
-        Vector2 toPlayer = (Vector2)(player.position - transform.position);
+        Vector2 toPlayer = player.position - transform.position;
         float sqrDistance = toPlayer.sqrMagnitude;
 
         if (!_playerDetected)
         {
-            if (sqrDistance > _sqrDetectionRadius) 
+            if (sqrDistance > _sqrDetectionRadius)
                 return;
 
             _playerDetected = true;
@@ -51,39 +57,34 @@ public class EnemyController : MonoBehaviour
         }
 
         Vector2 direction = toPlayer.normalized;
+        _lastLookDirection = direction;
+
+        if (combat.IsMovementLocked)
+        {
+            combat.ProcessAttack(direction, _lastLookDirection, true);
+            return;
+        }
 
         if (enemyData.IsMelee)
         {
-            transform.position += (Vector3)(direction * (enemyData.MoveSpeed * Time.deltaTime));
-            _lastLookDirection = direction;
-        }
-        else
-        {
-            MoveRange(direction, sqrDistance);
+            bool inAttackRange = sqrDistance <= _sqrMeleeAttackRadius;
+            if (!inAttackRange)
+                transform.position += (Vector3)(direction * (enemyData.MoveSpeed * Time.deltaTime));
+
+            combat.ProcessAttack(direction, _lastLookDirection, inAttackRange);
+            return;
         }
 
-        combat?.ProcessAttack(direction, _lastLookDirection);
+        MoveRange(direction, sqrDistance);
+        combat.ProcessAttack(direction, _lastLookDirection, true);
     }
 
     private void MoveRange(Vector2 direction, float sqrDistance)
     {
-        float keepDistSqr = enemyData.KeepDistance * enemyData.KeepDistance;
-
-        if (sqrDistance > keepDistSqr)
-        {
+        if (sqrDistance > _sqrKeepDistance)
             transform.position += (Vector3)(direction * (enemyData.MoveSpeed * Time.deltaTime));
-            _lastLookDirection = direction;
-        }
-        else if (sqrDistance < keepDistSqr * 0.8f)
-        {
-            Vector2 backDirection = -direction;
-            transform.position += (Vector3)(backDirection * (enemyData.MoveSpeed * Time.deltaTime));
-            _lastLookDirection = backDirection;
-        }
-        else
-        {
-            _lastLookDirection = direction;
-        }
+        else if (sqrDistance < _sqrKeepDistance * 0.8f)
+            transform.position += (Vector3)(-direction * (enemyData.MoveSpeed * Time.deltaTime));
     }
 
 #if UNITY_EDITOR
@@ -93,6 +94,12 @@ public class EnemyController : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, enemyData.DetectionRadius);
+
+        if (enemyData.IsMelee)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, enemyData.MeleeAttackRadius);
+        }
 
         if (enemyData.IsRange)
         {
