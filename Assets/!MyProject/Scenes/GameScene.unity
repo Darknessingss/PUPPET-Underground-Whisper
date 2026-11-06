@@ -6737,6 +6737,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDeath
   deathScreen: {fileID: 1386492962}
+  animator: {fileID: 1101049636}
+  deathStateName: DeathState
+  deathAnimationDuration: 1.5
+  crossFadeDuration: 0.1
 --- !u!70 &1101049641
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

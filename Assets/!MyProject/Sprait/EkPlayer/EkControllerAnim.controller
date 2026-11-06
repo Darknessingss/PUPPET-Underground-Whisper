@@ -11,13 +11,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 5389061762534525391}
-    m_Position: {x: 290, y: -120, z: 0}
+    m_Position: {x: 290, y: 0, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 1349661786664294656}
+    m_Position: {x: 290, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 570, y: 10, z: 0}
+  m_AnyStatePosition: {x: 600, y: 0, z: 0}
   m_EntryPosition: {x: 310, y: -200, z: 0}
   m_ExitPosition: {x: 600, y: 140, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
@@ -63,6 +66,32 @@ AnimatorController:
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
   m_EvaluateTransitionsOnStart: 1
+--- !u!1102 &1349661786664294656
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DeathState
+  m_Speed: 0.8
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: f3ba66e42f77d7c4795dcef8165ef7fc, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &5389061762534525391
 AnimatorState:
   serializedVersion: 6
@@ -165,7 +194,7 @@ BlendTree:
     m_Motion: {fileID: 7400000, guid: 3c3969819e1501b4db704c283dcabeaa, type: 2}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
-    m_TimeScale: 0.5
+    m_TimeScale: 0.9
     m_CycleOffset: 0
     m_DirectBlendParameter: Vertical
     m_Mirror: 0

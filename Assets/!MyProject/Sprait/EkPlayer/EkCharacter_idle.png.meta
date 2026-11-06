@@ -5,6 +5,78 @@ TextureImporter:
   - first:
       213: 8500892386737735783
     second: EkCharacter_idle_0
+  - first:
+      213: -8110590417782386072
+    second: EkCharacter_idle_1
+  - first:
+      213: -5773001001119805154
+    second: EkCharacter_idle_2
+  - first:
+      213: 3208921606378370592
+    second: EkCharacter_idle_3
+  - first:
+      213: -2716990307168187301
+    second: EkCharacter_idle_4
+  - first:
+      213: 7442147896577976611
+    second: EkCharacter_idle_5
+  - first:
+      213: -245872515290278656
+    second: EkCharacter_idle_6
+  - first:
+      213: -1403024339787490309
+    second: EkCharacter_idle_7
+  - first:
+      213: 3417496650050081513
+    second: EkCharacter_idle_8
+  - first:
+      213: 5044251710844298518
+    second: EkCharacter_idle_9
+  - first:
+      213: -7125278091631010058
+    second: EkCharacter_idle_10
+  - first:
+      213: 8131548945542332025
+    second: EkCharacter_idle_11
+  - first:
+      213: 4535797371348008715
+    second: EkCharacter_idle_12
+  - first:
+      213: -5185181312862659185
+    second: EkCharacter_idle_13
+  - first:
+      213: -1231894575712281368
+    second: EkCharacter_idle_14
+  - first:
+      213: -1512922118536732623
+    second: EkCharacter_idle_15
+  - first:
+      213: 5814726688498206680
+    second: EkCharacter_idle_16
+  - first:
+      213: -7705733274264946103
+    second: EkCharacter_idle_17
+  - first:
+      213: 9152153195296719354
+    second: EkCharacter_idle_18
+  - first:
+      213: 5362244594729870222
+    second: EkCharacter_idle_19
+  - first:
+      213: -2031629198524471665
+    second: EkCharacter_idle_20
+  - first:
+      213: 4991930720723906847
+    second: EkCharacter_idle_21
+  - first:
+      213: 6655343580192475885
+    second: EkCharacter_idle_22
+  - first:
+      213: -6716535094292637589
+    second: EkCharacter_idle_23
+  - first:
+      213: 128513554122691044
+    second: EkCharacter_idle_24
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -104,9 +176,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1021
-        width: 246
-        height: 255
+        y: 1004
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -125,20 +197,20 @@ TextureImporter:
       name: EkCharacter_idle_1
       rect:
         serializedVersion: 2
-        x: 246
-        y: 1021
-        width: 246
-        height: 255
+        x: 250
+        y: 1004
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 43c418a3efd9ab249ab4ae707cbde69d
-      internalID: -1178822216
+      spriteID: 862d46d9cf4617f80800000000000000
+      internalID: -8110590417782386072
       vertices: []
       indices: 
       edges: []
@@ -147,20 +219,20 @@ TextureImporter:
       name: EkCharacter_idle_2
       rect:
         serializedVersion: 2
-        x: 492
-        y: 1021
-        width: 246
-        height: 255
+        x: 500
+        y: 1004
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e844b58d5fb2dc340979f38fa94e45cd
-      internalID: 1326339473
+      spriteID: e1197481d2e22efa0800000000000000
+      internalID: -5773001001119805154
       vertices: []
       indices: 
       edges: []
@@ -169,20 +241,20 @@ TextureImporter:
       name: EkCharacter_idle_3
       rect:
         serializedVersion: 2
-        x: 738
-        y: 1021
-        width: 246
-        height: 255
+        x: 750
+        y: 1004
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a1368813d1e350440959c85db252b150
-      internalID: -555036068
+      spriteID: 026324c0331688c20800000000000000
+      internalID: 3208921606378370592
       vertices: []
       indices: 
       edges: []
@@ -191,20 +263,20 @@ TextureImporter:
       name: EkCharacter_idle_4
       rect:
         serializedVersion: 2
-        x: 984
-        y: 1021
-        width: 246
-        height: 255
+        x: 1000
+        y: 1004
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 54ed34ca5325c264abcd10c34c90a530
-      internalID: -1829784510
+      spriteID: b5c8f0bf5bf4b4ad0800000000000000
+      internalID: -2716990307168187301
       vertices: []
       indices: 
       edges: []
@@ -214,19 +286,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 766
-        width: 246
-        height: 255
+        y: 754
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: aa213a67302db0f43a251224e2f24a6f
-      internalID: 482726040
+      spriteID: 329637de412d74760800000000000000
+      internalID: 7442147896577976611
       vertices: []
       indices: 
       edges: []
@@ -235,20 +307,20 @@ TextureImporter:
       name: EkCharacter_idle_6
       rect:
         serializedVersion: 2
-        x: 246
-        y: 766
-        width: 246
-        height: 255
+        x: 250
+        y: 754
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ca0b733e49b669b4bb023bef53a2e9f9
-      internalID: -768426334
+      spriteID: 0055712004c769cf0800000000000000
+      internalID: -245872515290278656
       vertices: []
       indices: 
       edges: []
@@ -257,20 +329,20 @@ TextureImporter:
       name: EkCharacter_idle_7
       rect:
         serializedVersion: 2
-        x: 492
-        y: 766
-        width: 246
-        height: 255
+        x: 500
+        y: 754
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ad542ad67ad19ca478fc4904eb28602d
-      internalID: 1529225728
+      spriteID: bfb5db7ebc4778ce0800000000000000
+      internalID: -1403024339787490309
       vertices: []
       indices: 
       edges: []
@@ -279,20 +351,20 @@ TextureImporter:
       name: EkCharacter_idle_8
       rect:
         serializedVersion: 2
-        x: 738
-        y: 766
-        width: 246
-        height: 255
+        x: 750
+        y: 754
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d78a31399a38f044da1fa2eb090ccdf5
-      internalID: 1769763433
+      spriteID: 9e29257b8136d6f20800000000000000
+      internalID: 3417496650050081513
       vertices: []
       indices: 
       edges: []
@@ -301,20 +373,20 @@ TextureImporter:
       name: EkCharacter_idle_9
       rect:
         serializedVersion: 2
-        x: 984
-        y: 766
-        width: 246
-        height: 255
+        x: 1000
+        y: 754
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a6f622d7796e8c649bd0ccbedceb5d6d
-      internalID: -1143214491
+      spriteID: 615e7869438c00640800000000000000
+      internalID: 5044251710844298518
       vertices: []
       indices: 
       edges: []
@@ -324,19 +396,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 511
-        width: 246
-        height: 255
+        y: 504
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f63b363fdfecb7e4ca039e161cd71618
-      internalID: -1078650333
+      spriteID: 6fed576b35ded1d90800000000000000
+      internalID: -7125278091631010058
       vertices: []
       indices: 
       edges: []
@@ -345,20 +417,20 @@ TextureImporter:
       name: EkCharacter_idle_11
       rect:
         serializedVersion: 2
-        x: 246
-        y: 511
-        width: 246
-        height: 255
+        x: 250
+        y: 504
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d5910af30a4cbdf499f9c598df552c47
-      internalID: 1352692689
+      spriteID: 97eb0c4eea019d070800000000000000
+      internalID: 8131548945542332025
       vertices: []
       indices: 
       edges: []
@@ -367,20 +439,20 @@ TextureImporter:
       name: EkCharacter_idle_12
       rect:
         serializedVersion: 2
-        x: 492
-        y: 511
-        width: 246
-        height: 255
+        x: 500
+        y: 504
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b17d14b993abe9e47a57a53a18a6bf4b
-      internalID: 777288308
+      spriteID: b0f39547da362fe30800000000000000
+      internalID: 4535797371348008715
       vertices: []
       indices: 
       edges: []
@@ -389,20 +461,20 @@ TextureImporter:
       name: EkCharacter_idle_13
       rect:
         serializedVersion: 2
-        x: 738
-        y: 511
-        width: 246
-        height: 255
+        x: 750
+        y: 504
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e05aec181cdff3b47a627c0ce6af2c54
-      internalID: 1705233234
+      spriteID: f8dd3d671198a08b0800000000000000
+      internalID: -5185181312862659185
       vertices: []
       indices: 
       edges: []
@@ -411,20 +483,20 @@ TextureImporter:
       name: EkCharacter_idle_14
       rect:
         serializedVersion: 2
-        x: 984
-        y: 511
-        width: 246
-        height: 255
+        x: 1000
+        y: 504
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a6ee7a4570a6d49458d764b4ec4bb9fa
-      internalID: -106930150
+      spriteID: 8ec50f5096e67eee0800000000000000
+      internalID: -1231894575712281368
       vertices: []
       indices: 
       edges: []
@@ -434,19 +506,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 256
-        width: 246
-        height: 255
+        y: 254
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 362728962e15c834db19b7571f8a7830
-      internalID: 1996643997
+      spriteID: 13069c75955010be0800000000000000
+      internalID: -1512922118536732623
       vertices: []
       indices: 
       edges: []
@@ -455,20 +527,20 @@ TextureImporter:
       name: EkCharacter_idle_16
       rect:
         serializedVersion: 2
-        x: 246
-        y: 256
-        width: 246
-        height: 255
+        x: 250
+        y: 254
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 567966d13c8949c409da4adb4a3c8896
-      internalID: -655000378
+      spriteID: 8d74bed8d1f02b050800000000000000
+      internalID: 5814726688498206680
       vertices: []
       indices: 
       edges: []
@@ -477,20 +549,20 @@ TextureImporter:
       name: EkCharacter_idle_17
       rect:
         serializedVersion: 2
-        x: 492
-        y: 256
-        width: 246
-        height: 255
+        x: 500
+        y: 254
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cbab9c89460da3c4c81bfb2a6fec2d1d
-      internalID: 392765570
+      spriteID: 94ab78de96cbf0590800000000000000
+      internalID: -7705733274264946103
       vertices: []
       indices: 
       edges: []
@@ -499,20 +571,20 @@ TextureImporter:
       name: EkCharacter_idle_18
       rect:
         serializedVersion: 2
-        x: 738
-        y: 256
-        width: 246
-        height: 255
+        x: 750
+        y: 254
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dfdf9e7f3cb9f2c4c8df1142ad35bee1
-      internalID: 106043676
+      spriteID: af10e9747daf20f70800000000000000
+      internalID: 9152153195296719354
       vertices: []
       indices: 
       edges: []
@@ -521,20 +593,20 @@ TextureImporter:
       name: EkCharacter_idle_19
       rect:
         serializedVersion: 2
-        x: 984
-        y: 256
-        width: 246
-        height: 255
+        x: 1000
+        y: 254
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 608638e88485a9f4a9eece8d820e7aee
-      internalID: 1914632428
+      spriteID: e83e1ab6c058a6a40800000000000000
+      internalID: 5362244594729870222
       vertices: []
       indices: 
       edges: []
@@ -544,19 +616,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 246
-        height: 255
+        y: 4
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9486cbdc59d452a48a5c548dbe00c5ed
-      internalID: -335538429
+      spriteID: f8623aa02043ec3e0800000000000000
+      internalID: -2031629198524471665
       vertices: []
       indices: 
       edges: []
@@ -565,20 +637,20 @@ TextureImporter:
       name: EkCharacter_idle_21
       rect:
         serializedVersion: 2
-        x: 246
-        y: 1
-        width: 246
-        height: 255
+        x: 250
+        y: 4
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 24eee4b14b7f452498d927a9ea3bb79f
-      internalID: 401988669
+      spriteID: f11bb18ca86e64540800000000000000
+      internalID: 4991930720723906847
       vertices: []
       indices: 
       edges: []
@@ -587,20 +659,20 @@ TextureImporter:
       name: EkCharacter_idle_22
       rect:
         serializedVersion: 2
-        x: 492
-        y: 1
-        width: 246
-        height: 255
+        x: 500
+        y: 4
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3f736f49a2386bf46a77f85916ff01b9
-      internalID: -1084866286
+      spriteID: dea8c8389b78c5c50800000000000000
+      internalID: 6655343580192475885
       vertices: []
       indices: 
       edges: []
@@ -609,20 +681,20 @@ TextureImporter:
       name: EkCharacter_idle_23
       rect:
         serializedVersion: 2
-        x: 738
-        y: 1
-        width: 246
-        height: 255
+        x: 750
+        y: 4
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 990b1de637c5e8a4496afd9de6a96fa8
-      internalID: 2022233420
+      spriteID: b681e3fdae21ac2a0800000000000000
+      internalID: -6716535094292637589
       vertices: []
       indices: 
       edges: []
@@ -631,20 +703,20 @@ TextureImporter:
       name: EkCharacter_idle_24
       rect:
         serializedVersion: 2
-        x: 984
-        y: 1
-        width: 246
-        height: 255
+        x: 1000
+        y: 4
+        width: 250
+        height: 250
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 1ae11aa683e5dac4ebcef633b734db2b
-      internalID: -1212488680
+      spriteID: 4e15e46856298c100800000000000000
+      internalID: 128513554122691044
       vertices: []
       indices: 
       edges: []
@@ -653,7 +725,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b7be318e50901634d86c8d20da1e77c5
+    spriteID: 7c23c27084a49c940b8dc9674f6b4269
     internalID: 0
     vertices: []
     indices: 
@@ -663,33 +735,33 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":246.0,"y":255.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":5.0},"gridSpriteSize":{"x":250.0,"y":250.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       EkCharacter_idle_0: 8500892386737735783
-      EkCharacter_idle_1: -1178822216
-      EkCharacter_idle_10: -1078650333
-      EkCharacter_idle_11: 1352692689
-      EkCharacter_idle_12: 777288308
-      EkCharacter_idle_13: 1705233234
-      EkCharacter_idle_14: -106930150
-      EkCharacter_idle_15: 1996643997
-      EkCharacter_idle_16: -655000378
-      EkCharacter_idle_17: 392765570
-      EkCharacter_idle_18: 106043676
-      EkCharacter_idle_19: 1914632428
-      EkCharacter_idle_2: 1326339473
-      EkCharacter_idle_20: -335538429
-      EkCharacter_idle_21: 401988669
-      EkCharacter_idle_22: -1084866286
-      EkCharacter_idle_23: 2022233420
-      EkCharacter_idle_24: -1212488680
-      EkCharacter_idle_3: -555036068
-      EkCharacter_idle_4: -1829784510
-      EkCharacter_idle_5: 482726040
-      EkCharacter_idle_6: -768426334
-      EkCharacter_idle_7: 1529225728
-      EkCharacter_idle_8: 1769763433
-      EkCharacter_idle_9: -1143214491
+      EkCharacter_idle_1: -8110590417782386072
+      EkCharacter_idle_10: -7125278091631010058
+      EkCharacter_idle_11: 8131548945542332025
+      EkCharacter_idle_12: 4535797371348008715
+      EkCharacter_idle_13: -5185181312862659185
+      EkCharacter_idle_14: -1231894575712281368
+      EkCharacter_idle_15: -1512922118536732623
+      EkCharacter_idle_16: 5814726688498206680
+      EkCharacter_idle_17: -7705733274264946103
+      EkCharacter_idle_18: 9152153195296719354
+      EkCharacter_idle_19: 5362244594729870222
+      EkCharacter_idle_2: -5773001001119805154
+      EkCharacter_idle_20: -2031629198524471665
+      EkCharacter_idle_21: 4991930720723906847
+      EkCharacter_idle_22: 6655343580192475885
+      EkCharacter_idle_23: -6716535094292637589
+      EkCharacter_idle_24: 128513554122691044
+      EkCharacter_idle_3: 3208921606378370592
+      EkCharacter_idle_4: -2716990307168187301
+      EkCharacter_idle_5: 7442147896577976611
+      EkCharacter_idle_6: -245872515290278656
+      EkCharacter_idle_7: -1403024339787490309
+      EkCharacter_idle_8: 3417496650050081513
+      EkCharacter_idle_9: 5044251710844298518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

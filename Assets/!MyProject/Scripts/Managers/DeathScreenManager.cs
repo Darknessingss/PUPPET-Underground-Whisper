@@ -115,8 +115,6 @@ public class DeathScreenManager : MonoBehaviour
         if (mainUiManager != null) mainUiManager.enabled = false;
         if (musicManager != null) musicManager.StopAllMusic();
 
-        Time.timeScale = 0f;
-
         if (deathRoot != null) deathRoot.SetActive(true);
         if (blackScreen != null) blackScreen.gameObject.SetActive(true);
         if (deathPanelRect != null) deathPanelRect.gameObject.SetActive(false);
