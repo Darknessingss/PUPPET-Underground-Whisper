@@ -22,6 +22,8 @@ public class EkHealth : MonoBehaviour, IDamageable
     public float CurrentHealth => _currentHealth;
     public float Normalized => _currentHealth / maxHealth;
 
+    [SerializeField] private EkController controller;
+
     private void Awake()
     {
         _currentHealth = maxHealth;
@@ -58,8 +60,9 @@ public class EkHealth : MonoBehaviour, IDamageable
         healthFill.fillAmount = Normalized;
 
         if (_currentHealth <= 0f)
-        {
+        { 
             _isDead = true;
+            controller.SetMovementLocked(true);
             death.TryDie();
         }
     }
