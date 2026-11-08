@@ -4,11 +4,7 @@ using UnityEngine.UI;
 public class EkHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxHealth = 100f;
-
-    [Header("Damage")]
     [SerializeField] private float damagePerSecondWhenNoSoul = 10f;
-
-    [Header("Regeneration")]
     [SerializeField] private float soulThresholdForHeal = 50f;
     [SerializeField] private float healPerSecond = 3f;
 
@@ -22,8 +18,6 @@ public class EkHealth : MonoBehaviour, IDamageable
     public float CurrentHealth => _currentHealth;
     public float Normalized => _currentHealth / maxHealth;
 
-    [SerializeField] private EkController controller;
-
     private void Awake()
     {
         _currentHealth = maxHealth;
@@ -32,8 +26,7 @@ public class EkHealth : MonoBehaviour, IDamageable
 
     private void Update()
     {
-        if (_isDead)
-            return;
+        if (_isDead) return;
 
         if (soul.CurrentSoul <= 0f)
             _currentHealth -= damagePerSecondWhenNoSoul * Time.deltaTime;
@@ -52,17 +45,15 @@ public class EkHealth : MonoBehaviour, IDamageable
 
     public void TakeDamage(float amount)
     {
-        if (_isDead)
-            return;
+        if (_isDead) return;
 
         _currentHealth = Mathf.Max(_currentHealth - amount, 0f);
         soul.TakeSoulDamage(amount * 0.5f);
         healthFill.fillAmount = Normalized;
 
         if (_currentHealth <= 0f)
-        { 
+        {
             _isDead = true;
-            controller.SetMovementLocked(true);
             death.TryDie();
         }
     }

@@ -10,6 +10,7 @@ public class EkController : MonoBehaviour
 
     private Vector2 moveInput;
     private bool _movementLocked;
+    private bool _dead;
 
     private void Awake()
     {
@@ -26,7 +27,6 @@ public class EkController : MonoBehaviour
     private void OnEnable()
     {
         input.Enable();
-
         input.EkMovementSystem.EkMovement.performed += OnMove;
         input.EkMovementSystem.EkMovement.canceled += OnMove;
     }
@@ -51,14 +51,19 @@ public class EkController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        RigidBody.linearVelocity = _movementLocked ? Vector2.zero : moveInput.normalized * moveSpeed;
+        RigidBody.linearVelocity = (_dead || _movementLocked) ? Vector2.zero : moveInput.normalized * moveSpeed;
     }
 
     public void SetMovementLocked(bool locked)
     {
         _movementLocked = locked;
+        if (locked) RigidBody.linearVelocity = Vector2.zero;
+    }
 
-        if (locked)
-            RigidBody.linearVelocity = Vector2.zero;
+    public void SetDead()
+    {
+        _dead = true;
+        _movementLocked = true;
+        RigidBody.linearVelocity = Vector2.zero;
     }
 }

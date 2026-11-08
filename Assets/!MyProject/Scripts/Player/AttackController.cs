@@ -9,8 +9,7 @@ public class AttackController : MonoBehaviour
     [SerializeField] private WeaponInventory inventory;
     [SerializeField] private Collider2D attackOriginCollider;
     [SerializeField] private EkController movementController;
-
-    [Header("Movement Lock")]
+    [SerializeField] private PlayerDeath playerDeath;
     [SerializeField] private float attackMovementLockDuration = 0.2f;
 
     private const int WeaponSlotCount = 5;
@@ -43,8 +42,11 @@ public class AttackController : MonoBehaviour
 
     private void Update()
     {
+        if (playerDeath != null && playerDeath.IsDead)
+            return;
+
         var weapon = inventory != null ? inventory.CurrentWeapon : null;
-        if (weapon == null || keyboard == null || mouse == null) 
+        if (weapon == null || keyboard == null || mouse == null)
             return;
 
         if (movementLocked && Time.time >= movementLockEndTime)
@@ -191,7 +193,7 @@ public class AttackController : MonoBehaviour
         SpawnMuzzleFlash(weapon, spawnPosition, rotation);
 
         var bulletInstance = BulletPool.Instance.Get(weapon.BulletPrefab, spawnPosition, rotation);
-        if (bulletInstance == null) 
+        if (bulletInstance == null)
             return false;
 
         if (!bulletInstance.TryGetComponent<Bullet>(out var bullet))

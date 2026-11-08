@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   enemyData: {fileID: 0}
-  maxHealth: 100
+  maxHealth: 85
   healthSlider: {fileID: 0}
   spriteRenderer: {fileID: 264983504150302514}
   sliderLerpSpeed: 1.5
