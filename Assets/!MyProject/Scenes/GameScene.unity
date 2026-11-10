@@ -632,13 +632,13 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: ab74fc96d79f7c243bbbc025e21b83bc, type: 2}
   - serializedVersion: 2
     m_RefCount: 0
-    m_Data: {fileID: 11400000, guid: 8facacf6a9d75b24d81e6a5a7cc25075, type: 2}
+    m_Data: {fileID: 11400000, guid: 28200c68d4557b44782f8083b8f9b978, type: 2}
   - serializedVersion: 2
     m_RefCount: 0
-    m_Data: {fileID: 11400000, guid: 620930e467d15384e8c8f03a0254e32e, type: 2}
+    m_Data: {fileID: 11400000, guid: 44fde9e0cb3d3cd4fa3d351774ff0012, type: 2}
   - serializedVersion: 2
     m_RefCount: 0
-    m_Data: {fileID: 11400000, guid: 7ae841ef9f5ae104e9289452a549de99, type: 2}
+    m_Data: {fileID: 11400000, guid: 752f1405ba55ddf4da9fe553ee18006b, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
     m_RefCount: 0
@@ -648,10 +648,10 @@ Tilemap:
     m_Data: {fileID: 1759432714185795596, guid: 1a3a5fe6a98af0e42b1354785f186cd2, type: 3}
   - serializedVersion: 2
     m_RefCount: 0
-    m_Data: {fileID: 4268268288697015645, guid: cb542d455f3305a45ad0cc3b6ea21581, type: 3}
+    m_Data: {fileID: 21300000, guid: 95dcf6d62217ed241980d004628b0aca, type: 3}
   - serializedVersion: 2
     m_RefCount: 0
-    m_Data: {fileID: -5971191325147536722, guid: 1729558c5eda3ad4a82a77dd397bb243, type: 3}
+    m_Data: {fileID: 21300000, guid: 904237839314b4b46ae471690ecadeec, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 0
@@ -676,11 +676,14 @@ Tilemap:
   - serializedVersion: 2
     m_RefCount: 0
     m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - serializedVersion: 2
+    m_RefCount: 0
+    m_Data: {r: 0.74240017, g: 0.44461426, b: 0.49968457, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -15, y: -12, z: 0}
-  m_Size: {x: 22, y: 46, z: 1}
+  m_Origin: {x: -15, y: -18, z: 0}
+  m_Size: {x: 22, y: 52, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -5410,6 +5413,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1101049632}
+    - target: {fileID: 4604667183253280010, guid: acaf46bb4fd69c246bbc05b5357987e8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7051,7 +7058,7 @@ Grid:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123664622}
   m_Enabled: 1
-  m_CellSize: {x: 1, y: 0.5, z: 1}
+  m_CellSize: {x: 5, y: 2.5, z: 5}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 2
   m_CellSwizzle: 0
@@ -9005,7 +9012,7 @@ TilemapRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_MaskInteraction: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -9027,17 +9034,20 @@ Tilemap:
   m_TileAssetArray:
   - serializedVersion: 2
     m_RefCount: 0
-    m_Data: {fileID: 11400000, guid: ab74fc96d79f7c243bbbc025e21b83bc, type: 2}
+    m_Data: {fileID: 11400000, guid: 752f1405ba55ddf4da9fe553ee18006b, type: 2}
   - serializedVersion: 2
     m_RefCount: 0
-    m_Data: {fileID: 11400000, guid: 8facacf6a9d75b24d81e6a5a7cc25075, type: 2}
+    m_Data: {fileID: 11400000, guid: 44fde9e0cb3d3cd4fa3d351774ff0012, type: 2}
   m_TileSpriteArray:
   - serializedVersion: 2
     m_RefCount: 0
     m_Data: {fileID: 4463101820758585737, guid: 95dcf6d62217ed241980d004628b0aca, type: 3}
   - serializedVersion: 2
     m_RefCount: 0
-    m_Data: {fileID: 1759432714185795596, guid: 1a3a5fe6a98af0e42b1354785f186cd2, type: 3}
+    m_Data: {fileID: 21300000, guid: 904237839314b4b46ae471690ecadeec, type: 3}
+  - serializedVersion: 2
+    m_RefCount: 0
+    m_Data: {fileID: 21300000, guid: 95dcf6d62217ed241980d004628b0aca, type: 3}
   m_TileMatrixArray:
   - serializedVersion: 2
     m_RefCount: 0
@@ -9065,8 +9075,8 @@ Tilemap:
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -15, y: -12, z: 0}
-  m_Size: {x: 20, y: 46, z: 1}
+  m_Origin: {x: -30, y: -12, z: 0}
+  m_Size: {x: 35, y: 46, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -11069,6 +11079,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 264983504150302514, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1666087922723831270, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
       propertyPath: combat
       value: 

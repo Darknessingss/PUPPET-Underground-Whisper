@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: isometric_floor_2_0
+  m_Name: isometric_floor_4
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: -8216479085923227592, guid: 92265566a0cb4e74a98c9a57697e8c85, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 904237839314b4b46ae471690ecadeec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
