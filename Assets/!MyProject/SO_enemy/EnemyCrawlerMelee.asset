@@ -18,11 +18,11 @@ MonoBehaviour:
   category: 0
   maxHealth: 250
   soulReward: 25
-  moveSpeed: 4
+  moveSpeed: 2
   damage: 25
   attackSpeed: 0.35
   meleeAttackPrefab: {fileID: 4697720233432405309, guid: 0a32711292939f543a2882da58be78d8, type: 3}
-  meleeAttackRadius: 2.5
+  meleeAttackRadius: 1.5
   bulletPrefab: {fileID: 1960371414040159481, guid: a159fa7c5270ce74dafebef1d06db933, type: 3}
   muzzleFlashPrefab: {fileID: 0}
   keepDistance: 8

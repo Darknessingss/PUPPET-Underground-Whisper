@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
+  m_Name: IsometricFloorDirt
+  m_EditorClassIdentifier: Unity.2D.Tilemap.Extras::UnityEngine.RuleTile
+  m_DefaultSprite: {fileID: -600541664849074133, guid: 293a5bdca05410c4a8953db907ad80f5, type: 3}
+  m_DefaultGameObject: {fileID: 0}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Id: 0
+    m_Sprites:
+    - {fileID: -600541664849074133, guid: 293a5bdca05410c4a8953db907ad80f5, type: 3}
+    - {fileID: 9110256877984623901, guid: 12280cfc8ade4884fab5f5293060e358, type: 3}
+    - {fileID: 7718310745123586672, guid: 6f0ec423c4bfa5244b93aa5685d53636, type: 3}
+    - {fileID: -2762939235109383942, guid: 20329f8e19a759b418b921301e505afc, type: 3}
+    - {fileID: -4694734302038799038, guid: 322dcc024ef3b09449e03a159638a613, type: 3}
+    - {fileID: 7718310745123586672, guid: 6f0ec423c4bfa5244b93aa5685d53636, type: 3}
+    - {fileID: 7703554312372639657, guid: ab57b3897b34c1f44b9fb5142ecbd576, type: 3}
+    - {fileID: -600541664849074133, guid: 293a5bdca05410c4a8953db907ad80f5, type: 3}
+    m_GameObject: {fileID: 0}
+    m_MinAnimationSpeed: 1
+    m_MaxAnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
+    m_Scroll: {x: 0, y: 0}
+    m_Neighbors: 
+    m_NeighborPositions:
+    - {x: -1, y: 1, z: 0}
+    - {x: 0, y: 1, z: 0}
+    - {x: 1, y: 1, z: 0}
+    - {x: -1, y: 0, z: 0}
+    - {x: 1, y: 0, z: 0}
+    - {x: -1, y: -1, z: 0}
+    - {x: 0, y: -1, z: 0}
+    - {x: 1, y: -1, z: 0}
+    m_RuleTransform: 0
