@@ -25,8 +25,8 @@ MonoBehaviour:
   meleeAttackRadius: 1.5
   bulletPrefab: {fileID: 1960371414040159481, guid: a159fa7c5270ce74dafebef1d06db933, type: 3}
   muzzleFlashPrefab: {fileID: 8990008340118216689, guid: 63feb889155861744b777f60aefa323e, type: 3}
-  keepDistance: 3
-  detectionRadius: 5
+  keepDistance: 2
+  detectionRadius: 6
   hitSound: {fileID: 8300000, guid: b5f7401cf5ee0c94fb56759964f77373, type: 3}
   deathSound: {fileID: 8300000, guid: 591c24d6a87c0614eb7f73b76d506896, type: 3}
   detectionSound: {fileID: 8300000, guid: 794ab52ce19eb224bb3065a18c0a0d0c, type: 3}
