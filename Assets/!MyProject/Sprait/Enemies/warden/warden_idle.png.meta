@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: c354ee9d2d363764e8998474d2555648
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5411233034134108248
+    second: warden_idle_0
+  - first:
+      213: 8904413888346317401
+    second: warden_idle_1
+  - first:
+      213: 4582230455398595036
+    second: warden_idle_2
+  - first:
+      213: 169797781102897883
+    second: warden_idle_3
+  - first:
+      213: 6042668371304711464
+    second: warden_idle_4
+  - first:
+      213: -3461981361681035198
+    second: warden_idle_5
+  - first:
+      213: 1673012805217833932
+    second: warden_idle_6
+  - first:
+      213: 7787782870836274363
+    second: warden_idle_7
+  - first:
+      213: -5961210452137401568
+    second: warden_idle_8
+  - first:
+      213: -8162936852870256056
+    second: warden_idle_9
+  - first:
+      213: 7810130118011306393
+    second: warden_idle_10
+  - first:
+      213: 5745205002588322079
+    second: warden_idle_11
+  - first:
+      213: 7263365215168682865
+    second: warden_idle_12
+  - first:
+      213: -716211980582122118
+    second: warden_idle_13
+  - first:
+      213: 4765349041894724560
+    second: warden_idle_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: warden_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 724
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.54882365, y: 0.54142314}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7c393b93077e4b0800000000000000
+      internalID: -5411233034134108248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_1
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 724
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.54317564, y: 0.54278904}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 952efebf045d29b70800000000000000
+      internalID: 8904413888346317401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_2
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 724
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.57592964, y: 0.5558635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd9720d425a579f30800000000000000
+      internalID: 4582230455398595036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_3
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 724
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.596773, y: 0.562995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdaa94aae2e3b5200800000000000000
+      internalID: 169797781102897883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 362
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.556575, y: 0.58201236}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2409afd3b4294ffc0800000000000000
+      internalID: -3461981361681035198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_6
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 362
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.55955267, y: 0.5796352}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc350b7484cb73710800000000000000
+      internalID: 1673012805217833932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_7
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 362
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.57592964, y: 0.56537217}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb461147243c31c60800000000000000
+      internalID: 7787782870836274363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_8
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 362
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.6071946, y: 0.55467486}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02321097da6854da0800000000000000
+      internalID: -5961210452137401568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.5535974, y: 0.5439776}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991c4a566f7236c60800000000000000
+      internalID: 7810130118011306393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_11
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 0
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.55955267, y: 0.53922325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f19f21da2811bbf40800000000000000
+      internalID: 5745205002588322079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_12
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 0
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.5803962, y: 0.5380347}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17bde042e28acc460800000000000000
+      internalID: 7263365215168682865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_13
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 0
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.5923067, y: 0.53209174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d06819ff08f06f0800000000000000
+      internalID: -716211980582122118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_4
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 724
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.622083, y: 0.5665607}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886ed53059de898459034d5c8617a582
+      internalID: 6042668371304711464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_9
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 362
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.62952715, y: 0.54754335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51a23facb32d9e48b005c369a90b101
+      internalID: -8162936852870256056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: warden_idle_14
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 0
+        width: 289
+        height: 362
+      alignment: 9
+      pivot: {x: 0.6265493, y: 0.53209174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 549653a4e9ca4914f8b10060ba4c9ecd
+      internalID: 4765349041894724560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cbed706c77f31f648acbfca8283e0239
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":3.0},"gridSpriteSize":{"x":289.0,"y":362.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      warden_idle_0: -5411233034134108248
+      warden_idle_1: 8904413888346317401
+      warden_idle_10: 7810130118011306393
+      warden_idle_11: 5745205002588322079
+      warden_idle_12: 7263365215168682865
+      warden_idle_13: -716211980582122118
+      warden_idle_14: 4765349041894724560
+      warden_idle_2: 4582230455398595036
+      warden_idle_3: 169797781102897883
+      warden_idle_4: 6042668371304711464
+      warden_idle_5: -3461981361681035198
+      warden_idle_6: 1673012805217833932
+      warden_idle_7: 7787782870836274363
+      warden_idle_8: -5961210452137401568
+      warden_idle_9: -8162936852870256056
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

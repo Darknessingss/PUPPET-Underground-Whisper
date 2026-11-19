@@ -53,6 +53,7 @@ public class ManagerInterface : MonoBehaviour
         inputPause.Enable();
         inputPause.EscapeSystem.ExitGameplay.Enable();
         inputPause.EscapeSystem.ExitGameplay.performed += OnEscape;
+
     }
 
     private void OnDisable()
@@ -171,5 +172,10 @@ public class ManagerInterface : MonoBehaviour
     {
         TogglePause(!isPaused);
         MindMapPanel.SetActive(false);
+    }
+
+    public void ActivateBossBar()
+    {
+        BossBarHealth.SetActive(true);
     }
 }

@@ -29,6 +29,10 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     private EkSoul _playerSoul;
 
+    public bool IsDead => _isDead;
+    public float CurrentHealth => _currentHealth;
+    public float MaxHealth => maxHealth;
+
     private void Awake()
     {
         if (enemyData != null)
@@ -52,9 +56,9 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
         _flashWait = new WaitForSeconds(hitFlashDuration);
 
-        var playerObj = GameObject.FindGameObjectWithTag("Player");
-        if (playerObj != null)
-            _playerSoul = playerObj.GetComponent<EkSoul>();
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+            _playerSoul = playerObject.GetComponent<EkSoul>();
     }
 
     private void Update()
@@ -72,7 +76,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
             Destroy(gameObject);
     }
 
-    public void TakeDamage(float amount)
+    public virtual void TakeDamage(float amount)
     {
         if (_isDead || amount <= 0f)
             return;
@@ -90,16 +94,19 @@ public class EnemyHealth : MonoBehaviour, IDamageable
         }
 
         if (_currentHealth <= 0f)
-        {
-            _isDead = true;
-            EnemyAudioService.Instance.PlayDeath(enemyData);
+            Die();
+    }
 
-            if (_playerSoul != null && enemyData != null)
-                _playerSoul.RestoreSoul(enemyData.SoulReward);
+    protected void Die()
+    {
+        _isDead = true;
+        EnemyAudioService.Instance.PlayDeath(enemyData);
 
-            if (!_hasSlider)
-                Destroy(gameObject);
-        }
+        if (_playerSoul != null && enemyData != null)
+            _playerSoul.RestoreSoul(enemyData.SoulReward);
+
+        if (!_hasSlider)
+            Destroy(gameObject);
     }
 
     private IEnumerator HitFlashRoutine()

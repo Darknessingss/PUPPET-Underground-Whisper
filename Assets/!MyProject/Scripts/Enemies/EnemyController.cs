@@ -11,7 +11,12 @@ public class EnemyController : MonoBehaviour
     private float _sqrMeleeAttackRadius;
     private float _sqrKeepDistance;
     private bool _playerDetected;
+    private bool _movementEnabled = true;
     private Vector2 _lastLookDirection = Vector2.right;
+
+    public bool PlayerDetected => _playerDetected;
+
+    public void SetMovementEnabled(bool value) => _movementEnabled = value;
 
     private void Awake()
     {
@@ -29,8 +34,8 @@ public class EnemyController : MonoBehaviour
     {
         if (player == null)
         {
-            var playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null) player = playerObj.transform;
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if (playerObject != null) player = playerObject.transform;
         }
     }
 
@@ -68,14 +73,17 @@ public class EnemyController : MonoBehaviour
         if (enemyData.IsMelee)
         {
             bool inAttackRange = sqrDistance <= _sqrMeleeAttackRadius;
-            if (!inAttackRange)
+
+            if (_movementEnabled && !inAttackRange)
                 transform.position += (Vector3)(direction * (enemyData.MoveSpeed * Time.deltaTime));
 
             combat.ProcessAttack(direction, _lastLookDirection, inAttackRange);
             return;
         }
 
-        MoveRange(direction, sqrDistance);
+        if (_movementEnabled)
+            MoveRange(direction, sqrDistance);
+
         combat.ProcessAttack(direction, _lastLookDirection, true);
     }
 

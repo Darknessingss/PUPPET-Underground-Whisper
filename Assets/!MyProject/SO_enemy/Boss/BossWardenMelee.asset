@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bedd35ad375af34e8d6606c70f68ef1, type: 3}
+  m_Name: BossWardenMelee
+  m_EditorClassIdentifier: Assembly-CSharp::BossData
+  enemyID: 666
+  displayName: Warden
+  enemyPrefab: {fileID: 5087295180689942117, guid: 7c0d9edc887f7c54599638e134079b7d, type: 3}
+  category: 0
+  maxHealth: 2500
+  soulReward: 50
+  moveSpeed: 2.5
+  damage: 35
+  attackSpeed: 0.2
+  meleeAttackPrefab: {fileID: 7980274788526523973, guid: 3afff9783ee228f4699ea08784e1fbc3, type: 3}
+  meleeAttackRadius: 4
+  bulletPrefab: {fileID: 0}
+  muzzleFlashPrefab: {fileID: 0}
+  keepDistance: 50
+  detectionRadius: 8
+  hitSound: {fileID: 8300000, guid: b5f7401cf5ee0c94fb56759964f77373, type: 3}
+  deathSound: {fileID: 0}
+  detectionSound: {fileID: 0}
+  attackSound: {fileID: 0}
+  volume: 1
+  audioMixerGroup: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}
+  tentacleWarningPrefab: {fileID: 859804437385477122, guid: d26e21294c20ae04dbae12b03d865482, type: 3}
+  tentacleSpikePrefab: {fileID: 3279865580445596387, guid: bf35ab563c743a44eba995f7f1bc7e1d, type: 3}
+  tentacleDamage: 25
+  tentacleWarningRadius: 6
+  tentacleWarningDelay: 1.25
+  tentacleCount: 6
+  tentacleCooldown: 6
+  stompPrefab: {fileID: 2255623188190610025, guid: 79564c5e4f9c90d479aae6dd2f2b3b7c, type: 3}
+  stompImpactPrefab: {fileID: 0}
+  stompDamage: 40
+  stompChargeTime: 3
+  stompRadius: 8
+  stompCooldown: 15
+  enrageSpeedMultiplier: 2
+  enragePassDamage: 10
+  enrageMaxTotalDamage: 30
+  enrageCircleRadius: 2
+  enragePassCooldown: 0.1
+  enrageTrailPrefab: {fileID: 0}
+  stompSound: {fileID: 0}
+  tentacleSound: {fileID: 0}
+  enrageRoarSound: {fileID: 0}
+  bossExtraVolume: 1
+  bossExtraMixer: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}

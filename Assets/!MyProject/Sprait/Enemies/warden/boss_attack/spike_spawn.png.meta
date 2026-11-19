@@ -1,0 +1,417 @@
+fileFormatVersion: 2
+guid: 6fb27baa444ce644e86294245e863fd1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -995290548154356490
+    second: spike_spawn_0
+  - first:
+      213: -7153899817801909028
+    second: spike_spawn_1
+  - first:
+      213: 5968557096812012953
+    second: spike_spawn_2
+  - first:
+      213: -5440311182706773645
+    second: spike_spawn_3
+  - first:
+      213: -6619532764916614176
+    second: spike_spawn_4
+  - first:
+      213: -6815131968610550194
+    second: spike_spawn_5
+  - first:
+      213: 8423161106008003724
+    second: spike_spawn_6
+  - first:
+      213: -7529455744869577359
+    second: spike_spawn_7
+  - first:
+      213: -2519108410228868987
+    second: spike_spawn_8
+  - first:
+      213: 655656840214110259
+    second: spike_spawn_9
+  - first:
+      213: 262556245222056519
+    second: spike_spawn_10
+  - first:
+      213: 636993407540828053
+    second: spike_spawn_11
+  - first:
+      213: 7517435556528371800
+    second: spike_spawn_12
+  - first:
+      213: 8783542363652089168
+    second: spike_spawn_13
+  - first:
+      213: -318886783286354067
+    second: spike_spawn_14
+  - first:
+      213: -5787644501249931306
+    second: spike_spawn_15
+  - first:
+      213: 2444220003206206746
+    second: spike_spawn_16
+  - first:
+      213: -6363098499870720900
+    second: spike_spawn_17
+  - first:
+      213: 336339362481548066
+    second: spike_spawn_18
+  - first:
+      213: -1860335513721315510
+    second: spike_spawn_19
+  - first:
+      213: 8416959175151612654
+    second: spike_spawn_20
+  - first:
+      213: -6352360921218589742
+    second: spike_spawn_21
+  - first:
+      213: -1314210544346751273
+    second: spike_spawn_22
+  - first:
+      213: 5540890497843688611
+    second: spike_spawn_23
+  - first:
+      213: 3115154210174117947
+    second: spike_spawn_24
+  - first:
+      213: 1617443356396075094
+    second: spike_spawn_25
+  - first:
+      213: -8612675197195083742
+    second: spike_spawn_26
+  - first:
+      213: -8273790714002671212
+    second: spike_spawn_27
+  - first:
+      213: 6044854087129522591
+    second: spike_spawn_28
+  - first:
+      213: 26044799419964114
+    second: spike_spawn_29
+  - first:
+      213: 7432048115660909283
+    second: spike_spawn_30
+  - first:
+      213: 3486415741537464749
+    second: spike_spawn_31
+  - first:
+      213: 3353264794996135721
+    second: spike_spawn_32
+  - first:
+      213: 4919803769085503557
+    second: spike_spawn_33
+  - first:
+      213: 2364785699461621154
+    second: spike_spawn_34
+  - first:
+      213: -4789724446837673477
+    second: spike_spawn_35
+  - first:
+      213: 3157221088303681233
+    second: spike_spawn_36
+  - first:
+      213: -7867455418849891310
+    second: spike_spawn_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spike_spawn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 642
+        width: 306
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fca4fc05840032f0800000000000000
+      internalID: -995290548154356490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spike_spawn_1
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 642
+        width: 306
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc7f29c40e38bc90800000000000000
+      internalID: -7153899817801909028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spike_spawn_2
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 642
+        width: 306
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995ed198e0394d250800000000000000
+      internalID: 5968557096812012953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spike_spawn_3
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 642
+        width: 306
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3717d27adc12084b0800000000000000
+      internalID: -5440311182706773645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spike_spawn_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 306
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebf518a502b224a0800000000000000
+      internalID: -6619532764916614176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spike_spawn_5
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1
+        width: 306
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4e3f892599cb61a0800000000000000
+      internalID: -6815131968610550194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spike_spawn_6
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1
+        width: 306
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c845e79e56415e470800000000000000
+      internalID: 8423161106008003724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spike_spawn_7
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1
+        width: 306
+        height: 641
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17d460f84eff18790800000000000000
+      internalID: -7529455744869577359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0e0c4e035788395459dc5e476e5d9ec4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":306.0,"y":641.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      spike_spawn_0: -995290548154356490
+      spike_spawn_1: -7153899817801909028
+      spike_spawn_2: 5968557096812012953
+      spike_spawn_3: -5440311182706773645
+      spike_spawn_4: -6619532764916614176
+      spike_spawn_5: -6815131968610550194
+      spike_spawn_6: 8423161106008003724
+      spike_spawn_7: -7529455744869577359
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
