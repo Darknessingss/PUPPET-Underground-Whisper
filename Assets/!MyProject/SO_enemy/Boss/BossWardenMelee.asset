@@ -26,7 +26,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 0}
   muzzleFlashPrefab: {fileID: 0}
   keepDistance: 50
-  detectionRadius: 8
+  detectionRadius: 14
   hitSound: {fileID: 8300000, guid: b5f7401cf5ee0c94fb56759964f77373, type: 3}
   deathSound: {fileID: 0}
   detectionSound: {fileID: 0}
@@ -46,9 +46,9 @@ MonoBehaviour:
   stompChargeTime: 3
   stompRadius: 8
   stompCooldown: 15
-  enrageSpeedMultiplier: 2
+  enrageSpeedMultiplier: 5
   enragePassDamage: 10
-  enrageMaxTotalDamage: 30
+  enrageMaxTotalDamage: 50
   enrageCircleRadius: 2
   enragePassCooldown: 0.1
   enrageTrailPrefab: {fileID: 0}
