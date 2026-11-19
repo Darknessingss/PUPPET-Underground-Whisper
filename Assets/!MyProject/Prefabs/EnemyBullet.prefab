@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8154650892749323672}
   - component: {fileID: 1701357835993446438}
   - component: {fileID: 3307042699639632617}
-  - component: {fileID: 4731713914907327988}
   - component: {fileID: 4340202342633825651}
+  - component: {fileID: 2906085836719531632}
   m_Layer: 9
   m_Name: EnemyBullet
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2558787918306485299, guid: 5331c41bbc152234ca8372a8d072eef1, type: 3}
+  m_Sprite: {fileID: -4062289194406457977, guid: 9253e100a6827e348ae67308451fe944, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,17 +130,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.09986514, y: 0.0072340965}
+  m_Offset: {x: 0.017603695, y: -0.06999901}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.69, y: 0.47}
+    oldSize: {x: 1.228, y: 2.048}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0368596, y: 0.5506438}
+  m_Size: {x: 0.8667301, y: 0.70511}
   m_EdgeRadius: 0
 --- !u!50 &3307042699639632617
 Rigidbody2D:
@@ -169,28 +169,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!95 &4731713914907327988
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960371414040159481}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7a0b3ece34dbbb440b0d951499c0fac0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &4340202342633825651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,3 +186,25 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 8
+--- !u!95 &2906085836719531632
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960371414040159481}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5e477b82faca8a04995e5be60ba94c27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

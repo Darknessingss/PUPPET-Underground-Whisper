@@ -1,0 +1,287 @@
+fileFormatVersion: 2
+guid: 3f1e5492e8de88047bd7fbb345b123c0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8437236648330512283
+    second: weeper_impact_attack_0
+  - first:
+      213: -5455839252719574132
+    second: weeper_impact_attack_1
+  - first:
+      213: -6342652160272156376
+    second: weeper_impact_attack_2
+  - first:
+      213: 6865095102660422027
+    second: weeper_impact_attack_3
+  - first:
+      213: 4473205867088849826
+    second: weeper_impact_attack_4
+  - first:
+      213: -8223899163502539984
+    second: weeper_impact_attack_5
+  - first:
+      213: 4033812506552041937
+    second: weeper_impact_attack_6
+  - first:
+      213: -311260017531002306
+    second: weeper_impact_attack_7
+  - first:
+      213: -7180490360300947595
+    second: weeper_impact_attack_8
+  - first:
+      213: -8982638729616933379
+    second: weeper_impact_attack_9
+  - first:
+      213: 1942704230073844917
+    second: weeper_impact_attack_10
+  - first:
+      213: -8130295641403061683
+    second: weeper_impact_attack_11
+  - first:
+      213: 5950523252205979292
+    second: weeper_impact_attack_12
+  - first:
+      213: 112118318409082665
+    second: weeper_impact_attack_13
+  - first:
+      213: 4687614373299841258
+    second: weeper_impact_attack_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 130
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: weeper_impact_attack_2
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 257
+        width: 338
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5683a5288f9e8ea80800000000000000
+      internalID: -8437236648330512283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weeper_impact_attack_3
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 252
+        width: 412
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83640e1b17f844b0800000000000000
+      internalID: -5455839252719574132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weeper_impact_attack_1
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 256
+        width: 344
+        height: 371
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab260b3905041e30800000000000000
+      internalID: 4473205867088849826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weeper_impact_attack_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 268
+        width: 252
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf07035fe62ea6c489817f12d867dec6
+      internalID: 4033812506552041937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weeper_impact_attack_4
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 285
+        width: 333
+        height: 311
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c534deb1fb9979499a11b3b11c89e16
+      internalID: -7180490360300947595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: de6508e7fa299bb4d82dd853fa163c69
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":1.0},"gridSpriteSize":{"x":354.0,"y":887.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      weeper_impact_attack_0: 4033812506552041937
+      weeper_impact_attack_1: 4473205867088849826
+      weeper_impact_attack_10: 1942704230073844917
+      weeper_impact_attack_11: -8130295641403061683
+      weeper_impact_attack_12: 5950523252205979292
+      weeper_impact_attack_13: 112118318409082665
+      weeper_impact_attack_14: 4687614373299841258
+      weeper_impact_attack_2: -8437236648330512283
+      weeper_impact_attack_3: -5455839252719574132
+      weeper_impact_attack_4: -7180490360300947595
+      weeper_impact_attack_5: -8223899163502539984
+      weeper_impact_attack_7: -311260017531002306
+      weeper_impact_attack_9: -8982638729616933379
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

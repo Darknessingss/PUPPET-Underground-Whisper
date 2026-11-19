@@ -21,8 +21,8 @@ MonoBehaviour:
   damage: 20
   attackSpeed: 0.7
   usesAmmo: 1
-  magazineSize: 6
-  maxReserveAmmo: 30
+  magazineSize: 5
+  maxReserveAmmo: 120
   bulletPrefab: {fileID: 2422041515755228696, guid: 2da6d692cfd324d47b15b0aaeddcc341, type: 3}
   reloadTime: 1.5
   muzzleFlashPrefab: {fileID: 8990008340118216689, guid: 63feb889155861744b777f60aefa323e, type: 3}

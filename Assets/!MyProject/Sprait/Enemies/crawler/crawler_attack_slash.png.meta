@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: 71a85f43a546de74abf0ec32334c2e48
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -846296924711084970
+    second: crawler_attack_slash_0
+  - first:
+      213: 6369169492578616403
+    second: crawler_attack_slash_1
+  - first:
+      213: -2049099159767045342
+    second: crawler_attack_slash_2
+  - first:
+      213: 2172486115348414842
+    second: crawler_attack_slash_3
+  - first:
+      213: 3628309348174011911
+    second: crawler_attack_slash_4
+  - first:
+      213: -3273175085915588230
+    second: crawler_attack_slash_5
+  - first:
+      213: -6426714289368554155
+    second: crawler_attack_slash_6
+  - first:
+      213: 7340983703752431208
+    second: crawler_attack_slash_7
+  - first:
+      213: -8457194294565526273
+    second: crawler_attack_slash_8
+  - first:
+      213: 1492927425381812068
+    second: crawler_attack_slash_9
+  - first:
+      213: -7722797326124362613
+    second: crawler_attack_slash_10
+  - first:
+      213: 9105193846107059255
+    second: crawler_attack_slash_11
+  - first:
+      213: 3173678513696046089
+    second: crawler_attack_slash_12
+  - first:
+      213: -5432243143912518720
+    second: crawler_attack_slash_13
+  - first:
+      213: -6665471543413226163
+    second: crawler_attack_slash_14
+  - first:
+      213: 1064592838302646279
+    second: crawler_attack_slash_15
+  - first:
+      213: 9197198333207579149
+    second: crawler_attack_slash_16
+  - first:
+      213: 8471447329408691153
+    second: crawler_attack_slash_17
+  - first:
+      213: -1003453939817072075
+    second: crawler_attack_slash_18
+  - first:
+      213: -1826557245582231714
+    second: crawler_attack_slash_19
+  - first:
+      213: -768457699712918441
+    second: crawler_attack_slash_20
+  - first:
+      213: 4600831404813983037
+    second: crawler_attack_slash_21
+  - first:
+      213: 4468774033671207354
+    second: crawler_attack_slash_22
+  - first:
+      213: 4610444823510594063
+    second: crawler_attack_slash_23
+  - first:
+      213: -4801790742866589622
+    second: crawler_attack_slash_24
+  - first:
+      213: 645568213285290485
+    second: crawler_attack_slash_25
+  - first:
+      213: 4056247586253818962
+    second: crawler_attack_slash_26
+  - first:
+      213: -4293428683984638102
+    second: crawler_attack_slash_27
+  - first:
+      213: -5324840182686718327
+    second: crawler_attack_slash_28
+  - first:
+      213: 3210884239790299213
+    second: crawler_attack_slash_29
+  - first:
+      213: -2596233802785841399
+    second: crawler_attack_slash_30
+  - first:
+      213: 7726372274771314994
+    second: crawler_attack_slash_31
+  - first:
+      213: 943100092135733235
+    second: crawler_attack_slash_32
+  - first:
+      213: 4357590605486755008
+    second: crawler_attack_slash_33
+  - first:
+      213: -92878650186806933
+    second: crawler_attack_slash_34
+  - first:
+      213: -4376129581996232431
+    second: crawler_attack_slash_35
+  - first:
+      213: -815371530955987702
+    second: crawler_attack_slash_36
+  - first:
+      213: -4512668955821965264
+    second: crawler_attack_slash_37
+  - first:
+      213: -1712260620162117182
+    second: crawler_attack_slash_38
+  - first:
+      213: 2142462025763479132
+    second: crawler_attack_slash_39
+  - first:
+      213: 9048319835000209860
+    second: crawler_attack_slash_40
+  - first:
+      213: 8883372445733051425
+    second: crawler_attack_slash_41
+  - first:
+      213: 2414176864531725040
+    second: crawler_attack_slash_42
+  - first:
+      213: -281515036502414381
+    second: crawler_attack_slash_43
+  - first:
+      213: -2981124456193672894
+    second: crawler_attack_slash_44
+  - first:
+      213: -5645057116062951231
+    second: crawler_attack_slash_45
+  - first:
+      213: 732543906916417066
+    second: crawler_attack_slash_46
+  - first:
+      213: 2236365099583259152
+    second: crawler_attack_slash_47
+  - first:
+      213: -6645274753360948160
+    second: crawler_attack_slash_48
+  - first:
+      213: -3754042802992703337
+    second: crawler_attack_slash_49
+  - first:
+      213: -7144357916202340885
+    second: crawler_attack_slash_50
+  - first:
+      213: 3843727310093260136
+    second: crawler_attack_slash_51
+  - first:
+      213: -6476283801562340452
+    second: crawler_attack_slash_52
+  - first:
+      213: -181424368000454919
+    second: crawler_attack_slash_53
+  - first:
+      213: 1604675922443095398
+    second: crawler_attack_slash_54
+  - first:
+      213: -7382564966822215997
+    second: crawler_attack_slash_55
+  - first:
+      213: -7560594547978569862
+    second: crawler_attack_slash_56
+  - first:
+      213: -1811925611324252393
+    second: crawler_attack_slash_57
+  - first:
+      213: 7363478720857610366
+    second: crawler_attack_slash_58
+  - first:
+      213: -1219895155789660756
+    second: crawler_attack_slash_59
+  - first:
+      213: -6294653086139198702
+    second: crawler_attack_slash_60
+  - first:
+      213: -1129628561805967735
+    second: crawler_attack_slash_61
+  - first:
+      213: -7097055670290703478
+    second: crawler_attack_slash_62
+  - first:
+      213: 3305271292708283366
+    second: crawler_attack_slash_63
+  - first:
+      213: -2115888702968390258
+    second: crawler_attack_slash_64
+  - first:
+      213: 1200767865966680274
+    second: crawler_attack_slash_65
+  - first:
+      213: -7355922447407483619
+    second: crawler_attack_slash_66
+  - first:
+      213: 5904784308677667258
+    second: crawler_attack_slash_67
+  - first:
+      213: 1711349631469088178
+    second: crawler_attack_slash_68
+  - first:
+      213: -3062955919218648406
+    second: crawler_attack_slash_69
+  - first:
+      213: -2504318167324322747
+    second: crawler_attack_slash_70
+  - first:
+      213: -1369662353968945013
+    second: crawler_attack_slash_71
+  - first:
+      213: 7568592273390150626
+    second: crawler_attack_slash_72
+  - first:
+      213: 4566339909478815553
+    second: crawler_attack_slash_73
+  - first:
+      213: 7933009163680269387
+    second: crawler_attack_slash_74
+  - first:
+      213: 3842481864540760669
+    second: crawler_attack_slash_75
+  - first:
+      213: -2273197680759772585
+    second: crawler_attack_slash_76
+  - first:
+      213: -7496059338642574933
+    second: crawler_attack_slash_77
+  - first:
+      213: -4383494488611753130
+    second: crawler_attack_slash_78
+  - first:
+      213: 7320553870982490324
+    second: crawler_attack_slash_79
+  - first:
+      213: 9083668465720080681
+    second: crawler_attack_slash_80
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: crawler_attack_slash_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 444
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65c171c4e695144f0800000000000000
+      internalID: -846296924711084970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_1
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 444
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 354476f78e5d36850800000000000000
+      internalID: 6369169492578616403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_2
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 444
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ba888bb232093e0800000000000000
+      internalID: -2049099159767045342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_3
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 444
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a718fc09c98362e10800000000000000
+      internalID: 2172486115348414842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_4
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 444
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e1429e0285a5230800000000000000
+      internalID: 3628309348174011911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_5
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a79b754f9985392d0800000000000000
+      internalID: -3273175085915588230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_6
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555a24d6769bfc6a0800000000000000
+      internalID: -6426714289368554155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_7
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 0
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866581cc8c960e560800000000000000
+      internalID: 7340983703752431208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_8
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 2
+        width: 354
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff426f3e89202aa80800000000000000
+      internalID: -8457194294565526273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crawler_attack_slash_9
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 1
+        width: 344
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46742516591f7b410800000000000000
+      internalID: 1492927425381812068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 75f57e6f36a60064ba5901a3012ca3f2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":354.0,"y":443.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      crawler_attack_slash_0: -846296924711084970
+      crawler_attack_slash_1: 6369169492578616403
+      crawler_attack_slash_2: -2049099159767045342
+      crawler_attack_slash_3: 2172486115348414842
+      crawler_attack_slash_4: 3628309348174011911
+      crawler_attack_slash_5: -3273175085915588230
+      crawler_attack_slash_6: -6426714289368554155
+      crawler_attack_slash_7: 7340983703752431208
+      crawler_attack_slash_8: -8457194294565526273
+      crawler_attack_slash_9: 1492927425381812068
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
