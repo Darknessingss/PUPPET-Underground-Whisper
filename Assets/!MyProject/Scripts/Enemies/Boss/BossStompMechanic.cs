@@ -34,6 +34,8 @@ public class BossStompMechanic : MonoBehaviour
         _isCharging = true;
         _cooldownTimer = bossData.StompCooldown;
 
+        PlayExtra(bossData.StompSound);
+
         GameObject chargeVisual = null;
         if (bossData.StompPrefab != null)
             chargeVisual = Instantiate(bossData.StompPrefab, transform.position, Quaternion.identity, transform);
@@ -50,8 +52,6 @@ public class BossStompMechanic : MonoBehaviour
             if (impact.TryGetComponent<EnemyDamageDealer>(out EnemyDamageDealer damageDealer))
                 damageDealer.SetDamage(bossData.StompDamage);
         }
-
-        PlayExtra(bossData.StompSound);
 
         if (player != null)
         {

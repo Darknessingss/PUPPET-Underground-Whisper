@@ -28,9 +28,9 @@ MonoBehaviour:
   keepDistance: 50
   detectionRadius: 14
   hitSound: {fileID: 8300000, guid: b5f7401cf5ee0c94fb56759964f77373, type: 3}
-  deathSound: {fileID: 0}
-  detectionSound: {fileID: 0}
-  attackSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 634d195b5061dea4d91642930fca2691, type: 3}
+  detectionSound: {fileID: 8300000, guid: 5b1a67c41934c5d4c97f9cb6c52cdc03, type: 3}
+  attackSound: {fileID: 8300000, guid: edfc2d9e8d1c96f4781a9f7acb54e5da, type: 3}
   volume: 1
   audioMixerGroup: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}
   tentacleWarningPrefab: {fileID: 859804437385477122, guid: d26e21294c20ae04dbae12b03d865482, type: 3}
@@ -41,19 +41,20 @@ MonoBehaviour:
   tentacleCount: 6
   tentacleCooldown: 6
   stompPrefab: {fileID: 2255623188190610025, guid: 79564c5e4f9c90d479aae6dd2f2b3b7c, type: 3}
-  stompImpactPrefab: {fileID: 0}
+  stompImpactPrefab: {fileID: 7445419415639402622, guid: 87cb202e561fab447a22c08cf9729c6c, type: 3}
   stompDamage: 40
-  stompChargeTime: 3
+  stompChargeTime: 2.5
   stompRadius: 8
   stompCooldown: 15
-  enrageSpeedMultiplier: 5
-  enragePassDamage: 10
-  enrageMaxTotalDamage: 50
-  enrageCircleRadius: 2
-  enragePassCooldown: 0.1
-  enrageTrailPrefab: {fileID: 0}
-  stompSound: {fileID: 0}
+  enrageDuration: 10
+  enrageSpeedMultiplier: 2
+  enragePassDamage: 7
+  enrageMaxTotalDamage: 45
+  enrageCircleRadius: 0.5
+  enragePassCooldown: 0.2
+  enrageTrailPrefab: {fileID: 6251427748554793182, guid: 60897b52b4c8af647a144e59cb45c6ea, type: 3}
+  stompSound: {fileID: 8300000, guid: 3c8343ecb4fe7204290b6604fe651fc1, type: 3}
   tentacleSound: {fileID: 0}
-  enrageRoarSound: {fileID: 0}
+  enrageRoarSound: {fileID: 8300000, guid: fdfdafcca71dd14428b83692ed320853, type: 3}
   bossExtraVolume: 1
   bossExtraMixer: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}

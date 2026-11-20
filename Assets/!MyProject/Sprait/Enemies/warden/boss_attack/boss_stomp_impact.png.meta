@@ -1,0 +1,748 @@
+fileFormatVersion: 2
+guid: 4f81b1e7f44b8544ea6914412b27c1b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -833693775199710345
+    second: boss_stomp_impact_0
+  - first:
+      213: -2102701536325969909
+    second: boss_stomp_impact_1
+  - first:
+      213: -8764204426958662122
+    second: boss_stomp_impact_2
+  - first:
+      213: 6048267421734797693
+    second: boss_stomp_impact_3
+  - first:
+      213: 4166891807948395890
+    second: boss_stomp_impact_4
+  - first:
+      213: 7638519484933099915
+    second: boss_stomp_impact_5
+  - first:
+      213: -7586282829930446101
+    second: boss_stomp_impact_6
+  - first:
+      213: 5752623269292781853
+    second: boss_stomp_impact_7
+  - first:
+      213: -4064323958553330260
+    second: boss_stomp_impact_8
+  - first:
+      213: -521850047995056974
+    second: boss_stomp_impact_9
+  - first:
+      213: -1215332747640686181
+    second: boss_stomp_impact_10
+  - first:
+      213: 1433201134879289064
+    second: boss_stomp_impact_11
+  - first:
+      213: -3079870919032072325
+    second: boss_stomp_impact_12
+  - first:
+      213: -76926114549710906
+    second: boss_stomp_impact_13
+  - first:
+      213: -3079665518041286370
+    second: boss_stomp_impact_14
+  - first:
+      213: 5574886805957999488
+    second: boss_stomp_impact_15
+  - first:
+      213: -3700270928231549341
+    second: boss_stomp_impact_16
+  - first:
+      213: -2398222466079621684
+    second: boss_stomp_impact_17
+  - first:
+      213: -3138462621959901371
+    second: boss_stomp_impact_18
+  - first:
+      213: 5207360296530310368
+    second: boss_stomp_impact_19
+  - first:
+      213: 5592429015299363197
+    second: boss_stomp_impact_20
+  - first:
+      213: -576838218901448185
+    second: boss_stomp_impact_21
+  - first:
+      213: 1688307205907574658
+    second: boss_stomp_impact_22
+  - first:
+      213: 917157491483975809
+    second: boss_stomp_impact_23
+  - first:
+      213: -6265994531743151930
+    second: boss_stomp_impact_24
+  - first:
+      213: -6957346085609001208
+    second: boss_stomp_impact_25
+  - first:
+      213: -8889959888510475512
+    second: boss_stomp_impact_26
+  - first:
+      213: -7026720560729994445
+    second: boss_stomp_impact_27
+  - first:
+      213: 1500233629395582839
+    second: boss_stomp_impact_28
+  - first:
+      213: 3247431022281476429
+    second: boss_stomp_impact_29
+  - first:
+      213: -335967515276550203
+    second: boss_stomp_impact_30
+  - first:
+      213: -170072852108510709
+    second: boss_stomp_impact_31
+  - first:
+      213: 3402384156953708326
+    second: boss_stomp_impact_32
+  - first:
+      213: 647997636395279165
+    second: boss_stomp_impact_33
+  - first:
+      213: -8277613492368152710
+    second: boss_stomp_impact_34
+  - first:
+      213: -3446151797216063524
+    second: boss_stomp_impact_35
+  - first:
+      213: -7816008677520317387
+    second: boss_stomp_impact_36
+  - first:
+      213: 1127414190634419706
+    second: boss_stomp_impact_37
+  - first:
+      213: 7007198495445077099
+    second: boss_stomp_impact_38
+  - first:
+      213: 2394651042904379080
+    second: boss_stomp_impact_39
+  - first:
+      213: 5592648766383230843
+    second: boss_stomp_impact_40
+  - first:
+      213: -1374270791192857857
+    second: boss_stomp_impact_41
+  - first:
+      213: -5122267700560398687
+    second: boss_stomp_impact_42
+  - first:
+      213: 1269691222559201950
+    second: boss_stomp_impact_43
+  - first:
+      213: 1624273823846581310
+    second: boss_stomp_impact_44
+  - first:
+      213: -6876598681035618032
+    second: boss_stomp_impact_45
+  - first:
+      213: 2472512722093909583
+    second: boss_stomp_impact_46
+  - first:
+      213: -6622240441622390245
+    second: boss_stomp_impact_47
+  - first:
+      213: -8820087337409836015
+    second: boss_stomp_impact_48
+  - first:
+      213: 6921524369910382324
+    second: boss_stomp_impact_49
+  - first:
+      213: -7249544172066051673
+    second: boss_stomp_impact_50
+  - first:
+      213: -2281908293281074938
+    second: boss_stomp_impact_51
+  - first:
+      213: 546498780013820986
+    second: boss_stomp_impact_52
+  - first:
+      213: 8801027388211334595
+    second: boss_stomp_impact_53
+  - first:
+      213: -7785186902950906587
+    second: boss_stomp_impact_54
+  - first:
+      213: 7926597901072496976
+    second: boss_stomp_impact_55
+  - first:
+      213: 7636215966407783908
+    second: boss_stomp_impact_56
+  - first:
+      213: 1749198063256079904
+    second: boss_stomp_impact_57
+  - first:
+      213: -6131093705908493526
+    second: boss_stomp_impact_58
+  - first:
+      213: 1729732797240852098
+    second: boss_stomp_impact_59
+  - first:
+      213: -799438631703330764
+    second: boss_stomp_impact_60
+  - first:
+      213: 5139983862929482983
+    second: boss_stomp_impact_61
+  - first:
+      213: -934017642256252247
+    second: boss_stomp_impact_62
+  - first:
+      213: -8319854632873190034
+    second: boss_stomp_impact_63
+  - first:
+      213: 3545926675870764814
+    second: boss_stomp_impact_64
+  - first:
+      213: 1573741293018256116
+    second: boss_stomp_impact_65
+  - first:
+      213: 675454244800337143
+    second: boss_stomp_impact_66
+  - first:
+      213: -477028941725487223
+    second: boss_stomp_impact_67
+  - first:
+      213: 4727360815472005224
+    second: boss_stomp_impact_68
+  - first:
+      213: 4879816942028774713
+    second: boss_stomp_impact_69
+  - first:
+      213: -8152818263189349768
+    second: boss_stomp_impact_70
+  - first:
+      213: 2864272226910834687
+    second: boss_stomp_impact_71
+  - first:
+      213: 1185563575487228031
+    second: boss_stomp_impact_72
+  - first:
+      213: -7128779042785949888
+    second: boss_stomp_impact_73
+  - first:
+      213: 5130195409667013132
+    second: boss_stomp_impact_74
+  - first:
+      213: 4025745763712617875
+    second: boss_stomp_impact_75
+  - first:
+      213: -8378703670147247779
+    second: boss_stomp_impact_76
+  - first:
+      213: -5000502823549698741
+    second: boss_stomp_impact_77
+  - first:
+      213: 5832283842879927274
+    second: boss_stomp_impact_78
+  - first:
+      213: -1348737127166265744
+    second: boss_stomp_impact_79
+  - first:
+      213: -2942597261433174439
+    second: boss_stomp_impact_80
+  - first:
+      213: -2055551907091092693
+    second: boss_stomp_impact_81
+  - first:
+      213: -5359697162086047787
+    second: boss_stomp_impact_82
+  - first:
+      213: 8985755428982661513
+    second: boss_stomp_impact_83
+  - first:
+      213: 5719629168241739042
+    second: boss_stomp_impact_84
+  - first:
+      213: 6700903707398864077
+    second: boss_stomp_impact_85
+  - first:
+      213: 2501340337845200813
+    second: boss_stomp_impact_86
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_stomp_impact_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77354c5bdef1e64f0800000000000000
+      internalID: -833693775199710345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b085f92e714b1d2e0800000000000000
+      internalID: -2102701536325969909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6161938228a4f5680800000000000000
+      internalID: -8764204426958662122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 768
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d71021bcc23cfe350800000000000000
+      internalID: 6048267421734797693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 275df3ea506c3d930800000000000000
+      internalID: 4166891807948395890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b81565d3009710a60800000000000000
+      internalID: 7638519484933099915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be2c954c5fb18b690800000000000000
+      internalID: -7586282829930446101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_7
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 512
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11b7dc726c65df40800000000000000
+      internalID: 5752623269292781853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cadb156b4ee9897c0800000000000000
+      internalID: -4064323958553330260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bceb3f652402c8f0800000000000000
+      internalID: -521850047995056974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b993afc1e45422fe0800000000000000
+      internalID: -1215332747640686181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_11
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 256
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eeaa28b6d0c3e310800000000000000
+      internalID: 1433201134879289064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b77990d87b91245d0800000000000000
+      internalID: -3079870919032072325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf305c3b14beeef0800000000000000
+      internalID: -76926114549710906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1931223784d245d0800000000000000
+      internalID: -3079665518041286370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_stomp_impact_15
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b7324530afd5d40800000000000000
+      internalID: 5574886805957999488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9456cfebf64c1ad4199639c0ab861fd4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":4.0},"gridSpriteSize":{"x":384.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      boss_stomp_impact_0: -833693775199710345
+      boss_stomp_impact_1: -2102701536325969909
+      boss_stomp_impact_10: -1215332747640686181
+      boss_stomp_impact_11: 1433201134879289064
+      boss_stomp_impact_12: -3079870919032072325
+      boss_stomp_impact_13: -76926114549710906
+      boss_stomp_impact_14: -3079665518041286370
+      boss_stomp_impact_15: 5574886805957999488
+      boss_stomp_impact_2: -8764204426958662122
+      boss_stomp_impact_3: 6048267421734797693
+      boss_stomp_impact_4: 4166891807948395890
+      boss_stomp_impact_5: 7638519484933099915
+      boss_stomp_impact_6: -7586282829930446101
+      boss_stomp_impact_7: 5752623269292781853
+      boss_stomp_impact_8: -4064323958553330260
+      boss_stomp_impact_9: -521850047995056974
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

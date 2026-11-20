@@ -50,9 +50,12 @@ public class BossEnrageMechanic : MonoBehaviour
 
         float currentSpeed = bossData.MoveSpeed * bossData.EnrageSpeedMultiplier;
         float totalDamageLimit = bossData.EnrageMaxTotalDamage;
+        float enrageTimer = bossData.EnrageDuration;
 
-        while (_totalPassDamageDealt < totalDamageLimit && player != null)
+        while (enrageTimer > 0f && _totalPassDamageDealt < totalDamageLimit && player != null)
         {
+            enrageTimer -= Time.deltaTime;
+
             _angle += OrbitSpeed * Time.deltaTime;
             Vector3 targetPosition = player.position +
                 new Vector3(Mathf.Cos(_angle), Mathf.Sin(_angle), 0f) * bossData.EnrageCircleRadius;

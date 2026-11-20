@@ -1,0 +1,839 @@
+fileFormatVersion: 2
+guid: 787b52c25ec5c8643b0375e415e29aee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3165210524672606790
+    second: boss_trail_enrage_0
+  - first:
+      213: -7394163687929747811
+    second: boss_trail_enrage_1
+  - first:
+      213: -5213979186844413073
+    second: boss_trail_enrage_2
+  - first:
+      213: -3665192285080831466
+    second: boss_trail_enrage_3
+  - first:
+      213: 216288209145486584
+    second: boss_trail_enrage_4
+  - first:
+      213: -1348300753656071877
+    second: boss_trail_enrage_5
+  - first:
+      213: -6738890305006773888
+    second: boss_trail_enrage_6
+  - first:
+      213: 3444144990668289420
+    second: boss_trail_enrage_7
+  - first:
+      213: -6371564485111041707
+    second: boss_trail_enrage_8
+  - first:
+      213: -6835507569725976061
+    second: boss_trail_enrage_9
+  - first:
+      213: -2172473361772158407
+    second: boss_trail_enrage_10
+  - first:
+      213: 6837800135177458344
+    second: boss_trail_enrage_11
+  - first:
+      213: -2691696194655720086
+    second: boss_trail_enrage_12
+  - first:
+      213: 1755109594114201133
+    second: boss_trail_enrage_13
+  - first:
+      213: 6110658761901744910
+    second: boss_trail_enrage_14
+  - first:
+      213: -2385271563470523598
+    second: boss_trail_enrage_15
+  - first:
+      213: -7561087048794302246
+    second: boss_trail_enrage_16
+  - first:
+      213: -3148998196369876856
+    second: boss_trail_enrage_17
+  - first:
+      213: -2586128151764568456
+    second: boss_trail_enrage_18
+  - first:
+      213: 1270369172969593786
+    second: boss_trail_enrage_19
+  - first:
+      213: -1554297866635901077
+    second: boss_trail_enrage_20
+  - first:
+      213: 6092515863867473164
+    second: boss_trail_enrage_21
+  - first:
+      213: -2068398014111530481
+    second: boss_trail_enrage_22
+  - first:
+      213: -5113410825799366364
+    second: boss_trail_enrage_23
+  - first:
+      213: 8184137654900785376
+    second: boss_trail_enrage_24
+  - first:
+      213: -701992062956867034
+    second: boss_trail_enrage_25
+  - first:
+      213: 5015910354958764531
+    second: boss_trail_enrage_26
+  - first:
+      213: -5843537400161909634
+    second: boss_trail_enrage_27
+  - first:
+      213: -1524115577101191144
+    second: boss_trail_enrage_28
+  - first:
+      213: -5792542071705001222
+    second: boss_trail_enrage_29
+  - first:
+      213: -5258285506697159805
+    second: boss_trail_enrage_30
+  - first:
+      213: 4542826876357166578
+    second: boss_trail_enrage_31
+  - first:
+      213: 1210267438017924748
+    second: boss_trail_enrage_32
+  - first:
+      213: -4093593653747940976
+    second: boss_trail_enrage_33
+  - first:
+      213: -5408470430063057552
+    second: boss_trail_enrage_34
+  - first:
+      213: -4634337936256492127
+    second: boss_trail_enrage_35
+  - first:
+      213: 8327497244667890579
+    second: boss_trail_enrage_36
+  - first:
+      213: 6401706095220073881
+    second: boss_trail_enrage_37
+  - first:
+      213: -4325175631333497314
+    second: boss_trail_enrage_38
+  - first:
+      213: -3832600511155408627
+    second: boss_trail_enrage_39
+  - first:
+      213: 8047695315214324113
+    second: boss_trail_enrage_40
+  - first:
+      213: -1175718212136233258
+    second: boss_trail_enrage_41
+  - first:
+      213: -379524285338031907
+    second: boss_trail_enrage_42
+  - first:
+      213: 3789890974579525905
+    second: boss_trail_enrage_43
+  - first:
+      213: -8389143881367770834
+    second: boss_trail_enrage_44
+  - first:
+      213: 1053807988295084713
+    second: boss_trail_enrage_45
+  - first:
+      213: -7345211261086426177
+    second: boss_trail_enrage_46
+  - first:
+      213: -8579824440964452476
+    second: boss_trail_enrage_47
+  - first:
+      213: -8794348403390140648
+    second: boss_trail_enrage_48
+  - first:
+      213: -2335019855067987436
+    second: boss_trail_enrage_49
+  - first:
+      213: 302220100600120219
+    second: boss_trail_enrage_50
+  - first:
+      213: -5858684296638421503
+    second: boss_trail_enrage_51
+  - first:
+      213: 957219852363409084
+    second: boss_trail_enrage_52
+  - first:
+      213: 146996050573106032
+    second: boss_trail_enrage_53
+  - first:
+      213: -7222861543835940417
+    second: boss_trail_enrage_54
+  - first:
+      213: -8597632816735735569
+    second: boss_trail_enrage_55
+  - first:
+      213: 55176166657989608
+    second: boss_trail_enrage_56
+  - first:
+      213: -8011250350929419675
+    second: boss_trail_enrage_57
+  - first:
+      213: 989130836367523997
+    second: boss_trail_enrage_58
+  - first:
+      213: -352548312945387185
+    second: boss_trail_enrage_59
+  - first:
+      213: -5206170785448766972
+    second: boss_trail_enrage_60
+  - first:
+      213: -4223518479613952625
+    second: boss_trail_enrage_61
+  - first:
+      213: 1684775205959607179
+    second: boss_trail_enrage_62
+  - first:
+      213: 8331573412357982137
+    second: boss_trail_enrage_63
+  - first:
+      213: -6746243129762470666
+    second: boss_trail_enrage_64
+  - first:
+      213: 3901235774549276536
+    second: boss_trail_enrage_65
+  - first:
+      213: -8300289115561321068
+    second: boss_trail_enrage_66
+  - first:
+      213: 5896741253198142410
+    second: boss_trail_enrage_67
+  - first:
+      213: -4129483839022408671
+    second: boss_trail_enrage_68
+  - first:
+      213: 3420227972781789280
+    second: boss_trail_enrage_69
+  - first:
+      213: 8231517035081619221
+    second: boss_trail_enrage_70
+  - first:
+      213: 6391134455921091979
+    second: boss_trail_enrage_71
+  - first:
+      213: 1679942691237963906
+    second: boss_trail_enrage_72
+  - first:
+      213: 1621353372689339752
+    second: boss_trail_enrage_73
+  - first:
+      213: -5556085498471606186
+    second: boss_trail_enrage_74
+  - first:
+      213: 8844097909082349255
+    second: boss_trail_enrage_75
+  - first:
+      213: -4465587007100476645
+    second: boss_trail_enrage_76
+  - first:
+      213: 4263878716484840837
+    second: boss_trail_enrage_77
+  - first:
+      213: -5013014720450435557
+    second: boss_trail_enrage_78
+  - first:
+      213: 7443119661222801624
+    second: boss_trail_enrage_79
+  - first:
+      213: 8385173553439797913
+    second: boss_trail_enrage_80
+  - first:
+      213: 2400616115258969710
+    second: boss_trail_enrage_81
+  - first:
+      213: 6148355017184163653
+    second: boss_trail_enrage_82
+  - first:
+      213: 7245914152157660547
+    second: boss_trail_enrage_83
+  - first:
+      213: -7629346821448309698
+    second: boss_trail_enrage_84
+  - first:
+      213: -7816836905754677211
+    second: boss_trail_enrage_85
+  - first:
+      213: -5277725327974953162
+    second: boss_trail_enrage_86
+  - first:
+      213: -3375759908500650061
+    second: boss_trail_enrage_87
+  - first:
+      213: 3442050635452904182
+    second: boss_trail_enrage_88
+  - first:
+      213: -4277931481133933643
+    second: boss_trail_enrage_89
+  - first:
+      213: -3353504780674456944
+    second: boss_trail_enrage_90
+  - first:
+      213: 3107834591864041107
+    second: boss_trail_enrage_91
+  - first:
+      213: -7545975573764153656
+    second: boss_trail_enrage_92
+  - first:
+      213: -4224411447969450920
+    second: boss_trail_enrage_93
+  - first:
+      213: 8581568804135843509
+    second: boss_trail_enrage_94
+  - first:
+      213: -1789065851956033164
+    second: boss_trail_enrage_95
+  - first:
+      213: 1959502316458043351
+    second: boss_trail_enrage_96
+  - first:
+      213: -601405964565566422
+    second: boss_trail_enrage_97
+  - first:
+      213: 5993965967146449290
+    second: boss_trail_enrage_98
+  - first:
+      213: -81961510352224473
+    second: boss_trail_enrage_99
+  - first:
+      213: -4729106084236609859
+    second: boss_trail_enrage_100
+  - first:
+      213: -7758106505548127601
+    second: boss_trail_enrage_101
+  - first:
+      213: 1728009724194252067
+    second: boss_trail_enrage_102
+  - first:
+      213: 328367061580333270
+    second: boss_trail_enrage_103
+  - first:
+      213: -3814831159565822155
+    second: boss_trail_enrage_104
+  - first:
+      213: -404912286920543946
+    second: boss_trail_enrage_105
+  - first:
+      213: 6357236454897291185
+    second: boss_trail_enrage_106
+  - first:
+      213: -6796637513919104035
+    second: boss_trail_enrage_107
+  - first:
+      213: -4808207431322588452
+    second: boss_trail_enrage_108
+  - first:
+      213: 3640357502169776129
+    second: boss_trail_enrage_109
+  - first:
+      213: -7628516520631113766
+    second: boss_trail_enrage_110
+  - first:
+      213: 3322395125665118452
+    second: boss_trail_enrage_111
+  - first:
+      213: -4588781357800420763
+    second: boss_trail_enrage_112
+  - first:
+      213: 4654929664657293341
+    second: boss_trail_enrage_113
+  - first:
+      213: -1369661872258582029
+    second: boss_trail_enrage_114
+  - first:
+      213: -6255398001005579789
+    second: boss_trail_enrage_115
+  - first:
+      213: -2636362657818977559
+    second: boss_trail_enrage_116
+  - first:
+      213: -5488014345688318026
+    second: boss_trail_enrage_117
+  - first:
+      213: -805301880599186105
+    second: boss_trail_enrage_118
+  - first:
+      213: -4094231433023996173
+    second: boss_trail_enrage_119
+  - first:
+      213: -533509800692504324
+    second: boss_trail_enrage_120
+  - first:
+      213: 8383927018339949968
+    second: boss_trail_enrage_121
+  - first:
+      213: -6871773670164148960
+    second: boss_trail_enrage_122
+  - first:
+      213: -1726010414927542864
+    second: boss_trail_enrage_123
+  - first:
+      213: -8168849901679906022
+    second: boss_trail_enrage_124
+  - first:
+      213: -2768708876838249989
+    second: boss_trail_enrage_125
+  - first:
+      213: -5955647339698725550
+    second: boss_trail_enrage_126
+  - first:
+      213: 4623883145701810733
+    second: boss_trail_enrage_127
+  - first:
+      213: 8187991404484085341
+    second: boss_trail_enrage_128
+  - first:
+      213: -8662260131984917537
+    second: boss_trail_enrage_129
+  - first:
+      213: -2296469142949274194
+    second: boss_trail_enrage_130
+  - first:
+      213: -2899941363489684220
+    second: boss_trail_enrage_131
+  - first:
+      213: 8830684139846464626
+    second: boss_trail_enrage_132
+  - first:
+      213: 3498936419906771067
+    second: boss_trail_enrage_133
+  - first:
+      213: 4682036198219988576
+    second: boss_trail_enrage_134
+  - first:
+      213: -7776657647447547777
+    second: boss_trail_enrage_135
+  - first:
+      213: -9181213088036040395
+    second: boss_trail_enrage_136
+  - first:
+      213: 1166977602000824801
+    second: boss_trail_enrage_137
+  - first:
+      213: 963482495835391444
+    second: boss_trail_enrage_138
+  - first:
+      213: 5919302587067666695
+    second: boss_trail_enrage_139
+  - first:
+      213: -2872083458949842097
+    second: boss_trail_enrage_140
+  - first:
+      213: 5068321307237833575
+    second: boss_trail_enrage_141
+  - first:
+      213: -403215800039493424
+    second: boss_trail_enrage_142
+  - first:
+      213: 3737380570777990667
+    second: boss_trail_enrage_143
+  - first:
+      213: -5840887507505956371
+    second: boss_trail_enrage_144
+  - first:
+      213: -5194943355795612151
+    second: boss_trail_enrage_145
+  - first:
+      213: -3203822103256910689
+    second: boss_trail_enrage_146
+  - first:
+      213: 4439717727582719873
+    second: boss_trail_enrage_147
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_trail_enrage_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 683
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6424072c3361deb20800000000000000
+      internalID: 3165210524672606790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 683
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d96ead14d47a26990800000000000000
+      internalID: -7394163687929747811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 683
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f63dbdded8934a7b0800000000000000
+      internalID: -5213979186844413073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 683
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a3146290f922dc0800000000000000
+      internalID: -3665192285080831466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fcd833faf8600300800000000000000
+      internalID: 216288209145486584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 342
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3930ffab9fd94de0800000000000000
+      internalID: -1348300753656071877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 342
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0895fb5c8f6aa72a0800000000000000
+      internalID: -6738890305006773888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_7
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 342
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8579b30f9f0ccf20800000000000000
+      internalID: 3444144990668289420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5513679dbd7a397a0800000000000000
+      internalID: -6371564485111041707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3025df6d4166321a0800000000000000
+      internalID: -6835507569725976061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_10
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 932629bdcf2d9d1e0800000000000000
+      internalID: -2172473361772158407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_trail_enrage_11
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1
+        width: 384
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a2de56aefeb4ee50800000000000000
+      internalID: 6837800135177458344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 922732dc016e8a9458d9af46a0434e94
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":384.0,"y":341.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      boss_trail_enrage_0: 3165210524672606790
+      boss_trail_enrage_1: -7394163687929747811
+      boss_trail_enrage_10: -2172473361772158407
+      boss_trail_enrage_11: 6837800135177458344
+      boss_trail_enrage_2: -5213979186844413073
+      boss_trail_enrage_3: -3665192285080831466
+      boss_trail_enrage_4: 216288209145486584
+      boss_trail_enrage_5: -1348300753656071877
+      boss_trail_enrage_6: -6738890305006773888
+      boss_trail_enrage_7: 3444144990668289420
+      boss_trail_enrage_8: -6371564485111041707
+      boss_trail_enrage_9: -6835507569725976061
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

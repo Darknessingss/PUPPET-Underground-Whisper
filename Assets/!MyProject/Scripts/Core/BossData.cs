@@ -22,6 +22,7 @@ public class BossData : EnemyData
     [SerializeField] private float stompCooldown = 8f;
 
     [Header("Boss - Enrage Mechanic")]
+    [SerializeField] private float enrageDuration = 10f;
     [SerializeField] private float enrageSpeedMultiplier = 2.5f;
     [SerializeField] private float enragePassDamage = 5f;
     [SerializeField] private float enrageMaxTotalDamage = 20f;
@@ -51,6 +52,7 @@ public class BossData : EnemyData
     public float StompRadius => stompRadius;
     public float StompCooldown => stompCooldown;
 
+    public float EnrageDuration => enrageDuration;
     public float EnrageSpeedMultiplier => enrageSpeedMultiplier;
     public float EnragePassDamage => enragePassDamage;
     public float EnrageMaxTotalDamage => enrageMaxTotalDamage;
