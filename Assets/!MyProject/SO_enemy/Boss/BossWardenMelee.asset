@@ -54,7 +54,7 @@ MonoBehaviour:
   enragePassCooldown: 0.2
   enrageTrailPrefab: {fileID: 6251427748554793182, guid: 60897b52b4c8af647a144e59cb45c6ea, type: 3}
   stompSound: {fileID: 8300000, guid: 3c8343ecb4fe7204290b6604fe651fc1, type: 3}
-  tentacleSound: {fileID: 0}
+  tentacleSound: {fileID: 8300000, guid: c3bf9b3cc790fc845a7c32a29969bec0, type: 3}
   enrageRoarSound: {fileID: 8300000, guid: fdfdafcca71dd14428b83692ed320853, type: 3}
   bossExtraVolume: 1
   bossExtraMixer: {fileID: 4136719252937611478, guid: cf20869bb25784a4a92184bce0e25625, type: 2}

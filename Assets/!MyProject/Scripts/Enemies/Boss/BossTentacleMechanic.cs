@@ -72,8 +72,10 @@ public class BossTentacleMechanic : MonoBehaviour
 
             if (bossData.TentacleWarningPrefab != null)
             {
-                GameObject warning = Instantiate(bossData.TentacleWarningPrefab, spawnPosition, Quaternion.identity);
-                Destroy(warning, bossData.TentacleWarningDelay);
+                if (BulletPool.Instance != null)
+                    BulletPool.Instance.Get(bossData.TentacleWarningPrefab, spawnPosition, Quaternion.identity);
+                else
+                    Instantiate(bossData.TentacleWarningPrefab, spawnPosition, Quaternion.identity);
             }
 
             StartCoroutine(SpawnSpikeAfterDelay(spawnPosition));
@@ -92,7 +94,13 @@ public class BossTentacleMechanic : MonoBehaviour
 
         if (bossData.TentacleSpikePrefab != null)
         {
-            GameObject spike = Instantiate(bossData.TentacleSpikePrefab, position, Quaternion.identity);
+            GameObject spike;
+
+            if (BulletPool.Instance != null)
+                spike = BulletPool.Instance.Get(bossData.TentacleSpikePrefab, position, Quaternion.identity);
+            else
+                spike = Instantiate(bossData.TentacleSpikePrefab, position, Quaternion.identity);
+
             if (spike.TryGetComponent<EnemyDamageDealer>(out EnemyDamageDealer damageDealer))
                 damageDealer.SetDamage(bossData.TentacleDamage);
         }
