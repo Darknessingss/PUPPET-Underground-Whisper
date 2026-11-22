@@ -18,7 +18,7 @@ MonoBehaviour:
   category: 0
   maxHealth: 2500
   soulReward: 50
-  moveSpeed: 2.5
+  moveSpeed: 1.5
   damage: 35
   attackSpeed: 0.2
   meleeAttackPrefab: {fileID: 7980274788526523973, guid: 3afff9783ee228f4699ea08784e1fbc3, type: 3}
@@ -47,7 +47,7 @@ MonoBehaviour:
   stompRadius: 8
   stompCooldown: 15
   enrageDuration: 10
-  enrageSpeedMultiplier: 2
+  enrageSpeedMultiplier: 4
   enragePassDamage: 7
   enrageMaxTotalDamage: 45
   enrageCircleRadius: 0.5

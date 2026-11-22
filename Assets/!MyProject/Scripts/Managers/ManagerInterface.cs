@@ -14,7 +14,6 @@ public class ManagerInterface : MonoBehaviour
     [SerializeField] private GameObject exitPanel;
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private GameObject MindMapPanel;
-    [SerializeField] private GameObject BossBarHealth;
 
     private EkControllerSystem inputPause;
     private bool isPaused;
@@ -37,7 +36,6 @@ public class ManagerInterface : MonoBehaviour
         SettingsGameplay.SetActive(false);
         deathPanel.SetActive(false);
         MindMapPanel.SetActive(false);
-        BossBarHealth.SetActive(false);
     }
 
     private void Start()
@@ -172,10 +170,5 @@ public class ManagerInterface : MonoBehaviour
     {
         TogglePause(!isPaused);
         MindMapPanel.SetActive(false);
-    }
-
-    public void ActivateBossBar()
-    {
-        BossBarHealth.SetActive(true);
     }
 }
