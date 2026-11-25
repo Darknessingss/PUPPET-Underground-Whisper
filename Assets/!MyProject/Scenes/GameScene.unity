@@ -796599,9 +796599,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 411699942}
     m_Modifications:
     - target: {fileID: 1666087922723831270, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+      propertyPath: combat
+      value: 
+      objectReference: {fileID: 1890135051}
+    - target: {fileID: 1666087922723831270, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1101049632}
+    - target: {fileID: 1666087922723831270, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: cf3455e6debaef04bbe6eb5ea18fe7de, type: 2}
     - target: {fileID: 1853281082323137531, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
       propertyPath: m_Name
       value: Weeper (10)
@@ -796650,10 +796658,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3565441907929830132, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: cf3455e6debaef04bbe6eb5ea18fe7de, type: 2}
+    - target: {fileID: 3565441907929830132, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+      propertyPath: attackOriginCollider
+      value: 
+      objectReference: {fileID: 1143651272}
+    - target: {fileID: 6794189230917677674, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: cf3455e6debaef04bbe6eb5ea18fe7de, type: 2}
     - target: {fileID: 6794189230917677674, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
       propertyPath: maxHealth
       value: 95
       objectReference: {fileID: 0}
+    - target: {fileID: 6794189230917677674, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1535072877}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -845657,11 +845681,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8285275432142674233, guid: 4659cd1f5ed2b7d43984f9045c1e00e7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -35.77
+      value: -28.22
       objectReference: {fileID: 0}
     - target: {fileID: 8285275432142674233, guid: 4659cd1f5ed2b7d43984f9045c1e00e7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9494312
+      value: -11.26
       objectReference: {fileID: 0}
     - target: {fileID: 8285275432142674233, guid: 4659cd1f5ed2b7d43984f9045c1e00e7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -847547,7 +847571,7 @@ GameObject:
   - component: {fileID: 1101049638}
   - component: {fileID: 1101049636}
   - component: {fileID: 1101049635}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Hero
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -847662,6 +847686,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 447256625}
+  - {fileID: 1879736822}
   - {fileID: 826690752}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -848449,6 +848474,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2873820533159309982, guid: be0a0303abd92fd4e90603a945dfa07e, type: 3}
   m_PrefabInstance: {fileID: 883796319}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &1143651272 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4867103605984902760, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+  m_PrefabInstance: {fileID: 713640958}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1164719800
 GameObject:
@@ -864861,6 +864891,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511381189}
   m_CullTransparentMesh: 1
+--- !u!114 &1535072877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8215947169911697657, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+  m_PrefabInstance: {fileID: 713640958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!224 &1552820324 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8363945796343843134, guid: afa6092a193c4344bb25e2e4d25d6d89, type: 3}
@@ -869371,6 +869412,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1409309466094292925, guid: acaf46bb4fd69c246bbc05b5357987e8, type: 3}
   m_PrefabInstance: {fileID: 1874991288}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1879736821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1879736822}
+  - component: {fileID: 1879736823}
+  m_Layer: 3
+  m_Name: ColliderHealth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1879736822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879736821}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.032, y: 1.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1101049632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1879736823
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879736821}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.07019234, y: 0.12748814}
+  m_Size: {x: 1.9323082, y: 2.5598621}
+  m_Direction: 0
+--- !u!114 &1890135051 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3565441907929830132, guid: c506166a0590b4945a1dbe8dcbeb96d4, type: 3}
+  m_PrefabInstance: {fileID: 713640958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4204ee2613e6b8b4d9e07d824408225a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyCombat
 --- !u!1 &1894948420
 GameObject:
   m_ObjectHideFlags: 0
